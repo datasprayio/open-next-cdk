@@ -4,6 +4,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'matus@matus.io',
   cdkVersion: '2.73.0',
   defaultReleaseBranch: 'main',
+  dependabot: true,
   name: 'OpenNEXT via CDK',
   repositoryUrl: 'https://github.com/datasprayio/open-next-cdk.git',
   authorOrganization: true,
@@ -31,7 +32,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     prettier: true,
   },
 
-  prerelease: 'alpha', // TODO Remove me
   majorVersion: 0,
 
   tsconfig: { compilerOptions: { noUnusedLocals: false }, include: ['assets/**/*.ts'] },

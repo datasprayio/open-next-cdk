@@ -9,17 +9,17 @@
   <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
     <img alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
   </a>
-  <a href="https://www.npmjs.com/package/matusfaro/open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
+  <a href="https://www.npmjs.com/package/open-next-cdk">
+    <img alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
   </a>
   <a href="https://pypi.org/project/open-next-cdk/">
-    <img alt="Maven Central release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
+    <img alt="Pypi release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
   </a>
-  <a href="https://github.com/orgs/datasprayio/packages?repo_name=open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk?style=for-the-badge">
+  <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
+    <img alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/main?filename=opennextcdk%2Fgo.mod&style=for-the-badge">
   </a>
-  <a href="https://www.nuget.org/packages/open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/nuget/v/open-next-cdk?style=for-the-badge">
+  <a href="https://www.nuget.org/packages/Dataspray.OpenNextCdk">
+    <img alt="Nuget release" src="https://img.shields.io/nuget/v/Dataspray.OpenNextCdk?style=for-the-badge">
   </a>
 </div>
 <h3 align="center">Deploy NextJS using OpenNEXT packaging to serverless AWS using CDK in any language</h3>
@@ -48,21 +48,72 @@ Your NextJS app is packaged using OpenNEXT to fit the serverless format on Lambd
 
 # Quickstart
 
-Add the dependency `esbuild@0.17.16` to your project along with `open-next-cdk`.
+### NextJS setup
+
+Add a dev dependency `esbuild@0.17.16` to your NextJS project.
 
 ```shell
-npm install --save-dev esbuild@0.17.16 open-next-cdk
+npm install --save-dev esbuild@0.17.16
 ```
 
-Add the following CDK construct to your CDK application
+### CDK Construct
 
-```ts
-import { Nextjs } from 'open-next-cdk';
+Use this construct in your CDK application to deploy your NextJS app to AWS.
 
-new Nextjs(this, 'Web', {
-  nextjsPath: './web', // relative path to nextjs project root
-});
-```
+<details>
+  <summary>Typescript</summary>
+
+  ```shell
+  npm install --save-dev esbuild@0.17.16 open-next-cdk
+  ```
+
+  ```ts
+  import { Nextjs } from 'open-next-cdk';
+
+  new Nextjs(this, 'Web', {
+    nextjsPath: './web', // relative path to nextjs project root
+  });
+  ```
+</details>
+<details>
+  <summary>Java</summary>
+
+  ```xml
+  <dependency>
+    <groupId>io.dataspray</groupId>
+    <artifactId>open-next-cdk</artifactId>
+    <version>x.y.z</version>
+  </dependency>
+  ```
+
+  ```java
+  Nextjs.Builder.create(this, getConstructId())
+          .nextjsPath("./web")
+          .build();
+  ```
+</details>
+<details>
+  <summary>Go</summary>
+
+  ```shell
+  go get github.com:datasprayio/open-next-cdk.git
+  ```
+</details>
+<details>
+  <summary>Python</summary>
+
+  ```shell
+  pip install open-next-cdk
+  ```
+</details>
+<details>
+  <summary>.NET</summary>
+
+  ```shell
+  dotnet add package Dataspray.OpenNextCdk
+  ```
+</details>
+<br/>
 
 This will automatically build your NextJS app and package it for you as part of the CDK construct.
 
