@@ -415,6 +415,16 @@
     "@aws-sdk/util-hex-encoding" "3.310.0"
     tslib "^2.5.0"
 
+"@aws-sdk/eventstream-codec@3.370.0":
+  version "3.370.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/eventstream-codec/-/eventstream-codec-3.370.0.tgz#c407ae5e8e24a4c02f626cc5ae55403df55573f7"
+  integrity sha512-PiaDMum7TNsIE3DGECSsNYwibBIPN2/e13BJbTwi6KgVx8BV2mYA3kQkaUDiy++tEpzN81Nh5OPTFVb7bvgYYg==
+  dependencies:
+    "@aws-crypto/crc32" "3.0.0"
+    "@aws-sdk/types" "3.370.0"
+    "@aws-sdk/util-hex-encoding" "3.310.0"
+    tslib "^2.5.0"
+
 "@aws-sdk/eventstream-serde-browser@3.310.0":
   version "3.310.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/eventstream-serde-browser/-/eventstream-serde-browser-3.310.0.tgz#02aef0262b5f740a1c8ffbdeb8459542f90c14dd"
@@ -768,14 +778,15 @@
     tslib "^2.5.0"
 
 "@aws-sdk/signature-v4@^3.341.0":
-  version "3.341.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/signature-v4/-/signature-v4-3.341.0.tgz#3ebf018adfcbd1a5e097e545aa9ef4819a54b7c4"
-  integrity sha512-4nWgDiw68lEFBwrQY1JsKBvcMmcRhClpWzi3iKHwU1PJogId6g4XRU89Zo0QzBQihmFZIKklRSF/150pbNGdcg==
+  version "3.370.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/signature-v4/-/signature-v4-3.370.0.tgz#5726c46eddc6e959a497e403d9d4e6f65efb196c"
+  integrity sha512-Mh++NJiXoBxMzz4d8GQPNB37nqjS1gsVwjKoSAWFE67sjgsjb8D5JWRCm9CinqPoXi2iN57+1DcQalTDKQGc0A==
   dependencies:
+    "@aws-sdk/eventstream-codec" "3.370.0"
     "@aws-sdk/is-array-buffer" "3.310.0"
-    "@aws-sdk/types" "3.341.0"
+    "@aws-sdk/types" "3.370.0"
     "@aws-sdk/util-hex-encoding" "3.310.0"
-    "@aws-sdk/util-middleware" "3.341.0"
+    "@aws-sdk/util-middleware" "3.370.0"
     "@aws-sdk/util-uri-escape" "3.310.0"
     "@aws-sdk/util-utf8" "3.310.0"
     tslib "^2.5.0"
@@ -800,18 +811,19 @@
     "@aws-sdk/types" "3.310.0"
     tslib "^2.5.0"
 
-"@aws-sdk/types@3.310.0", "@aws-sdk/types@^3.222.0":
+"@aws-sdk/types@3.310.0":
   version "3.310.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/types/-/types-3.310.0.tgz#b83a0580feb38b58417abb8b4ed3eae1a0cb7bc1"
   integrity sha512-j8eamQJ7YcIhw7fneUfs8LYl3t01k4uHi4ZDmNRgtbmbmTTG3FZc2MotStZnp3nZB6vLiPF1o5aoJxWVvkzS6A==
   dependencies:
     tslib "^2.5.0"
 
-"@aws-sdk/types@3.341.0":
-  version "3.341.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/types/-/types-3.341.0.tgz#b4282a2d3a9f7ae85650a4b61a80326588ca9400"
-  integrity sha512-2KJf64BhJly/Ty35oWKlCElIqUP4kQ0LA+meSrgAmwl7oE0AYuO7V0ar1nsTGlsubYkLRvOuEhMcuNuumaUdoQ==
+"@aws-sdk/types@3.370.0", "@aws-sdk/types@^3.222.0":
+  version "3.370.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/types/-/types-3.370.0.tgz#79e0e4927529c957b5c5c2a00f7590a76784a5e4"
+  integrity sha512-8PGMKklSkRKjunFhzM2y5Jm0H2TBu7YRNISdYzXLUHKSP9zlMEYagseKVdmox0zKHf1LXVNuSlUV2b6SRrieCQ==
   dependencies:
+    "@smithy/types" "^1.1.0"
     tslib "^2.5.0"
 
 "@aws-sdk/url-parser@3.310.0":
@@ -918,10 +930,10 @@
   dependencies:
     tslib "^2.5.0"
 
-"@aws-sdk/util-middleware@3.341.0":
-  version "3.341.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/util-middleware/-/util-middleware-3.341.0.tgz#1012412783e66b6e6056f8373604f0a4f0e79b9e"
-  integrity sha512-JsuZGZw9pMYMHzaJW31Y3Zl1Dh/R2PNVxnlQPsPy37RhHoSLPZ6wR9G828Y1ZY2thBpR+DU3D/VfNJOxBmWGkw==
+"@aws-sdk/util-middleware@3.370.0":
+  version "3.370.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-middleware/-/util-middleware-3.370.0.tgz#3ff3b0e3cbf05ca44450fd6a943c9eabe4fd7330"
+  integrity sha512-Jvs9FZHaQznWGLkRel3PFEP93I1n0Kp6356zxYHk3LIOmjpzoob3R+v96mzyN+dZrnhPdPubYS41qbU2F9lROg==
   dependencies:
     tslib "^2.5.0"
 
@@ -1806,6 +1818,13 @@
   integrity sha512-OAPJUAtgeINhh/TAlUID4QTs53Njm7xzddaVlEs/SXwgtiD1tW22zAB/W1wdqfrpmikgaWQ9Fw6Ws+hsiRm5Vg==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
+
+"@smithy/types@^1.1.0":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@smithy/types/-/types-1.1.1.tgz#949394a22e13e7077471bae0d18c146e5f62c456"
+  integrity sha512-tMpkreknl2gRrniHeBtdgQwaOlo39df8RxSrwsHVNIGXULy5XP6KqgScUw2m12D15wnJCKWxVhCX+wbrBW/y7g==
+  dependencies:
+    tslib "^2.5.0"
 
 "@tootallnate/once@1":
   version "1.1.2"
