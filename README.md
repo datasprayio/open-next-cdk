@@ -1,43 +1,39 @@
-<h1 align="center">OpenNEXT CDK<br/>TS | Java | Go | Python | .NET</h1>
+<h1 align="center">
+  <div align="center">
+      <img align="middle" alt="Typescript" src="./resources/typescript.svg" width=15>
+      <img align="middle" alt="Java" src="./resources/java.svg" width=20>
+      <img align="middle" alt="Go" src="./resources/go.svg" width=30>
+      <img align="middle" alt="Python" src="./resources/python.svg" width=15>
+      <img align="middle" alt=".NET" src="./resources/dotnet.svg" width=30>
+  </div>
+  OpenNEXT CDK
+</h1>
 <div align="center">
   <a href="https://github.com/datasprayio/open-next-cdk/actions?query=workflow%3A%22build%22">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datasprayio/open-next-cdk/build.yml?style=for-the-badge">
+    <img align="middle" alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datasprayio/open-next-cdk/build.yml?style=for-the-badge">
   </a>
   <a href="https://github.com/datasprayio/open-next-cdk/blob/master/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/datasprayio/open-next-cdk?style=for-the-badge">
-  </a>
-  <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
+    <img align="middle" alt="License" src="https://img.shields.io/github/license/datasprayio/open-next-cdk?style=for-the-badge">
   </a>
   <a href="https://www.npmjs.com/package/open-next-cdk">
-    <img alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
-  </a>
-  <a href="https://pypi.org/project/open-next-cdk/">
-    <img alt="Pypi release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
-  </a>
-  <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
-    <img alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/main?filename=opennextcdk%2Fgo.mod&style=for-the-badge">
-  </a>
-  <a href="https://www.nuget.org/packages/Dataspray.OpenNextCdk">
-    <img alt="Nuget release" src="https://img.shields.io/nuget/v/Dataspray.OpenNextCdk?style=for-the-badge">
+    <img align="middle" alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?label=RELEASE&color=blue&style=for-the-badge">
   </a>
 </div>
-<h3 align="center">Deploy NextJS using OpenNEXT packaging to serverless AWS using CDK in any language</h3>
+<h3 align="center">Deploy NextJS on AWS using CDK IaC and OpenNEXT packaging</h3>
 
 ### Contents
 
 - [What is this?](#what-is-this)
 - [Quickstart](#quickstart)
-    - [Build manually](#build-manually)
-- [Additional security](#additional-security)
+- [Advanced](#advanced)
+    - [Pre-built OpenNEXT package](#pre-built-opennext-package)
+    - [Additional security](#additional-security)
 - [About](#about)
     - [Benefits](#benefits)
     - [Dependencies](#dependencies)
     - [Similar projects](#similar-projects)
-        - [Heavily based on](#heavily-based-on)
-        - [Fork from cdk-nextjs](#fork-from-cdk-nextjs)
-    - [Contributing](#contributing)
-    - [Projen](#projen)
+- [Contributing](#contributing)
+    - [Using Projen](#using-projen)
 
 # What is this?
 
@@ -61,11 +57,19 @@ npm install --save-dev esbuild@0.17.16
 Use this construct in your CDK application to deploy your NextJS app to AWS.
 
 <details>
-  <summary>Typescript</summary>
+  <summary><img align="middle" alt="Typescript" src="./resources/typescript.svg" width=20> Typescript</summary>
+
+  <a href="https://www.npmjs.com/package/open-next-cdk">
+    <img align="middle" alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
+  </a>
+
+  Install the dependency using npm:
 
   ```shell
   npm install --save-dev esbuild@0.17.16 open-next-cdk
   ```
+
+  Use the construct in your CDK application:
 
   ```ts
   import { Nextjs } from 'open-next-cdk';
@@ -76,7 +80,12 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   ```
 </details>
 <details>
-  <summary>Java</summary>
+  <summary><img align="middle" alt="Java" src="./resources/java.svg" width=20> Java</summary>
+  <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
+    <img align="middle" alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
+  </a>
+
+  Install the dependency using Maven:
 
   ```xml
   <dependency>
@@ -86,6 +95,8 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   </dependency>
   ```
 
+  Use the construct in your CDK application:
+
   ```java
   Nextjs.Builder.create(this, getConstructId())
           .nextjsPath("./web")
@@ -93,21 +104,39 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   ```
 </details>
 <details>
-  <summary>Go</summary>
+  <summary><img align="middle" alt="Go" src="./resources/go.svg" width=20> Go</summary>
+
+  <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
+    <img align="middle" alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/main?filename=opennextcdk%2Fgo.mod&label=GO&style=for-the-badge">
+  </a>
+
+  Install the dependency:
 
   ```shell
   go get github.com:datasprayio/open-next-cdk.git
   ```
 </details>
 <details>
-  <summary>Python</summary>
+  <summary><img align="middle" alt="Python" src="./resources/python.svg" width=20> Python</summary>
+
+  <a href="https://pypi.org/project/open-next-cdk/">
+    <img align="middle" alt="Pypi release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
+  </a>
+
+  Install the dependency:
 
   ```shell
   pip install open-next-cdk
   ```
 </details>
 <details>
-  <summary>.NET</summary>
+  <summary><img align="middle" alt=".NET" src="./resources/dotnet.svg" width=20> .NET</summary>
+
+  <a href="https://www.nuget.org/packages/Dataspray.OpenNextCdk">
+    <img align="middle" alt="Nuget release" src="https://img.shields.io/nuget/v/Dataspray.OpenNextCdk?style=for-the-badge">
+  </a>
+
+  Install the dependency:
 
   ```shell
   dotnet add package Dataspray.OpenNextCdk
@@ -119,65 +148,77 @@ This will automatically build your NextJS app and package it for you as part of 
 
 If you would prefer to package it separately, see below:
 
-### Build manually
+# Advanced
 
-Build NextJs using open-next:
+### Pre-built OpenNEXT package
 
-```shell
-open-next build
-```
+<details>
+  <summary>How-to</summary>
 
-You will find a new folder `.open-next` which contains the packaging for your NextJS App. Now you can use the construct by instructing it not to build your app, just use the OpenNEXT folder directly:
+  You may also provide already pre-built OpenNEXT package directly by building it yourself first:
 
-```ts
-import { Nextjs } from 'open-next-cdk';
+  ```shell
+  open-next build
+  ```
 
-new Nextjs(this, 'Web', {
-  nextjsPath: './web', // relative path to nextjs project containing .open-next folder
-  isPlaceholder: true, // Do not build, assume .open-next folder already exists
-});
-```
+  You will find a new folder `.open-next` which contains the packaging for your NextJS App. Now you can use the construct by instructing it not to build your app, just use the OpenNEXT folder directly:
 
-# Additional security
-```ts
-import { RemovalPolicy, Stack } from "aws-cdk-lib";
-import { Construct } from "constructs";
-import { CfnWebAcl } from "aws-cdk-lib/aws-wafv2";
-import { SecurityPolicyProtocol, type DistributionProps } from "aws-cdk-lib/aws-cloudfront";
-import { Nextjs, type NextjsDistributionProps } from "cdk-nextjs-standalone";
-import { Bucket, BlockPublicAccess, BucketEncryption } from "aws-cdk-lib/aws-s3";
+  ```ts
+  import { Nextjs } from 'open-next-cdk';
 
-// Because of `WebAcl`, this stack must be deployed in us-east-1. If you want
-// to deploy Nextjs in another region, add WAF in separate stack deployed in us-east-1
-export class UiStack {
-  constructor(scope: Construct, id: string) {
-    const webAcl = new CfnWebAcl(this, "WebAcl", { ... });
-    new Nextjs(this, "NextSite", {
-      nextjsPath: "...",
-      defaults: {
-        assetDeployment: {
-          bucket: new Bucket(this, "NextjsAssetDeploymentBucket", {
-            autoDeleteObjects: true,
-            removalPolicy: RemovalPolicy.DESTROY,
-            encryption: BucketEncryption.S3_MANAGED,
-            enforceSSL: true,
-            blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
-          }),
-        },
-        distribution: {
-          functionUrlAuthType: FunctionUrlAuthType.AWS_IAM,
-          cdk: {
-            distribution: {
-              webAclId: webAcl.attrArn,
-              minimumProtocolVersion: SecurityPolicyProtocol.TLS_V1_2_2021,
-            } as DistributionProps,
+  new Nextjs(this, 'Web', {
+    nextjsPath: './web', // relative path to nextjs project containing .open-next folder
+    isPlaceholder: true, // Do not build, assume .open-next folder already exists
+  });
+  ```
+</details>
+
+### Additional security
+<details>
+  <summary>How-to</summary>
+
+  ```ts
+  import { RemovalPolicy, Stack } from "aws-cdk-lib";
+  import { Construct } from "constructs";
+  import { CfnWebAcl } from "aws-cdk-lib/aws-wafv2";
+  import { SecurityPolicyProtocol, type DistributionProps } from "aws-cdk-lib/aws-cloudfront";
+  import { Nextjs, type NextjsDistributionProps } from "cdk-nextjs-standalone";
+  import { Bucket, BlockPublicAccess, BucketEncryption } from "aws-cdk-lib/aws-s3";
+
+  // Because of `WebAcl`, this stack must be deployed in us-east-1. If you want
+  // to deploy Nextjs in another region, add WAF in separate stack deployed in us-east-1
+  export class UiStack {
+    constructor(scope: Construct, id: string) {
+      const webAcl = new CfnWebAcl(this, "WebAcl", { ... });
+      new Nextjs(this, "NextSite", {
+        nextjsPath: "...",
+        defaults: {
+          assetDeployment: {
+            bucket: new Bucket(this, "NextjsAssetDeploymentBucket", {
+              autoDeleteObjects: true,
+              removalPolicy: RemovalPolicy.DESTROY,
+              encryption: BucketEncryption.S3_MANAGED,
+              enforceSSL: true,
+              blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
+            }),
           },
-        } satisfies Partial<NextjsDistributionProps>,
-      },
-    });
+          distribution: {
+            functionUrlAuthType: FunctionUrlAuthType.AWS_IAM,
+            cdk: {
+              distribution: {
+                webAclId: webAcl.attrArn,
+                minimumProtocolVersion: SecurityPolicyProtocol.TLS_V1_2_2021,
+              } as DistributionProps,
+            },
+          } satisfies Partial<NextjsDistributionProps>,
+        },
+      });
+    }
   }
-}
-```
+  ```
+
+</details>
+<br />
 
 # About
 
@@ -216,10 +257,10 @@ Built on top of [open-next](https://open-next.js.org/), which was partially buil
 ### Fork from cdk-nextjs
 This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223) including Java, Go, .NET, Python using JSII.
 
-## Contributing
+# Contributing
 
-Hey there, we value every new contribution a lot 🙏🏼 thank you.
+Hey there, we value every new contribution a lot 🙏🏼 thank you. Open an issue or a PR and we'll gladly help you out.
 
-### Projen
-Don't manually update package.json or use npm CLI. Update dependencies in .projenrc.js then run `yarn projen`.
+## Using Projen
+Most boilerplate files are pre-generated including package.json. Don't update it directly, rather update `.projenrc.js` then run `yarn projen` to re-generate the files.
 
