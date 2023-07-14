@@ -1,46 +1,42 @@
-<h1 align="center">OpenNEXT CDK<br/>TS | Java | Go | Python | .NET</h1>
+<h1 align="center">
+  <div align="center">
+      <img align="middle" alt="Typescript" src="./resources/typescript.svg" width=15>
+      <img align="middle" alt="Java" src="./resources/java.svg" width=20>
+      <img align="middle" alt="Go" src="./resources/go.svg" width=30>
+      <img align="middle" alt="Python" src="./resources/python.svg" width=15>
+      <img align="middle" alt=".NET" src="./resources/dotnet.svg" width=30>
+  </div>
+  OpenNEXT CDK
+</h1>
 <div align="center">
   <a href="https://github.com/datasprayio/open-next-cdk/actions?query=workflow%3A%22build%22">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datasprayio/open-next-cdk/build.yml?style=for-the-badge">
+    <img align="middle" alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datasprayio/open-next-cdk/build.yml?style=for-the-badge">
   </a>
   <a href="https://github.com/datasprayio/open-next-cdk/blob/master/LICENSE">
-    <img alt="License" src="https://img.shields.io/github/license/datasprayio/open-next-cdk?style=for-the-badge">
+    <img align="middle" alt="License" src="https://img.shields.io/github/license/datasprayio/open-next-cdk?style=for-the-badge">
   </a>
-  <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
-  </a>
-  <a href="https://www.npmjs.com/package/matusfaro/open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
-  </a>
-  <a href="https://pypi.org/project/open-next-cdk/">
-    <img alt="Maven Central release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
-  </a>
-  <a href="https://github.com/orgs/datasprayio/packages?repo_name=open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk?style=for-the-badge">
-  </a>
-  <a href="https://www.nuget.org/packages/open-next-cdk">
-    <img alt="Maven Central release" src="https://img.shields.io/nuget/v/open-next-cdk?style=for-the-badge">
+  <a href="https://www.npmjs.com/package/open-next-cdk">
+    <img align="middle" alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?label=RELEASE&color=blue&style=for-the-badge">
   </a>
 </div>
-<h3 align="center">Deploy NextJS using OpenNEXT packaging to serverless AWS using CDK in any language</h3>
+<h3 align="center">Deploy NextJS on AWS using CDK IaC and OpenNEXT packaging</h3>
 
 ### Contents
 
 * [What is this?](#what-is-this)
 * [Quickstart](#quickstart)
+* [Advanced](#advanced)
 
-  * [Build manually](#build-manually)
-* [Additional security](#additional-security)
+  * [Pre-built OpenNEXT package](#pre-built-opennext-package)
+  * [Additional security](#additional-security)
 * [About](#about)
 
   * [Benefits](#benefits)
   * [Dependencies](#dependencies)
   * [Similar projects](#similar-projects)
+* [Contributing](#contributing)
 
-    * [Heavily based on](#heavily-based-on)
-    * [Fork from cdk-nextjs](#fork-from-cdk-nextjs)
-  * [Contributing](#contributing)
-  * [Projen](#projen)
+  * [Using Projen](#using-projen)
 
 # What is this?
 
@@ -51,13 +47,30 @@ Your NextJS app is packaged using OpenNEXT to fit the serverless format on Lambd
 
 # Quickstart
 
-Add the dependency `esbuild@0.17.16` to your project along with `open-next-cdk`.
+### NextJS setup
+
+Add a dev dependency `esbuild@0.17.16` to your NextJS project.
+
+```shell
+npm install --save-dev esbuild@0.17.16
+```
+
+### CDK Construct
+
+Use this construct in your CDK application to deploy your NextJS app to AWS.
+
+<details>
+  <summary><img align="middle" alt="Typescript" src="./resources/typescript.svg" width=20> Typescript</summary>  <a href="https://www.npmjs.com/package/open-next-cdk">
+    <img align="middle" alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
+  </a>
+
+Install the dependency using npm:
 
 ```shell
 npm install --save-dev esbuild@0.17.16 open-next-cdk
 ```
 
-Add the following CDK construct to your CDK application
+Use the construct in your CDK application:
 
 ```go
 import { Nextjs } from 'open-next-cdk';
@@ -67,13 +80,82 @@ new Nextjs(this, 'Web', {
 });
 ```
 
+</details>
+<details>
+  <summary><img align="middle" alt="Java" src="./resources/java.svg" width=20> Java</summary>
+  <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
+    <img align="middle" alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
+  </a>
+
+Install the dependency using Maven:
+
+```xml
+<dependency>
+  <groupId>io.dataspray</groupId>
+  <artifactId>open-next-cdk</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
+Use the construct in your CDK application:
+
+```java
+Nextjs.Builder.create(this, getConstructId())
+        .nextjsPath("./web")
+        .build();
+```
+
+</details>
+<details>
+  <summary><img align="middle" alt="Go" src="./resources/go.svg" width=20> Go</summary>  <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
+    <img align="middle" alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/main?filename=opennextcdk%2Fgo.mod&label=GO&style=for-the-badge">
+  </a>
+
+Install the dependency:
+
+```shell
+go get github.com:datasprayio/open-next-cdk.git
+```
+
+</details>
+<details>
+  <summary><img align="middle" alt="Python" src="./resources/python.svg" width=20> Python</summary>  <a href="https://pypi.org/project/open-next-cdk/">
+    <img align="middle" alt="Pypi release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
+  </a>
+
+Install the dependency:
+
+```shell
+pip install open-next-cdk
+```
+
+</details>
+<details>
+  <summary><img align="middle" alt=".NET" src="./resources/dotnet.svg" width=20> .NET</summary>  <a href="https://www.nuget.org/packages/Dataspray.OpenNextCdk">
+    <img align="middle" alt="Nuget release" src="https://img.shields.io/nuget/v/Dataspray.OpenNextCdk?style=for-the-badge">
+  </a>
+
+Install the dependency:
+
+```shell
+dotnet add package Dataspray.OpenNextCdk
+```
+
+</details>
+<br/>
+
 This will automatically build your NextJS app and package it for you as part of the CDK construct.
 
 If you would prefer to package it separately, see below:
 
-### Build manually
+# Advanced
 
-Build NextJs using open-next:
+### Pre-built OpenNEXT package
+
+<details>
+  <summary>How-to</summary>
+
+You may also provide already pre-built OpenNEXT package directly by building it yourself first:
 
 ```shell
 open-next build
@@ -90,7 +172,12 @@ new Nextjs(this, 'Web', {
 });
 ```
 
-# Additional security
+</details>
+
+### Additional security
+
+<details>
+  <summary>How-to</summary>
 
 ```go
 import { RemovalPolicy, Stack } from "aws-cdk-lib";
@@ -132,6 +219,9 @@ export class UiStack {
 }
 ```
 
+</details>
+<br />
+
 # About
 
 Deploys a NextJs static site with server-side rendering and API support. Uses AWS lambda and CloudFront.
@@ -171,10 +261,10 @@ Built on top of [open-next](https://open-next.js.org/), which was partially buil
 
 This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223) including Java, Go, .NET, Python using JSII.
 
-## Contributing
+# Contributing
 
-Hey there, we value every new contribution a lot 🙏🏼 thank you.
+Hey there, we value every new contribution a lot 🙏🏼 thank you. Open an issue or a PR and we'll gladly help you out.
 
-### Projen
+## Using Projen
 
-Don't manually update package.json or use npm CLI. Update dependencies in .projenrc.js then run `yarn projen`.
+Most boilerplate files are pre-generated including package.json. Don't update it directly, rather update `.projenrc.js` then run `yarn projen` to re-generate the files.
