@@ -1,38 +1,93 @@
-# Deploy NextJS with CDK
+<h1 align="center">OpenNEXT CDK<br/>TS | Java | Go | Python | .NET</h1>
+<div align="center">
+  <a href="https://github.com/datasprayio/open-next-cdk/actions?query=workflow%3A%22build%22">
+    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/datasprayio/open-next-cdk/build.yml?style=for-the-badge">
+  </a>
+  <a href="https://github.com/datasprayio/open-next-cdk/blob/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/datasprayio/open-next-cdk?style=for-the-badge">
+  </a>
+  <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
+    <img alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
+  </a>
+  <a href="https://www.npmjs.com/package/matusfaro/open-next-cdk">
+    <img alt="Maven Central release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
+  </a>
+  <a href="https://pypi.org/project/open-next-cdk/">
+    <img alt="Maven Central release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
+  </a>
+  <a href="https://github.com/orgs/datasprayio/packages?repo_name=open-next-cdk">
+    <img alt="Maven Central release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk?style=for-the-badge">
+  </a>
+  <a href="https://www.nuget.org/packages/open-next-cdk">
+    <img alt="Maven Central release" src="https://img.shields.io/nuget/v/open-next-cdk?style=for-the-badge">
+  </a>
+</div>
+<h3 align="center">Deploy NextJS using OpenNEXT packaging to serverless AWS using CDK in any language</h3>
 
-[![View on Construct Hub](https://constructs.dev/badge?package=cdk-nextjs-standalone)](https://constructs.dev/packages/cdk-nextjs-standalone)
+### Contents
 
-## What is this?
+- [What is this?](#what-is-this)
+- [Quickstart](#quickstart)
+    - [Build manually](#build-manually)
+- [Additional security](#additional-security)
+- [About](#about)
+    - [Benefits](#benefits)
+    - [Dependencies](#dependencies)
+    - [Similar projects](#similar-projects)
+        - [Heavily based on](#heavily-based-on)
+        - [Fork from cdk-nextjs](#fork-from-cdk-nextjs)
+    - [Contributing](#contributing)
+    - [Projen](#projen)
 
-A CDK construct to deploy a NextJS app using AWS CDK.
+# What is this?
+
+A building block for Amazon's infrastructure-as-code CDK toolkit to deploy a NextJS app using AWS serverless services.
 Supported NextJs versions: >=12.3.0+ (includes 13.0.0+)
 
-Uses the [standalone output](https://nextjs.org/docs/advanced-features/output-file-tracing) build mode.
+Your NextJS app is packaged using OpenNEXT to fit the serverless format on Lambda
 
-## Quickstart
+# Quickstart
 
-Add the dependency `esbuild@0.17.16` to your project along with `cdk-nextjs-standalone`.
+Add the dependency `esbuild@0.17.16` to your project along with `open-next-cdk`.
 
 ```shell
-npm install -D esbuild@0.17.16 cdk-nextjs-standalone
+npm install --save-dev esbuild@0.17.16 open-next-cdk
 ```
 
+Add the following CDK construct to your CDK application
+
 ```ts
-import path from 'path';
-import { Nextjs } from 'cdk-nextjs-standalone';
+import { Nextjs } from 'open-next-cdk';
 
 new Nextjs(this, 'Web', {
   nextjsPath: './web', // relative path to nextjs project root
 });
 ```
 
-## Documentation
+This will automatically build your NextJS app and package it for you as part of the CDK construct.
 
-Available on [Construct Hub](https://constructs.dev/packages/cdk-nextjs-standalone/).
+If you would prefer to package it separately, see below:
 
-## Customization
+### Build manually
 
-### Increased Security
+Build NextJs using open-next:
+
+```shell
+open-next build
+```
+
+You will find a new folder `.open-next` which contains the packaging for your NextJS App. Now you can use the construct by instructing it not to build your app, just use the OpenNEXT folder directly:
+
+```ts
+import { Nextjs } from 'open-next-cdk';
+
+new Nextjs(this, 'Web', {
+  nextjsPath: './web', // relative path to nextjs project containing .open-next folder
+  isPlaceholder: true, // Do not build, assume .open-next folder already exists
+});
+```
+
+# Additional security
 ```ts
 import { RemovalPolicy, Stack } from "aws-cdk-lib";
 import { Construct } from "constructs";
@@ -73,11 +128,7 @@ export class UiStack {
 }
 ```
 
-### Discord Chat
-
-We're in the #open-next channel on the [Serverless Stack Discord](https://discord.gg/sst).
-
-## About
+# About
 
 Deploys a NextJs static site with server-side rendering and API support. Uses AWS lambda and CloudFront.
 
@@ -99,7 +150,9 @@ You may want to look at [Serverless Stack](https://sst.dev) and its [NextjsSite]
 
 Built on top of [open-next](https://open-next.js.org/), which was partially built using the original core of cdk-nextjs-standalone.
 
-## Heavily based on
+## Similar projects
+
+### Heavily based on
 
 - [Open-next](https://open-next.js.org/)
 - <https://github.com/iiroj/iiro.fi/commit/bd43222032d0dbb765e1111825f64dbb5db851d9>
@@ -109,21 +162,13 @@ Built on top of [open-next](https://open-next.js.org/), which was partially buil
   - [RemixSite](https://github.com/serverless-stack/sst/blob/master/packages/resources/src/NextjsSite.ts) construct
   - [NextjsSite](https://github.com/serverless-stack/sst/blob/master/packages/resources/src/RemixSite.ts) construct
 
-## Contribute
+### Fork from cdk-nextjs
+This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223) including Java, Go, .NET, Python using JSII.
+
+## Contributing
 
 Hey there, we value every new contribution a lot 🙏🏼 thank you.
 
-Here is a short HowTo before you get started:
-
-1. Please make sure to create a bug first
-2. Link the bug in your pull request
-3. Run `yarn build` after you made your changes and before you open a pull request
-
 ### Projen
-Don't manually update package.json or use npm CLI. Update dependencies in .projenrc.js then run yarn projen.
+Don't manually update package.json or use npm CLI. Update dependencies in .projenrc.js then run `yarn projen`.
 
-## Breaking changes
-
-- v3.0.0: Using open-next for building, ARM64 architecture for image handling, new build options.
-
-- v2.0.0: SST wrapper changed, lambda/assets/distribution defaults now are in the `defaults` prop, refactored distribution settings into the new NextjsDistribution construct. If you are upgrading, you must temporarily remove the `customDomain` on your existing 1.x.x app before upgrading to >=2.x.x because the CloudFront distribution will get recreated due to refactoring, and the custom domain must be globally unique across all CloudFront distributions. Prepare for downtime.

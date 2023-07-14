@@ -1,26 +1,38 @@
 const { awscdk, JsonPatch } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
-  author: 'JetBridge',
-  authorAddress: 'mischa@jetbridge.com',
+  author: 'Dataspray',
+  authorAddress: 'matus@matus.io',
   cdkVersion: '2.73.0',
   defaultReleaseBranch: 'main',
-  name: 'cdk-nextjs-standalone',
-  repositoryUrl: 'https://github.com/jetbridge/cdk-nextjs.git',
+  name: 'OpenNEXT via CDK',
+  repositoryUrl: 'https://github.com/datasprayio/open-next-cdk.git',
   authorOrganization: true,
-  packageName: 'cdk-nextjs-standalone',
+  packageName: 'open-next-cdk',
   publishToMaven: {
-    javaPackage: 'com.jetbridge.cdknextjsstandalone',
-    mavenArtifactId: 'cdk-nextjs-standalone',
-    mavenGroupId: 'com.jetbridge',
+    javaPackage: 'io.dataspray.opennextcdk',
+    mavenGroupId: 'io.dataspray',
+    mavenArtifactId: 'open-next-cdk',
+    mavenEndpoint: 'https://s01.oss.sonatype.org',
   },
-  description: 'Deploy a NextJS app to AWS using CDK. Uses standalone build and output tracing.',
-  keywords: ['nextjs', 'next', 'aws-cdk', 'aws', 'cdk', 'standalone', 'iac', 'infrastructure', 'cloud', 'serverless'],
+  publishToPypi: {
+    distName: 'open-next-cdk',
+    module: 'open_next_cdk',
+  },
+  publishToGo: {
+    moduleName: 'github.com/datasprayio/open-next-cdk',
+  },
+  publishToNuget: {
+    packageId: 'Dataspray.OpenNextCdk',
+    dotNetNamespace: 'Dataspray.OpenNextCdk',
+  },
+  description: 'Deploy a NextJS app using OpenNEXT packaging to serverless AWS using CDK',
+  keywords: ['open-next', 'opennext', 'nextjs', 'next', 'aws-cdk', 'awscdk', 'cdk', 'serverless'],
   eslintOptions: {
     prettier: true,
-    // ignorePatterns: ['assets/**/*']
   },
-  majorVersion: 3,
-  // prerelease: 'pre',
+
+  prerelease: 'alpha', // TODO Remove me
+  majorVersion: 0,
 
   tsconfig: { compilerOptions: { noUnusedLocals: false }, include: ['assets/**/*.ts'] },
   tsconfigDev: { compilerOptions: { noUnusedLocals: false } },
@@ -58,8 +70,5 @@ if (packageJson) {
     ])
   );
 }
-// project.eslint.addOverride({
-//   rules: {},
-// });
-// project.tsconfig.addInclude('assets/**/*.ts');
+
 project.synth();

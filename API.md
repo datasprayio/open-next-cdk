@@ -2,41 +2,41 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### ImageOptimizationLambda <a name="ImageOptimizationLambda" id="cdk-nextjs-standalone.ImageOptimizationLambda"></a>
+### ImageOptimizationLambda <a name="ImageOptimizationLambda" id="open-next-cdk.ImageOptimizationLambda"></a>
 
 This lambda handles image optimization.
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.ImageOptimizationLambda.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.ImageOptimizationLambda.Initializer"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 new ImageOptimizationLambda(scope: Construct, id: string, props: ImageOptimizationProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps">ImageOptimizationProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.ImageOptimizationProps">ImageOptimizationProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.ImageOptimizationLambda.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.ImageOptimizationLambda.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.ImageOptimizationLambda.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.ImageOptimizationLambda.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.ImageOptimizationProps">ImageOptimizationProps</a>
+- *Type:* <a href="#open-next-cdk.ImageOptimizationProps">ImageOptimizationProps</a>
 
 ---
 
@@ -44,30 +44,30 @@ new ImageOptimizationLambda(scope: Construct, id: string, props: ImageOptimizati
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addEventSource">addEventSource</a></code> | Adds an event source to this function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addEventSourceMapping">addEventSourceMapping</a></code> | Adds an event source that maps to this AWS Lambda function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addFunctionUrl">addFunctionUrl</a></code> | Adds a url to this lambda function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addPermission">addPermission</a></code> | Adds a permission to the Lambda resource policy. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addToRolePolicy">addToRolePolicy</a></code> | Adds a statement to the IAM role assumed by the instance. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.configureAsyncInvoke">configureAsyncInvoke</a></code> | Configures options for asynchronous invocation. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions">considerWarningOnInvokeFunctionPermissions</a></code> | A warning will be added to functions under the following conditions: - permissions that include `lambda:InvokeFunction` are added to the unqualified function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.grantInvoke">grantInvoke</a></code> | Grant the given identity permissions to invoke this Lambda. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.grantInvokeUrl">grantInvokeUrl</a></code> | Grant the given identity permissions to invoke this Lambda Function URL. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metric">metric</a></code> | Return the given named metric for this Function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricDuration">metricDuration</a></code> | How long execution of this Lambda takes. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricErrors">metricErrors</a></code> | How many invocations of this Lambda fail. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricInvocations">metricInvocations</a></code> | How often this Lambda is invoked. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricThrottles">metricThrottles</a></code> | How often this Lambda is throttled. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addAlias">addAlias</a></code> | Defines an alias for this function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addEnvironment">addEnvironment</a></code> | Adds an environment variable to this Lambda function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.addLayers">addLayers</a></code> | Adds one or more Lambda Layers to this Lambda function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.invalidateVersionBasedOn">invalidateVersionBasedOn</a></code> | Mix additional information into the hash of the Version object. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addEventSource">addEventSource</a></code> | Adds an event source to this function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addEventSourceMapping">addEventSourceMapping</a></code> | Adds an event source that maps to this AWS Lambda function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addFunctionUrl">addFunctionUrl</a></code> | Adds a url to this lambda function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addPermission">addPermission</a></code> | Adds a permission to the Lambda resource policy. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addToRolePolicy">addToRolePolicy</a></code> | Adds a statement to the IAM role assumed by the instance. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.configureAsyncInvoke">configureAsyncInvoke</a></code> | Configures options for asynchronous invocation. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions">considerWarningOnInvokeFunctionPermissions</a></code> | A warning will be added to functions under the following conditions: - permissions that include `lambda:InvokeFunction` are added to the unqualified function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.grantInvoke">grantInvoke</a></code> | Grant the given identity permissions to invoke this Lambda. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.grantInvokeUrl">grantInvokeUrl</a></code> | Grant the given identity permissions to invoke this Lambda Function URL. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metric">metric</a></code> | Return the given named metric for this Function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricDuration">metricDuration</a></code> | How long execution of this Lambda takes. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricErrors">metricErrors</a></code> | How many invocations of this Lambda fail. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricInvocations">metricInvocations</a></code> | How often this Lambda is invoked. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricThrottles">metricThrottles</a></code> | How often this Lambda is throttled. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addAlias">addAlias</a></code> | Defines an alias for this function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addEnvironment">addEnvironment</a></code> | Adds an environment variable to this Lambda function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.addLayers">addLayers</a></code> | Adds one or more Lambda Layers to this Lambda function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.invalidateVersionBasedOn">invalidateVersionBasedOn</a></code> | Mix additional information into the hash of the Version object. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.ImageOptimizationLambda.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.ImageOptimizationLambda.toString"></a>
 
 ```typescript
 public toString(): string
@@ -75,7 +75,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="cdk-nextjs-standalone.ImageOptimizationLambda.applyRemovalPolicy"></a>
+##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="open-next-cdk.ImageOptimizationLambda.applyRemovalPolicy"></a>
 
 ```typescript
 public applyRemovalPolicy(policy: RemovalPolicy): void
@@ -91,13 +91,13 @@ to be replaced.
 The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
 account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 
-###### `policy`<sup>Required</sup> <a name="policy" id="cdk-nextjs-standalone.ImageOptimizationLambda.applyRemovalPolicy.parameter.policy"></a>
+###### `policy`<sup>Required</sup> <a name="policy" id="open-next-cdk.ImageOptimizationLambda.applyRemovalPolicy.parameter.policy"></a>
 
 - *Type:* aws-cdk-lib.RemovalPolicy
 
 ---
 
-##### `addEventSource` <a name="addEventSource" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEventSource"></a>
+##### `addEventSource` <a name="addEventSource" id="open-next-cdk.ImageOptimizationLambda.addEventSource"></a>
 
 ```typescript
 public addEventSource(source: IEventSource): void
@@ -113,13 +113,13 @@ import { SqsEventSource } from '@aws-cdk/aws-lambda-event-sources';
 myFunction.addEventSource(new SqsEventSource(myQueue));
 ```
 
-###### `source`<sup>Required</sup> <a name="source" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEventSource.parameter.source"></a>
+###### `source`<sup>Required</sup> <a name="source" id="open-next-cdk.ImageOptimizationLambda.addEventSource.parameter.source"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.IEventSource
 
 ---
 
-##### `addEventSourceMapping` <a name="addEventSourceMapping" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEventSourceMapping"></a>
+##### `addEventSourceMapping` <a name="addEventSourceMapping" id="open-next-cdk.ImageOptimizationLambda.addEventSourceMapping"></a>
 
 ```typescript
 public addEventSourceMapping(id: string, options: EventSourceMappingOptions): EventSourceMapping
@@ -127,19 +127,19 @@ public addEventSourceMapping(id: string, options: EventSourceMappingOptions): Ev
 
 Adds an event source that maps to this AWS Lambda function.
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEventSourceMapping.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.ImageOptimizationLambda.addEventSourceMapping.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `options`<sup>Required</sup> <a name="options" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEventSourceMapping.parameter.options"></a>
+###### `options`<sup>Required</sup> <a name="options" id="open-next-cdk.ImageOptimizationLambda.addEventSourceMapping.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.EventSourceMappingOptions
 
 ---
 
-##### `addFunctionUrl` <a name="addFunctionUrl" id="cdk-nextjs-standalone.ImageOptimizationLambda.addFunctionUrl"></a>
+##### `addFunctionUrl` <a name="addFunctionUrl" id="open-next-cdk.ImageOptimizationLambda.addFunctionUrl"></a>
 
 ```typescript
 public addFunctionUrl(options?: FunctionUrlOptions): FunctionUrl
@@ -147,13 +147,13 @@ public addFunctionUrl(options?: FunctionUrlOptions): FunctionUrl
 
 Adds a url to this lambda function.
 
-###### `options`<sup>Optional</sup> <a name="options" id="cdk-nextjs-standalone.ImageOptimizationLambda.addFunctionUrl.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="open-next-cdk.ImageOptimizationLambda.addFunctionUrl.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.FunctionUrlOptions
 
 ---
 
-##### `addPermission` <a name="addPermission" id="cdk-nextjs-standalone.ImageOptimizationLambda.addPermission"></a>
+##### `addPermission` <a name="addPermission" id="open-next-cdk.ImageOptimizationLambda.addPermission"></a>
 
 ```typescript
 public addPermission(id: string, permission: Permission): void
@@ -163,7 +163,7 @@ Adds a permission to the Lambda resource policy.
 
 > [Permission for details.](Permission for details.)
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.ImageOptimizationLambda.addPermission.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.ImageOptimizationLambda.addPermission.parameter.id"></a>
 
 - *Type:* string
 
@@ -171,7 +171,7 @@ The id for the permission construct.
 
 ---
 
-###### `permission`<sup>Required</sup> <a name="permission" id="cdk-nextjs-standalone.ImageOptimizationLambda.addPermission.parameter.permission"></a>
+###### `permission`<sup>Required</sup> <a name="permission" id="open-next-cdk.ImageOptimizationLambda.addPermission.parameter.permission"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.Permission
 
@@ -179,7 +179,7 @@ The permission to grant to this Lambda function.
 
 ---
 
-##### `addToRolePolicy` <a name="addToRolePolicy" id="cdk-nextjs-standalone.ImageOptimizationLambda.addToRolePolicy"></a>
+##### `addToRolePolicy` <a name="addToRolePolicy" id="open-next-cdk.ImageOptimizationLambda.addToRolePolicy"></a>
 
 ```typescript
 public addToRolePolicy(statement: PolicyStatement): void
@@ -187,13 +187,13 @@ public addToRolePolicy(statement: PolicyStatement): void
 
 Adds a statement to the IAM role assumed by the instance.
 
-###### `statement`<sup>Required</sup> <a name="statement" id="cdk-nextjs-standalone.ImageOptimizationLambda.addToRolePolicy.parameter.statement"></a>
+###### `statement`<sup>Required</sup> <a name="statement" id="open-next-cdk.ImageOptimizationLambda.addToRolePolicy.parameter.statement"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.PolicyStatement
 
 ---
 
-##### `configureAsyncInvoke` <a name="configureAsyncInvoke" id="cdk-nextjs-standalone.ImageOptimizationLambda.configureAsyncInvoke"></a>
+##### `configureAsyncInvoke` <a name="configureAsyncInvoke" id="open-next-cdk.ImageOptimizationLambda.configureAsyncInvoke"></a>
 
 ```typescript
 public configureAsyncInvoke(options: EventInvokeConfigOptions): void
@@ -201,13 +201,13 @@ public configureAsyncInvoke(options: EventInvokeConfigOptions): void
 
 Configures options for asynchronous invocation.
 
-###### `options`<sup>Required</sup> <a name="options" id="cdk-nextjs-standalone.ImageOptimizationLambda.configureAsyncInvoke.parameter.options"></a>
+###### `options`<sup>Required</sup> <a name="options" id="open-next-cdk.ImageOptimizationLambda.configureAsyncInvoke.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.EventInvokeConfigOptions
 
 ---
 
-##### `considerWarningOnInvokeFunctionPermissions` <a name="considerWarningOnInvokeFunctionPermissions" id="cdk-nextjs-standalone.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions"></a>
+##### `considerWarningOnInvokeFunctionPermissions` <a name="considerWarningOnInvokeFunctionPermissions" id="open-next-cdk.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions"></a>
 
 ```typescript
 public considerWarningOnInvokeFunctionPermissions(scope: Construct, action: string): void
@@ -220,19 +220,19 @@ function.currentVersion is invoked before or after the permission is created.
 This applies only to permissions on Lambda functions, not versions or aliases.
 This function is overridden as a noOp for QualifiedFunctionBase.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `action`<sup>Required</sup> <a name="action" id="cdk-nextjs-standalone.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions.parameter.action"></a>
+###### `action`<sup>Required</sup> <a name="action" id="open-next-cdk.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions.parameter.action"></a>
 
 - *Type:* string
 
 ---
 
-##### `grantInvoke` <a name="grantInvoke" id="cdk-nextjs-standalone.ImageOptimizationLambda.grantInvoke"></a>
+##### `grantInvoke` <a name="grantInvoke" id="open-next-cdk.ImageOptimizationLambda.grantInvoke"></a>
 
 ```typescript
 public grantInvoke(grantee: IGrantable): Grant
@@ -240,13 +240,13 @@ public grantInvoke(grantee: IGrantable): Grant
 
 Grant the given identity permissions to invoke this Lambda.
 
-###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-nextjs-standalone.ImageOptimizationLambda.grantInvoke.parameter.grantee"></a>
+###### `grantee`<sup>Required</sup> <a name="grantee" id="open-next-cdk.ImageOptimizationLambda.grantInvoke.parameter.grantee"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 ---
 
-##### `grantInvokeUrl` <a name="grantInvokeUrl" id="cdk-nextjs-standalone.ImageOptimizationLambda.grantInvokeUrl"></a>
+##### `grantInvokeUrl` <a name="grantInvokeUrl" id="open-next-cdk.ImageOptimizationLambda.grantInvokeUrl"></a>
 
 ```typescript
 public grantInvokeUrl(grantee: IGrantable): Grant
@@ -254,13 +254,13 @@ public grantInvokeUrl(grantee: IGrantable): Grant
 
 Grant the given identity permissions to invoke this Lambda Function URL.
 
-###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-nextjs-standalone.ImageOptimizationLambda.grantInvokeUrl.parameter.grantee"></a>
+###### `grantee`<sup>Required</sup> <a name="grantee" id="open-next-cdk.ImageOptimizationLambda.grantInvokeUrl.parameter.grantee"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 ---
 
-##### `metric` <a name="metric" id="cdk-nextjs-standalone.ImageOptimizationLambda.metric"></a>
+##### `metric` <a name="metric" id="open-next-cdk.ImageOptimizationLambda.metric"></a>
 
 ```typescript
 public metric(metricName: string, props?: MetricOptions): Metric
@@ -268,19 +268,19 @@ public metric(metricName: string, props?: MetricOptions): Metric
 
 Return the given named metric for this Function.
 
-###### `metricName`<sup>Required</sup> <a name="metricName" id="cdk-nextjs-standalone.ImageOptimizationLambda.metric.parameter.metricName"></a>
+###### `metricName`<sup>Required</sup> <a name="metricName" id="open-next-cdk.ImageOptimizationLambda.metric.parameter.metricName"></a>
 
 - *Type:* string
 
 ---
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metric.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metric.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricDuration` <a name="metricDuration" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricDuration"></a>
+##### `metricDuration` <a name="metricDuration" id="open-next-cdk.ImageOptimizationLambda.metricDuration"></a>
 
 ```typescript
 public metricDuration(props?: MetricOptions): Metric
@@ -290,13 +290,13 @@ How long execution of this Lambda takes.
 
 Average over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricDuration.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricDuration.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricErrors` <a name="metricErrors" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricErrors"></a>
+##### `metricErrors` <a name="metricErrors" id="open-next-cdk.ImageOptimizationLambda.metricErrors"></a>
 
 ```typescript
 public metricErrors(props?: MetricOptions): Metric
@@ -306,13 +306,13 @@ How many invocations of this Lambda fail.
 
 Sum over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricErrors.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricErrors.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricInvocations` <a name="metricInvocations" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricInvocations"></a>
+##### `metricInvocations` <a name="metricInvocations" id="open-next-cdk.ImageOptimizationLambda.metricInvocations"></a>
 
 ```typescript
 public metricInvocations(props?: MetricOptions): Metric
@@ -322,13 +322,13 @@ How often this Lambda is invoked.
 
 Sum over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricInvocations.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricInvocations.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricThrottles` <a name="metricThrottles" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricThrottles"></a>
+##### `metricThrottles` <a name="metricThrottles" id="open-next-cdk.ImageOptimizationLambda.metricThrottles"></a>
 
 ```typescript
 public metricThrottles(props?: MetricOptions): Metric
@@ -338,13 +338,13 @@ How often this Lambda is throttled.
 
 Sum over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricThrottles.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricThrottles.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `addAlias` <a name="addAlias" id="cdk-nextjs-standalone.ImageOptimizationLambda.addAlias"></a>
+##### `addAlias` <a name="addAlias" id="open-next-cdk.ImageOptimizationLambda.addAlias"></a>
 
 ```typescript
 public addAlias(aliasName: string, options?: AliasOptions): Alias
@@ -368,7 +368,7 @@ new lambda.Alias(this, 'AliasLive', {
 });
 ```
 
-###### `aliasName`<sup>Required</sup> <a name="aliasName" id="cdk-nextjs-standalone.ImageOptimizationLambda.addAlias.parameter.aliasName"></a>
+###### `aliasName`<sup>Required</sup> <a name="aliasName" id="open-next-cdk.ImageOptimizationLambda.addAlias.parameter.aliasName"></a>
 
 - *Type:* string
 
@@ -376,7 +376,7 @@ The name of the alias.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="cdk-nextjs-standalone.ImageOptimizationLambda.addAlias.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="open-next-cdk.ImageOptimizationLambda.addAlias.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.AliasOptions
 
@@ -384,7 +384,7 @@ Alias options.
 
 ---
 
-##### `addEnvironment` <a name="addEnvironment" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEnvironment"></a>
+##### `addEnvironment` <a name="addEnvironment" id="open-next-cdk.ImageOptimizationLambda.addEnvironment"></a>
 
 ```typescript
 public addEnvironment(key: string, value: string, options?: EnvironmentOptions): Function
@@ -394,7 +394,7 @@ Adds an environment variable to this Lambda function.
 
 If this is a ref to a Lambda function, this operation results in a no-op.
 
-###### `key`<sup>Required</sup> <a name="key" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEnvironment.parameter.key"></a>
+###### `key`<sup>Required</sup> <a name="key" id="open-next-cdk.ImageOptimizationLambda.addEnvironment.parameter.key"></a>
 
 - *Type:* string
 
@@ -402,7 +402,7 @@ The environment variable key.
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEnvironment.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="open-next-cdk.ImageOptimizationLambda.addEnvironment.parameter.value"></a>
 
 - *Type:* string
 
@@ -410,7 +410,7 @@ The environment variable's value.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="cdk-nextjs-standalone.ImageOptimizationLambda.addEnvironment.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="open-next-cdk.ImageOptimizationLambda.addEnvironment.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.EnvironmentOptions
 
@@ -418,7 +418,7 @@ Environment variable options.
 
 ---
 
-##### `addLayers` <a name="addLayers" id="cdk-nextjs-standalone.ImageOptimizationLambda.addLayers"></a>
+##### `addLayers` <a name="addLayers" id="open-next-cdk.ImageOptimizationLambda.addLayers"></a>
 
 ```typescript
 public addLayers(layers: ILayerVersion): void
@@ -426,7 +426,7 @@ public addLayers(layers: ILayerVersion): void
 
 Adds one or more Lambda Layers to this Lambda function.
 
-###### `layers`<sup>Required</sup> <a name="layers" id="cdk-nextjs-standalone.ImageOptimizationLambda.addLayers.parameter.layers"></a>
+###### `layers`<sup>Required</sup> <a name="layers" id="open-next-cdk.ImageOptimizationLambda.addLayers.parameter.layers"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.ILayerVersion
 
@@ -434,7 +434,7 @@ the layers to be added.
 
 ---
 
-##### `invalidateVersionBasedOn` <a name="invalidateVersionBasedOn" id="cdk-nextjs-standalone.ImageOptimizationLambda.invalidateVersionBasedOn"></a>
+##### `invalidateVersionBasedOn` <a name="invalidateVersionBasedOn" id="open-next-cdk.ImageOptimizationLambda.invalidateVersionBasedOn"></a>
 
 ```typescript
 public invalidateVersionBasedOn(x: string): void
@@ -457,7 +457,7 @@ a new Version needs to be created.
 
 This method may be called more than once.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.ImageOptimizationLambda.invalidateVersionBasedOn.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.ImageOptimizationLambda.invalidateVersionBasedOn.parameter.x"></a>
 
 - *Type:* string
 
@@ -467,34 +467,34 @@ This method may be called more than once.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.classifyVersionProperty">classifyVersionProperty</a></code> | Record whether specific properties in the `AWS::Lambda::Function` resource should also be associated to the Version resource. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionArn">fromFunctionArn</a></code> | Import a lambda function into the CDK using its ARN. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionAttributes">fromFunctionAttributes</a></code> | Creates a Lambda function object which represents a function not defined within this stack. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionName">fromFunctionName</a></code> | Import a lambda function into the CDK using its name. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricAll">metricAll</a></code> | Return the given named metric for this Lambda. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricAllConcurrentExecutions">metricAllConcurrentExecutions</a></code> | Metric for the number of concurrent executions across all Lambdas. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricAllDuration">metricAllDuration</a></code> | Metric for the Duration executing all Lambdas. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricAllErrors">metricAllErrors</a></code> | Metric for the number of Errors executing all Lambdas. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricAllInvocations">metricAllInvocations</a></code> | Metric for the number of invocations of all Lambdas. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricAllThrottles">metricAllThrottles</a></code> | Metric for the number of throttled invocations of all Lambdas. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.metricAllUnreservedConcurrentExecutions">metricAllUnreservedConcurrentExecutions</a></code> | Metric for the number of unreserved concurrent executions across all Lambdas. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.classifyVersionProperty">classifyVersionProperty</a></code> | Record whether specific properties in the `AWS::Lambda::Function` resource should also be associated to the Version resource. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.fromFunctionArn">fromFunctionArn</a></code> | Import a lambda function into the CDK using its ARN. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.fromFunctionAttributes">fromFunctionAttributes</a></code> | Creates a Lambda function object which represents a function not defined within this stack. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.fromFunctionName">fromFunctionName</a></code> | Import a lambda function into the CDK using its name. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricAll">metricAll</a></code> | Return the given named metric for this Lambda. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricAllConcurrentExecutions">metricAllConcurrentExecutions</a></code> | Metric for the number of concurrent executions across all Lambdas. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricAllDuration">metricAllDuration</a></code> | Metric for the Duration executing all Lambdas. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricAllErrors">metricAllErrors</a></code> | Metric for the number of Errors executing all Lambdas. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricAllInvocations">metricAllInvocations</a></code> | Metric for the number of invocations of all Lambdas. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricAllThrottles">metricAllThrottles</a></code> | Metric for the number of throttled invocations of all Lambdas. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.metricAllUnreservedConcurrentExecutions">metricAllUnreservedConcurrentExecutions</a></code> | Metric for the number of unreserved concurrent executions across all Lambdas. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.ImageOptimizationLambda.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.ImageOptimizationLambda.isConstruct"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.ImageOptimizationLambda.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.ImageOptimizationLambda.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -502,42 +502,42 @@ Any object.
 
 ---
 
-##### `isOwnedResource` <a name="isOwnedResource" id="cdk-nextjs-standalone.ImageOptimizationLambda.isOwnedResource"></a>
+##### `isOwnedResource` <a name="isOwnedResource" id="open-next-cdk.ImageOptimizationLambda.isOwnedResource"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.isOwnedResource(construct: IConstruct)
 ```
 
 Returns true if the construct was created by CDK, and false otherwise.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="cdk-nextjs-standalone.ImageOptimizationLambda.isOwnedResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="open-next-cdk.ImageOptimizationLambda.isOwnedResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `isResource` <a name="isResource" id="cdk-nextjs-standalone.ImageOptimizationLambda.isResource"></a>
+##### `isResource` <a name="isResource" id="open-next-cdk.ImageOptimizationLambda.isResource"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.isResource(construct: IConstruct)
 ```
 
 Check whether the given construct is a Resource.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="cdk-nextjs-standalone.ImageOptimizationLambda.isResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="open-next-cdk.ImageOptimizationLambda.isResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `classifyVersionProperty` <a name="classifyVersionProperty" id="cdk-nextjs-standalone.ImageOptimizationLambda.classifyVersionProperty"></a>
+##### `classifyVersionProperty` <a name="classifyVersionProperty" id="open-next-cdk.ImageOptimizationLambda.classifyVersionProperty"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.classifyVersionProperty(propertyName: string, locked: boolean)
 ```
@@ -546,7 +546,7 @@ Record whether specific properties in the `AWS::Lambda::Function` resource shoul
 
 See 'currentVersion' section in the module README for more details.
 
-###### `propertyName`<sup>Required</sup> <a name="propertyName" id="cdk-nextjs-standalone.ImageOptimizationLambda.classifyVersionProperty.parameter.propertyName"></a>
+###### `propertyName`<sup>Required</sup> <a name="propertyName" id="open-next-cdk.ImageOptimizationLambda.classifyVersionProperty.parameter.propertyName"></a>
 
 - *Type:* string
 
@@ -554,7 +554,7 @@ The property to classify.
 
 ---
 
-###### `locked`<sup>Required</sup> <a name="locked" id="cdk-nextjs-standalone.ImageOptimizationLambda.classifyVersionProperty.parameter.locked"></a>
+###### `locked`<sup>Required</sup> <a name="locked" id="open-next-cdk.ImageOptimizationLambda.classifyVersionProperty.parameter.locked"></a>
 
 - *Type:* boolean
 
@@ -562,45 +562,45 @@ whether the property should be associated to the version or not.
 
 ---
 
-##### `fromFunctionArn` <a name="fromFunctionArn" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionArn"></a>
+##### `fromFunctionArn` <a name="fromFunctionArn" id="open-next-cdk.ImageOptimizationLambda.fromFunctionArn"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.fromFunctionArn(scope: Construct, id: string, functionArn: string)
 ```
 
 Import a lambda function into the CDK using its ARN.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionArn.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.ImageOptimizationLambda.fromFunctionArn.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionArn.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.ImageOptimizationLambda.fromFunctionArn.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `functionArn`<sup>Required</sup> <a name="functionArn" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionArn.parameter.functionArn"></a>
+###### `functionArn`<sup>Required</sup> <a name="functionArn" id="open-next-cdk.ImageOptimizationLambda.fromFunctionArn.parameter.functionArn"></a>
 
 - *Type:* string
 
 ---
 
-##### `fromFunctionAttributes` <a name="fromFunctionAttributes" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionAttributes"></a>
+##### `fromFunctionAttributes` <a name="fromFunctionAttributes" id="open-next-cdk.ImageOptimizationLambda.fromFunctionAttributes"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.fromFunctionAttributes(scope: Construct, id: string, attrs: FunctionAttributes)
 ```
 
 Creates a Lambda function object which represents a function not defined within this stack.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionAttributes.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.ImageOptimizationLambda.fromFunctionAttributes.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -608,7 +608,7 @@ The parent construct.
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionAttributes.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.ImageOptimizationLambda.fromFunctionAttributes.parameter.id"></a>
 
 - *Type:* string
 
@@ -616,7 +616,7 @@ The name of the lambda construct.
 
 ---
 
-###### `attrs`<sup>Required</sup> <a name="attrs" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionAttributes.parameter.attrs"></a>
+###### `attrs`<sup>Required</sup> <a name="attrs" id="open-next-cdk.ImageOptimizationLambda.fromFunctionAttributes.parameter.attrs"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.FunctionAttributes
 
@@ -624,147 +624,147 @@ the attributes of the function to import.
 
 ---
 
-##### `fromFunctionName` <a name="fromFunctionName" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionName"></a>
+##### `fromFunctionName` <a name="fromFunctionName" id="open-next-cdk.ImageOptimizationLambda.fromFunctionName"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.fromFunctionName(scope: Construct, id: string, functionName: string)
 ```
 
 Import a lambda function into the CDK using its name.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionName.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.ImageOptimizationLambda.fromFunctionName.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionName.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.ImageOptimizationLambda.fromFunctionName.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `functionName`<sup>Required</sup> <a name="functionName" id="cdk-nextjs-standalone.ImageOptimizationLambda.fromFunctionName.parameter.functionName"></a>
+###### `functionName`<sup>Required</sup> <a name="functionName" id="open-next-cdk.ImageOptimizationLambda.fromFunctionName.parameter.functionName"></a>
 
 - *Type:* string
 
 ---
 
-##### `metricAll` <a name="metricAll" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAll"></a>
+##### `metricAll` <a name="metricAll" id="open-next-cdk.ImageOptimizationLambda.metricAll"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.metricAll(metricName: string, props?: MetricOptions)
 ```
 
 Return the given named metric for this Lambda.
 
-###### `metricName`<sup>Required</sup> <a name="metricName" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAll.parameter.metricName"></a>
+###### `metricName`<sup>Required</sup> <a name="metricName" id="open-next-cdk.ImageOptimizationLambda.metricAll.parameter.metricName"></a>
 
 - *Type:* string
 
 ---
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAll.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricAll.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllConcurrentExecutions` <a name="metricAllConcurrentExecutions" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllConcurrentExecutions"></a>
+##### `metricAllConcurrentExecutions` <a name="metricAllConcurrentExecutions" id="open-next-cdk.ImageOptimizationLambda.metricAllConcurrentExecutions"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.metricAllConcurrentExecutions(props?: MetricOptions)
 ```
 
 Metric for the number of concurrent executions across all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllConcurrentExecutions.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricAllConcurrentExecutions.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllDuration` <a name="metricAllDuration" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllDuration"></a>
+##### `metricAllDuration` <a name="metricAllDuration" id="open-next-cdk.ImageOptimizationLambda.metricAllDuration"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.metricAllDuration(props?: MetricOptions)
 ```
 
 Metric for the Duration executing all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllDuration.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricAllDuration.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllErrors` <a name="metricAllErrors" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllErrors"></a>
+##### `metricAllErrors` <a name="metricAllErrors" id="open-next-cdk.ImageOptimizationLambda.metricAllErrors"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.metricAllErrors(props?: MetricOptions)
 ```
 
 Metric for the number of Errors executing all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllErrors.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricAllErrors.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllInvocations` <a name="metricAllInvocations" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllInvocations"></a>
+##### `metricAllInvocations` <a name="metricAllInvocations" id="open-next-cdk.ImageOptimizationLambda.metricAllInvocations"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.metricAllInvocations(props?: MetricOptions)
 ```
 
 Metric for the number of invocations of all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllInvocations.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricAllInvocations.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllThrottles` <a name="metricAllThrottles" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllThrottles"></a>
+##### `metricAllThrottles` <a name="metricAllThrottles" id="open-next-cdk.ImageOptimizationLambda.metricAllThrottles"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.metricAllThrottles(props?: MetricOptions)
 ```
 
 Metric for the number of throttled invocations of all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllThrottles.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricAllThrottles.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllUnreservedConcurrentExecutions` <a name="metricAllUnreservedConcurrentExecutions" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllUnreservedConcurrentExecutions"></a>
+##### `metricAllUnreservedConcurrentExecutions` <a name="metricAllUnreservedConcurrentExecutions" id="open-next-cdk.ImageOptimizationLambda.metricAllUnreservedConcurrentExecutions"></a>
 
 ```typescript
-import { ImageOptimizationLambda } from 'cdk-nextjs-standalone'
+import { ImageOptimizationLambda } from 'open-next-cdk'
 
 ImageOptimizationLambda.metricAllUnreservedConcurrentExecutions(props?: MetricOptions)
 ```
 
 Metric for the number of unreserved concurrent executions across all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-nextjs-standalone.ImageOptimizationLambda.metricAllUnreservedConcurrentExecutions.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="open-next-cdk.ImageOptimizationLambda.metricAllUnreservedConcurrentExecutions.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
@@ -774,30 +774,30 @@ Metric for the number of unreserved concurrent executions across all Lambdas.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.architecture">architecture</a></code> | <code>aws-cdk-lib.aws_lambda.Architecture</code> | The architecture of this Lambda Function (this is an optional attribute and defaults to X86_64). |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.connections">connections</a></code> | <code>aws-cdk-lib.aws_ec2.Connections</code> | Access the Connections object. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.functionArn">functionArn</a></code> | <code>string</code> | ARN of this function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.functionName">functionName</a></code> | <code>string</code> | Name of this function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.grantPrincipal">grantPrincipal</a></code> | <code>aws-cdk-lib.aws_iam.IPrincipal</code> | The principal this Lambda Function is running as. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.isBoundToVpc">isBoundToVpc</a></code> | <code>boolean</code> | Whether or not this Lambda function was bound to a VPC. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.latestVersion">latestVersion</a></code> | <code>aws-cdk-lib.aws_lambda.IVersion</code> | The `$LATEST` version of this function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.permissionsNode">permissionsNode</a></code> | <code>constructs.Node</code> | The construct node where permissions are attached. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.resourceArnsForGrantInvoke">resourceArnsForGrantInvoke</a></code> | <code>string[]</code> | The ARN(s) to put into the resource field of the generated IAM policy for grantInvoke(). |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.role">role</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | Execution role associated with this function. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.currentVersion">currentVersion</a></code> | <code>aws-cdk-lib.aws_lambda.Version</code> | Returns a `lambda.Version` which represents the current version of this Lambda function. A new version will be created every time the function's configuration changes. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.logGroup">logGroup</a></code> | <code>aws-cdk-lib.aws_logs.ILogGroup</code> | The LogGroup where the Lambda function's logs are made available. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | The runtime configured for this lambda. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.deadLetterQueue">deadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | The DLQ (as queue) associated with this Lambda Function (this is an optional attribute). |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.deadLetterTopic">deadLetterTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | The DLQ (as topic) associated with this Lambda Function (this is an optional attribute). |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.timeout">timeout</a></code> | <code>aws-cdk-lib.Duration</code> | The timeout configured for this lambda. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.architecture">architecture</a></code> | <code>aws-cdk-lib.aws_lambda.Architecture</code> | The architecture of this Lambda Function (this is an optional attribute and defaults to X86_64). |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.connections">connections</a></code> | <code>aws-cdk-lib.aws_ec2.Connections</code> | Access the Connections object. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.functionArn">functionArn</a></code> | <code>string</code> | ARN of this function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.functionName">functionName</a></code> | <code>string</code> | Name of this function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.grantPrincipal">grantPrincipal</a></code> | <code>aws-cdk-lib.aws_iam.IPrincipal</code> | The principal this Lambda Function is running as. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.isBoundToVpc">isBoundToVpc</a></code> | <code>boolean</code> | Whether or not this Lambda function was bound to a VPC. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.latestVersion">latestVersion</a></code> | <code>aws-cdk-lib.aws_lambda.IVersion</code> | The `$LATEST` version of this function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.permissionsNode">permissionsNode</a></code> | <code>constructs.Node</code> | The construct node where permissions are attached. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.resourceArnsForGrantInvoke">resourceArnsForGrantInvoke</a></code> | <code>string[]</code> | The ARN(s) to put into the resource field of the generated IAM policy for grantInvoke(). |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.role">role</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | Execution role associated with this function. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.currentVersion">currentVersion</a></code> | <code>aws-cdk-lib.aws_lambda.Version</code> | Returns a `lambda.Version` which represents the current version of this Lambda function. A new version will be created every time the function's configuration changes. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.logGroup">logGroup</a></code> | <code>aws-cdk-lib.aws_logs.ILogGroup</code> | The LogGroup where the Lambda function's logs are made available. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | The runtime configured for this lambda. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.deadLetterQueue">deadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | The DLQ (as queue) associated with this Lambda Function (this is an optional attribute). |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.deadLetterTopic">deadLetterTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | The DLQ (as topic) associated with this Lambda Function (this is an optional attribute). |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.timeout">timeout</a></code> | <code>aws-cdk-lib.Duration</code> | The timeout configured for this lambda. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.ImageOptimizationLambda.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -809,7 +809,7 @@ The tree node.
 
 ---
 
-##### `env`<sup>Required</sup> <a name="env" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.env"></a>
+##### `env`<sup>Required</sup> <a name="env" id="open-next-cdk.ImageOptimizationLambda.property.env"></a>
 
 ```typescript
 public readonly env: ResourceEnvironment;
@@ -828,7 +828,7 @@ that might be different than the stack they were imported into.
 
 ---
 
-##### `stack`<sup>Required</sup> <a name="stack" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.stack"></a>
+##### `stack`<sup>Required</sup> <a name="stack" id="open-next-cdk.ImageOptimizationLambda.property.stack"></a>
 
 ```typescript
 public readonly stack: Stack;
@@ -840,7 +840,7 @@ The stack in which this resource is defined.
 
 ---
 
-##### `architecture`<sup>Required</sup> <a name="architecture" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.architecture"></a>
+##### `architecture`<sup>Required</sup> <a name="architecture" id="open-next-cdk.ImageOptimizationLambda.property.architecture"></a>
 
 ```typescript
 public readonly architecture: Architecture;
@@ -852,7 +852,7 @@ The architecture of this Lambda Function (this is an optional attribute and defa
 
 ---
 
-##### `connections`<sup>Required</sup> <a name="connections" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.connections"></a>
+##### `connections`<sup>Required</sup> <a name="connections" id="open-next-cdk.ImageOptimizationLambda.property.connections"></a>
 
 ```typescript
 public readonly connections: Connections;
@@ -866,7 +866,7 @@ Will fail if not a VPC-enabled Lambda Function
 
 ---
 
-##### `functionArn`<sup>Required</sup> <a name="functionArn" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.functionArn"></a>
+##### `functionArn`<sup>Required</sup> <a name="functionArn" id="open-next-cdk.ImageOptimizationLambda.property.functionArn"></a>
 
 ```typescript
 public readonly functionArn: string;
@@ -878,7 +878,7 @@ ARN of this function.
 
 ---
 
-##### `functionName`<sup>Required</sup> <a name="functionName" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.functionName"></a>
+##### `functionName`<sup>Required</sup> <a name="functionName" id="open-next-cdk.ImageOptimizationLambda.property.functionName"></a>
 
 ```typescript
 public readonly functionName: string;
@@ -890,7 +890,7 @@ Name of this function.
 
 ---
 
-##### `grantPrincipal`<sup>Required</sup> <a name="grantPrincipal" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.grantPrincipal"></a>
+##### `grantPrincipal`<sup>Required</sup> <a name="grantPrincipal" id="open-next-cdk.ImageOptimizationLambda.property.grantPrincipal"></a>
 
 ```typescript
 public readonly grantPrincipal: IPrincipal;
@@ -902,7 +902,7 @@ The principal this Lambda Function is running as.
 
 ---
 
-##### `isBoundToVpc`<sup>Required</sup> <a name="isBoundToVpc" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.isBoundToVpc"></a>
+##### `isBoundToVpc`<sup>Required</sup> <a name="isBoundToVpc" id="open-next-cdk.ImageOptimizationLambda.property.isBoundToVpc"></a>
 
 ```typescript
 public readonly isBoundToVpc: boolean;
@@ -916,7 +916,7 @@ If this is is `false`, trying to access the `connections` object will fail.
 
 ---
 
-##### `latestVersion`<sup>Required</sup> <a name="latestVersion" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.latestVersion"></a>
+##### `latestVersion`<sup>Required</sup> <a name="latestVersion" id="open-next-cdk.ImageOptimizationLambda.property.latestVersion"></a>
 
 ```typescript
 public readonly latestVersion: IVersion;
@@ -935,7 +935,7 @@ function configuration, use `lambdaFunction.currentVersion` instead.
 
 ---
 
-##### `permissionsNode`<sup>Required</sup> <a name="permissionsNode" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.permissionsNode"></a>
+##### `permissionsNode`<sup>Required</sup> <a name="permissionsNode" id="open-next-cdk.ImageOptimizationLambda.property.permissionsNode"></a>
 
 ```typescript
 public readonly permissionsNode: Node;
@@ -947,7 +947,7 @@ The construct node where permissions are attached.
 
 ---
 
-##### `resourceArnsForGrantInvoke`<sup>Required</sup> <a name="resourceArnsForGrantInvoke" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.resourceArnsForGrantInvoke"></a>
+##### `resourceArnsForGrantInvoke`<sup>Required</sup> <a name="resourceArnsForGrantInvoke" id="open-next-cdk.ImageOptimizationLambda.property.resourceArnsForGrantInvoke"></a>
 
 ```typescript
 public readonly resourceArnsForGrantInvoke: string[];
@@ -959,7 +959,7 @@ The ARN(s) to put into the resource field of the generated IAM policy for grantI
 
 ---
 
-##### `role`<sup>Optional</sup> <a name="role" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.role"></a>
+##### `role`<sup>Optional</sup> <a name="role" id="open-next-cdk.ImageOptimizationLambda.property.role"></a>
 
 ```typescript
 public readonly role: IRole;
@@ -971,7 +971,7 @@ Execution role associated with this function.
 
 ---
 
-##### `currentVersion`<sup>Required</sup> <a name="currentVersion" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.currentVersion"></a>
+##### `currentVersion`<sup>Required</sup> <a name="currentVersion" id="open-next-cdk.ImageOptimizationLambda.property.currentVersion"></a>
 
 ```typescript
 public readonly currentVersion: Version;
@@ -986,7 +986,7 @@ prop when initializing the `lambda.Function`.
 
 ---
 
-##### `logGroup`<sup>Required</sup> <a name="logGroup" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.logGroup"></a>
+##### `logGroup`<sup>Required</sup> <a name="logGroup" id="open-next-cdk.ImageOptimizationLambda.property.logGroup"></a>
 
 ```typescript
 public readonly logGroup: ILogGroup;
@@ -1005,7 +1005,7 @@ to never expire even if it was configured with a different value.
 
 ---
 
-##### `runtime`<sup>Required</sup> <a name="runtime" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.runtime"></a>
+##### `runtime`<sup>Required</sup> <a name="runtime" id="open-next-cdk.ImageOptimizationLambda.property.runtime"></a>
 
 ```typescript
 public readonly runtime: Runtime;
@@ -1017,7 +1017,7 @@ The runtime configured for this lambda.
 
 ---
 
-##### `deadLetterQueue`<sup>Optional</sup> <a name="deadLetterQueue" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.deadLetterQueue"></a>
+##### `deadLetterQueue`<sup>Optional</sup> <a name="deadLetterQueue" id="open-next-cdk.ImageOptimizationLambda.property.deadLetterQueue"></a>
 
 ```typescript
 public readonly deadLetterQueue: IQueue;
@@ -1029,7 +1029,7 @@ The DLQ (as queue) associated with this Lambda Function (this is an optional att
 
 ---
 
-##### `deadLetterTopic`<sup>Optional</sup> <a name="deadLetterTopic" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.deadLetterTopic"></a>
+##### `deadLetterTopic`<sup>Optional</sup> <a name="deadLetterTopic" id="open-next-cdk.ImageOptimizationLambda.property.deadLetterTopic"></a>
 
 ```typescript
 public readonly deadLetterTopic: ITopic;
@@ -1041,7 +1041,7 @@ The DLQ (as topic) associated with this Lambda Function (this is an optional att
 
 ---
 
-##### `timeout`<sup>Optional</sup> <a name="timeout" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.timeout"></a>
+##### `timeout`<sup>Optional</sup> <a name="timeout" id="open-next-cdk.ImageOptimizationLambda.property.timeout"></a>
 
 ```typescript
 public readonly timeout: Duration;
@@ -1053,7 +1053,7 @@ The timeout configured for this lambda.
 
 ---
 
-##### `bucket`<sup>Required</sup> <a name="bucket" id="cdk-nextjs-standalone.ImageOptimizationLambda.property.bucket"></a>
+##### `bucket`<sup>Required</sup> <a name="bucket" id="open-next-cdk.ImageOptimizationLambda.property.bucket"></a>
 
 ```typescript
 public readonly bucket: IBucket;
@@ -1064,7 +1064,7 @@ public readonly bucket: IBucket;
 ---
 
 
-### Nextjs <a name="Nextjs" id="cdk-nextjs-standalone.Nextjs"></a>
+### Nextjs <a name="Nextjs" id="open-next-cdk.Nextjs"></a>
 
 The `Nextjs` construct is a higher level construct that makes it easy to create a NextJS app.
 
@@ -1083,37 +1083,37 @@ new Nextjs(this, "Web", {
 ```
 
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.Nextjs.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.Nextjs.Initializer"></a>
 
 ```typescript
-import { Nextjs } from 'cdk-nextjs-standalone'
+import { Nextjs } from 'open-next-cdk'
 
 new Nextjs(scope: Construct, id: string, props: NextjsProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsProps">NextjsProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.NextjsProps">NextjsProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.Nextjs.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.Nextjs.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.Nextjs.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.Nextjs.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.Nextjs.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.Nextjs.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsProps">NextjsProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsProps">NextjsProps</a>
 
 ---
 
@@ -1121,11 +1121,11 @@ new Nextjs(scope: Construct, id: string, props: NextjsProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.Nextjs.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.Nextjs.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.Nextjs.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1137,21 +1137,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.Nextjs.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.Nextjs.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.Nextjs.isConstruct"></a>
 
 ```typescript
-import { Nextjs } from 'cdk-nextjs-standalone'
+import { Nextjs } from 'open-next-cdk'
 
 Nextjs.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.Nextjs.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.Nextjs.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -1163,22 +1163,22 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.url">url</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.assetsDeployment">assetsDeployment</a></code> | <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment">NextJsAssetsDeployment</a></code> | Asset deployment to S3. |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.distribution">distribution</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsDistribution">NextjsDistribution</a></code> | CloudFront distribution. |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.imageOptimizationFunction">imageOptimizationFunction</a></code> | <code><a href="#cdk-nextjs-standalone.ImageOptimizationLambda">ImageOptimizationLambda</a></code> | The image optimization handler lambda function. |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.imageOptimizationLambdaFunctionUrl">imageOptimizationLambdaFunctionUrl</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionUrl</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.lambdaFunctionUrl">lambdaFunctionUrl</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionUrl</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.nextBuild">nextBuild</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a></code> | Built NextJS project output. |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.serverFunction">serverFunction</a></code> | <code><a href="#cdk-nextjs-standalone.NextJsLambda">NextJsLambda</a></code> | The main NextJS server handler lambda function. |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Where build-time assets for deployment are stored. |
-| <code><a href="#cdk-nextjs-standalone.Nextjs.property.configBucket">configBucket</a></code> | <code>aws-cdk-lib.aws_s3.Bucket</code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.Nextjs.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.property.url">url</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.property.assetsDeployment">assetsDeployment</a></code> | <code><a href="#open-next-cdk.NextJsAssetsDeployment">NextJsAssetsDeployment</a></code> | Asset deployment to S3. |
+| <code><a href="#open-next-cdk.Nextjs.property.distribution">distribution</a></code> | <code><a href="#open-next-cdk.NextjsDistribution">NextjsDistribution</a></code> | CloudFront distribution. |
+| <code><a href="#open-next-cdk.Nextjs.property.imageOptimizationFunction">imageOptimizationFunction</a></code> | <code><a href="#open-next-cdk.ImageOptimizationLambda">ImageOptimizationLambda</a></code> | The image optimization handler lambda function. |
+| <code><a href="#open-next-cdk.Nextjs.property.imageOptimizationLambdaFunctionUrl">imageOptimizationLambdaFunctionUrl</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionUrl</code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.property.lambdaFunctionUrl">lambdaFunctionUrl</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionUrl</code> | *No description.* |
+| <code><a href="#open-next-cdk.Nextjs.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | Built NextJS project output. |
+| <code><a href="#open-next-cdk.Nextjs.property.serverFunction">serverFunction</a></code> | <code><a href="#open-next-cdk.NextJsLambda">NextJsLambda</a></code> | The main NextJS server handler lambda function. |
+| <code><a href="#open-next-cdk.Nextjs.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Where build-time assets for deployment are stored. |
+| <code><a href="#open-next-cdk.Nextjs.property.configBucket">configBucket</a></code> | <code>aws-cdk-lib.aws_s3.Bucket</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.Nextjs.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.Nextjs.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -1190,7 +1190,7 @@ The tree node.
 
 ---
 
-##### `bucket`<sup>Required</sup> <a name="bucket" id="cdk-nextjs-standalone.Nextjs.property.bucket"></a>
+##### `bucket`<sup>Required</sup> <a name="bucket" id="open-next-cdk.Nextjs.property.bucket"></a>
 
 ```typescript
 public readonly bucket: IBucket;
@@ -1200,7 +1200,7 @@ public readonly bucket: IBucket;
 
 ---
 
-##### `url`<sup>Required</sup> <a name="url" id="cdk-nextjs-standalone.Nextjs.property.url"></a>
+##### `url`<sup>Required</sup> <a name="url" id="open-next-cdk.Nextjs.property.url"></a>
 
 ```typescript
 public readonly url: string;
@@ -1210,43 +1210,43 @@ public readonly url: string;
 
 ---
 
-##### `assetsDeployment`<sup>Required</sup> <a name="assetsDeployment" id="cdk-nextjs-standalone.Nextjs.property.assetsDeployment"></a>
+##### `assetsDeployment`<sup>Required</sup> <a name="assetsDeployment" id="open-next-cdk.Nextjs.property.assetsDeployment"></a>
 
 ```typescript
 public readonly assetsDeployment: NextJsAssetsDeployment;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextJsAssetsDeployment">NextJsAssetsDeployment</a>
+- *Type:* <a href="#open-next-cdk.NextJsAssetsDeployment">NextJsAssetsDeployment</a>
 
 Asset deployment to S3.
 
 ---
 
-##### `distribution`<sup>Required</sup> <a name="distribution" id="cdk-nextjs-standalone.Nextjs.property.distribution"></a>
+##### `distribution`<sup>Required</sup> <a name="distribution" id="open-next-cdk.Nextjs.property.distribution"></a>
 
 ```typescript
 public readonly distribution: NextjsDistribution;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsDistribution">NextjsDistribution</a>
+- *Type:* <a href="#open-next-cdk.NextjsDistribution">NextjsDistribution</a>
 
 CloudFront distribution.
 
 ---
 
-##### `imageOptimizationFunction`<sup>Required</sup> <a name="imageOptimizationFunction" id="cdk-nextjs-standalone.Nextjs.property.imageOptimizationFunction"></a>
+##### `imageOptimizationFunction`<sup>Required</sup> <a name="imageOptimizationFunction" id="open-next-cdk.Nextjs.property.imageOptimizationFunction"></a>
 
 ```typescript
 public readonly imageOptimizationFunction: ImageOptimizationLambda;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.ImageOptimizationLambda">ImageOptimizationLambda</a>
+- *Type:* <a href="#open-next-cdk.ImageOptimizationLambda">ImageOptimizationLambda</a>
 
 The image optimization handler lambda function.
 
 ---
 
-##### `imageOptimizationLambdaFunctionUrl`<sup>Required</sup> <a name="imageOptimizationLambdaFunctionUrl" id="cdk-nextjs-standalone.Nextjs.property.imageOptimizationLambdaFunctionUrl"></a>
+##### `imageOptimizationLambdaFunctionUrl`<sup>Required</sup> <a name="imageOptimizationLambdaFunctionUrl" id="open-next-cdk.Nextjs.property.imageOptimizationLambdaFunctionUrl"></a>
 
 ```typescript
 public readonly imageOptimizationLambdaFunctionUrl: FunctionUrl;
@@ -1256,7 +1256,7 @@ public readonly imageOptimizationLambdaFunctionUrl: FunctionUrl;
 
 ---
 
-##### `lambdaFunctionUrl`<sup>Required</sup> <a name="lambdaFunctionUrl" id="cdk-nextjs-standalone.Nextjs.property.lambdaFunctionUrl"></a>
+##### `lambdaFunctionUrl`<sup>Required</sup> <a name="lambdaFunctionUrl" id="open-next-cdk.Nextjs.property.lambdaFunctionUrl"></a>
 
 ```typescript
 public readonly lambdaFunctionUrl: FunctionUrl;
@@ -1266,31 +1266,31 @@ public readonly lambdaFunctionUrl: FunctionUrl;
 
 ---
 
-##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="cdk-nextjs-standalone.Nextjs.property.nextBuild"></a>
+##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="open-next-cdk.Nextjs.property.nextBuild"></a>
 
 ```typescript
 public readonly nextBuild: NextjsBuild;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a>
+- *Type:* <a href="#open-next-cdk.NextjsBuild">NextjsBuild</a>
 
 Built NextJS project output.
 
 ---
 
-##### `serverFunction`<sup>Required</sup> <a name="serverFunction" id="cdk-nextjs-standalone.Nextjs.property.serverFunction"></a>
+##### `serverFunction`<sup>Required</sup> <a name="serverFunction" id="open-next-cdk.Nextjs.property.serverFunction"></a>
 
 ```typescript
 public readonly serverFunction: NextJsLambda;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextJsLambda">NextJsLambda</a>
+- *Type:* <a href="#open-next-cdk.NextJsLambda">NextJsLambda</a>
 
 The main NextJS server handler lambda function.
 
 ---
 
-##### `tempBuildDir`<sup>Required</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.Nextjs.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Required</sup> <a name="tempBuildDir" id="open-next-cdk.Nextjs.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -1302,7 +1302,7 @@ Where build-time assets for deployment are stored.
 
 ---
 
-##### `configBucket`<sup>Optional</sup> <a name="configBucket" id="cdk-nextjs-standalone.Nextjs.property.configBucket"></a>
+##### `configBucket`<sup>Optional</sup> <a name="configBucket" id="open-next-cdk.Nextjs.property.configBucket"></a>
 
 ```typescript
 public readonly configBucket: Bucket;
@@ -1313,43 +1313,43 @@ public readonly configBucket: Bucket;
 ---
 
 
-### NextJsAssetsDeployment <a name="NextJsAssetsDeployment" id="cdk-nextjs-standalone.NextJsAssetsDeployment"></a>
+### NextJsAssetsDeployment <a name="NextJsAssetsDeployment" id="open-next-cdk.NextJsAssetsDeployment"></a>
 
 Uploads NextJS-built static and public files to S3.
 
 Will rewrite CloudFormation references with their resolved values after uploading.
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.NextJsAssetsDeployment.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.NextJsAssetsDeployment.Initializer"></a>
 
 ```typescript
-import { NextJsAssetsDeployment } from 'cdk-nextjs-standalone'
+import { NextJsAssetsDeployment } from 'open-next-cdk'
 
 new NextJsAssetsDeployment(scope: Construct, id: string, props: NextjsAssetsDeploymentProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps">NextjsAssetsDeploymentProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps">NextjsAssetsDeploymentProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextJsAssetsDeployment.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextJsAssetsDeployment.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextJsAssetsDeployment.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextJsAssetsDeployment.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.NextJsAssetsDeployment.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.NextJsAssetsDeployment.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps">NextjsAssetsDeploymentProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsAssetsDeploymentProps">NextjsAssetsDeploymentProps</a>
 
 ---
 
@@ -1357,11 +1357,11 @@ new NextJsAssetsDeployment(scope: Construct, id: string, props: NextjsAssetsDepl
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.NextJsAssetsDeployment.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.NextJsAssetsDeployment.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1373,21 +1373,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.NextJsAssetsDeployment.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.NextJsAssetsDeployment.isConstruct"></a>
 
 ```typescript
-import { NextJsAssetsDeployment } from 'cdk-nextjs-standalone'
+import { NextJsAssetsDeployment } from 'open-next-cdk'
 
 NextJsAssetsDeployment.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.NextJsAssetsDeployment.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.NextJsAssetsDeployment.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -1399,15 +1399,15 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Bucket containing assets. |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.property.deployments">deployments</a></code> | <code>aws-cdk-lib.aws_s3_deployment.BucketDeployment[]</code> | Asset deployments to S3. |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.property.staticTempDir">staticTempDir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextJsAssetsDeployment.property.rewriter">rewriter</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter">NextjsS3EnvRewriter</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Bucket containing assets. |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.property.deployments">deployments</a></code> | <code>aws-cdk-lib.aws_s3_deployment.BucketDeployment[]</code> | Asset deployments to S3. |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.property.staticTempDir">staticTempDir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsAssetsDeployment.property.rewriter">rewriter</a></code> | <code><a href="#open-next-cdk.NextjsS3EnvRewriter">NextjsS3EnvRewriter</a></code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.NextJsAssetsDeployment.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.NextJsAssetsDeployment.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -1419,7 +1419,7 @@ The tree node.
 
 ---
 
-##### `bucket`<sup>Required</sup> <a name="bucket" id="cdk-nextjs-standalone.NextJsAssetsDeployment.property.bucket"></a>
+##### `bucket`<sup>Required</sup> <a name="bucket" id="open-next-cdk.NextJsAssetsDeployment.property.bucket"></a>
 
 ```typescript
 public readonly bucket: IBucket;
@@ -1431,7 +1431,7 @@ Bucket containing assets.
 
 ---
 
-##### `deployments`<sup>Required</sup> <a name="deployments" id="cdk-nextjs-standalone.NextJsAssetsDeployment.property.deployments"></a>
+##### `deployments`<sup>Required</sup> <a name="deployments" id="open-next-cdk.NextJsAssetsDeployment.property.deployments"></a>
 
 ```typescript
 public readonly deployments: BucketDeployment[];
@@ -1443,7 +1443,7 @@ Asset deployments to S3.
 
 ---
 
-##### `staticTempDir`<sup>Required</sup> <a name="staticTempDir" id="cdk-nextjs-standalone.NextJsAssetsDeployment.property.staticTempDir"></a>
+##### `staticTempDir`<sup>Required</sup> <a name="staticTempDir" id="open-next-cdk.NextJsAssetsDeployment.property.staticTempDir"></a>
 
 ```typescript
 public readonly staticTempDir: string;
@@ -1453,55 +1453,55 @@ public readonly staticTempDir: string;
 
 ---
 
-##### `rewriter`<sup>Optional</sup> <a name="rewriter" id="cdk-nextjs-standalone.NextJsAssetsDeployment.property.rewriter"></a>
+##### `rewriter`<sup>Optional</sup> <a name="rewriter" id="open-next-cdk.NextJsAssetsDeployment.property.rewriter"></a>
 
 ```typescript
 public readonly rewriter: NextjsS3EnvRewriter;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter">NextjsS3EnvRewriter</a>
+- *Type:* <a href="#open-next-cdk.NextjsS3EnvRewriter">NextjsS3EnvRewriter</a>
 
 ---
 
 
-### NextjsBuild <a name="NextjsBuild" id="cdk-nextjs-standalone.NextjsBuild"></a>
+### NextjsBuild <a name="NextjsBuild" id="open-next-cdk.NextjsBuild"></a>
 
 Represents a built NextJS application.
 
 This construct runs `npm build` in standalone output mode inside your `nextjsPath`.
 This construct can be used by higher level constructs or used directly.
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.NextjsBuild.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.NextjsBuild.Initializer"></a>
 
 ```typescript
-import { NextjsBuild } from 'cdk-nextjs-standalone'
+import { NextjsBuild } from 'open-next-cdk'
 
 new NextjsBuild(scope: Construct, id: string, props: NextjsBuildProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsBuildProps">NextjsBuildProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsBuild.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsBuild.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsBuild.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.NextjsBuildProps">NextjsBuildProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextjsBuild.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextjsBuild.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextjsBuild.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextjsBuild.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.NextjsBuild.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.NextjsBuild.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsBuildProps">NextjsBuildProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsBuildProps">NextjsBuildProps</a>
 
 ---
 
@@ -1509,12 +1509,12 @@ new NextjsBuild(scope: Construct, id: string, props: NextjsBuildProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.readPublicFileList">readPublicFileList</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsBuild.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.NextjsBuild.readPublicFileList">readPublicFileList</a></code> | *No description.* |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.NextjsBuild.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.NextjsBuild.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1522,7 +1522,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `readPublicFileList` <a name="readPublicFileList" id="cdk-nextjs-standalone.NextjsBuild.readPublicFileList"></a>
+##### `readPublicFileList` <a name="readPublicFileList" id="open-next-cdk.NextjsBuild.readPublicFileList"></a>
 
 ```typescript
 public readPublicFileList(): string[]
@@ -1532,21 +1532,21 @@ public readPublicFileList(): string[]
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.NextjsBuild.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.NextjsBuild.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.NextjsBuild.isConstruct"></a>
 
 ```typescript
-import { NextjsBuild } from 'cdk-nextjs-standalone'
+import { NextjsBuild } from 'open-next-cdk'
 
 NextjsBuild.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.NextjsBuild.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.NextjsBuild.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -1558,17 +1558,17 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.property.nextImageFnDir">nextImageFnDir</a></code> | <code>string</code> | Contains function for processessing image requests. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.property.nextServerFnDir">nextServerFnDir</a></code> | <code>string</code> | Contains server code and dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.property.nextStaticDir">nextStaticDir</a></code> | <code>string</code> | Static files containing client-side code. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.property.projectRoot">projectRoot</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.property.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsBuildProps">NextjsBuildProps</a></code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuild.property.nextMiddlewareFnDir">nextMiddlewareFnDir</a></code> | <code>string</code> | Contains code for middleware. |
+| <code><a href="#open-next-cdk.NextjsBuild.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.NextjsBuild.property.nextImageFnDir">nextImageFnDir</a></code> | <code>string</code> | Contains function for processessing image requests. |
+| <code><a href="#open-next-cdk.NextjsBuild.property.nextServerFnDir">nextServerFnDir</a></code> | <code>string</code> | Contains server code and dependencies. |
+| <code><a href="#open-next-cdk.NextjsBuild.property.nextStaticDir">nextStaticDir</a></code> | <code>string</code> | Static files containing client-side code. |
+| <code><a href="#open-next-cdk.NextjsBuild.property.projectRoot">projectRoot</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsBuild.property.props">props</a></code> | <code><a href="#open-next-cdk.NextjsBuildProps">NextjsBuildProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsBuild.property.nextMiddlewareFnDir">nextMiddlewareFnDir</a></code> | <code>string</code> | Contains code for middleware. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.NextjsBuild.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.NextjsBuild.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -1580,7 +1580,7 @@ The tree node.
 
 ---
 
-##### `nextImageFnDir`<sup>Required</sup> <a name="nextImageFnDir" id="cdk-nextjs-standalone.NextjsBuild.property.nextImageFnDir"></a>
+##### `nextImageFnDir`<sup>Required</sup> <a name="nextImageFnDir" id="open-next-cdk.NextjsBuild.property.nextImageFnDir"></a>
 
 ```typescript
 public readonly nextImageFnDir: string;
@@ -1594,7 +1594,7 @@ Should be arm64.
 
 ---
 
-##### `nextServerFnDir`<sup>Required</sup> <a name="nextServerFnDir" id="cdk-nextjs-standalone.NextjsBuild.property.nextServerFnDir"></a>
+##### `nextServerFnDir`<sup>Required</sup> <a name="nextServerFnDir" id="open-next-cdk.NextjsBuild.property.nextServerFnDir"></a>
 
 ```typescript
 public readonly nextServerFnDir: string;
@@ -1606,7 +1606,7 @@ Contains server code and dependencies.
 
 ---
 
-##### `nextStaticDir`<sup>Required</sup> <a name="nextStaticDir" id="cdk-nextjs-standalone.NextjsBuild.property.nextStaticDir"></a>
+##### `nextStaticDir`<sup>Required</sup> <a name="nextStaticDir" id="open-next-cdk.NextjsBuild.property.nextStaticDir"></a>
 
 ```typescript
 public readonly nextStaticDir: string;
@@ -1618,7 +1618,7 @@ Static files containing client-side code.
 
 ---
 
-##### `projectRoot`<sup>Required</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsBuild.property.projectRoot"></a>
+##### `projectRoot`<sup>Required</sup> <a name="projectRoot" id="open-next-cdk.NextjsBuild.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -1628,17 +1628,17 @@ public readonly projectRoot: string;
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.NextjsBuild.property.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.NextjsBuild.property.props"></a>
 
 ```typescript
 public readonly props: NextjsBuildProps;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsBuildProps">NextjsBuildProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsBuildProps">NextjsBuildProps</a>
 
 ---
 
-##### `nextMiddlewareFnDir`<sup>Optional</sup> <a name="nextMiddlewareFnDir" id="cdk-nextjs-standalone.NextjsBuild.property.nextMiddlewareFnDir"></a>
+##### `nextMiddlewareFnDir`<sup>Optional</sup> <a name="nextMiddlewareFnDir" id="open-next-cdk.NextjsBuild.property.nextMiddlewareFnDir"></a>
 
 ```typescript
 public readonly nextMiddlewareFnDir: string;
@@ -1653,41 +1653,41 @@ Not currently used.
 ---
 
 
-### NextjsDistribution <a name="NextjsDistribution" id="cdk-nextjs-standalone.NextjsDistribution"></a>
+### NextjsDistribution <a name="NextjsDistribution" id="open-next-cdk.NextjsDistribution"></a>
 
 Create a CloudFront distribution to serve a Next.js application.
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.NextjsDistribution.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.NextjsDistribution.Initializer"></a>
 
 ```typescript
-import { NextjsDistribution } from 'cdk-nextjs-standalone'
+import { NextjsDistribution } from 'open-next-cdk'
 
 new NextjsDistribution(scope: Construct, id: string, props: NextjsDistributionProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps">NextjsDistributionProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsDistribution.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsDistribution.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsDistribution.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.NextjsDistributionProps">NextjsDistributionProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextjsDistribution.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextjsDistribution.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextjsDistribution.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextjsDistribution.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.NextjsDistribution.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.NextjsDistribution.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsDistributionProps">NextjsDistributionProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsDistributionProps">NextjsDistributionProps</a>
 
 ---
 
@@ -1695,11 +1695,11 @@ new NextjsDistribution(scope: Construct, id: string, props: NextjsDistributionPr
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.NextjsDistribution.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.NextjsDistribution.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.NextjsDistribution.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1711,21 +1711,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.NextjsDistribution.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.NextjsDistribution.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.NextjsDistribution.isConstruct"></a>
 
 ```typescript
-import { NextjsDistribution } from 'cdk-nextjs-standalone'
+import { NextjsDistribution } from 'open-next-cdk'
 
 NextjsDistribution.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.NextjsDistribution.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.NextjsDistribution.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -1737,26 +1737,26 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.fallbackOriginRequestPolicyProps">fallbackOriginRequestPolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.OriginRequestPolicyProps</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.imageCachePolicyProps">imageCachePolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.CachePolicyProps</code> | The default CloudFront cache policy properties for images. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.imageOptimizationOriginRequestPolicyProps">imageOptimizationOriginRequestPolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.OriginRequestPolicyProps</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.lambdaCachePolicyProps">lambdaCachePolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.CachePolicyProps</code> | The default CloudFront cache policy properties for the Lambda server handler. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.lambdaOriginRequestPolicyProps">lambdaOriginRequestPolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.OriginRequestPolicyProps</code> | The default CloudFront lambda origin request policy. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.staticCachePolicyProps">staticCachePolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.CachePolicyProps</code> | The default CloudFront cache policy properties for static pages. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.distributionDomain">distributionDomain</a></code> | <code>string</code> | The domain name of the internally created CloudFront Distribution. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.distributionId">distributionId</a></code> | <code>string</code> | The ID of the internally created CloudFront Distribution. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.url">url</a></code> | <code>string</code> | The CloudFront URL of the website. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.customDomainName">customDomainName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.customDomainUrl">customDomainUrl</a></code> | <code>string</code> | If the custom domain is enabled, this is the URL of the website with the custom domain. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.Distribution</code> | The internally created CloudFront `Distribution` instance. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | The AWS Certificate Manager certificate for the custom domain. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistribution.property.hostedZone">hostedZone</a></code> | <code>aws-cdk-lib.aws_route53.IHostedZone</code> | The Route 53 hosted zone for the custom domain. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.fallbackOriginRequestPolicyProps">fallbackOriginRequestPolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.OriginRequestPolicyProps</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.imageCachePolicyProps">imageCachePolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.CachePolicyProps</code> | The default CloudFront cache policy properties for images. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.imageOptimizationOriginRequestPolicyProps">imageOptimizationOriginRequestPolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.OriginRequestPolicyProps</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.lambdaCachePolicyProps">lambdaCachePolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.CachePolicyProps</code> | The default CloudFront cache policy properties for the Lambda server handler. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.lambdaOriginRequestPolicyProps">lambdaOriginRequestPolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.OriginRequestPolicyProps</code> | The default CloudFront lambda origin request policy. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.staticCachePolicyProps">staticCachePolicyProps</a></code> | <code>aws-cdk-lib.aws_cloudfront.CachePolicyProps</code> | The default CloudFront cache policy properties for static pages. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.distributionDomain">distributionDomain</a></code> | <code>string</code> | The domain name of the internally created CloudFront Distribution. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.distributionId">distributionId</a></code> | <code>string</code> | The ID of the internally created CloudFront Distribution. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.url">url</a></code> | <code>string</code> | The CloudFront URL of the website. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.customDomainName">customDomainName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.customDomainUrl">customDomainUrl</a></code> | <code>string</code> | If the custom domain is enabled, this is the URL of the website with the custom domain. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.Distribution</code> | The internally created CloudFront `Distribution` instance. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | The AWS Certificate Manager certificate for the custom domain. |
+| <code><a href="#open-next-cdk.NextjsDistribution.property.hostedZone">hostedZone</a></code> | <code>aws-cdk-lib.aws_route53.IHostedZone</code> | The Route 53 hosted zone for the custom domain. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.NextjsDistribution.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.NextjsDistribution.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -1768,7 +1768,7 @@ The tree node.
 
 ---
 
-##### `fallbackOriginRequestPolicyProps`<sup>Required</sup> <a name="fallbackOriginRequestPolicyProps" id="cdk-nextjs-standalone.NextjsDistribution.property.fallbackOriginRequestPolicyProps"></a>
+##### `fallbackOriginRequestPolicyProps`<sup>Required</sup> <a name="fallbackOriginRequestPolicyProps" id="open-next-cdk.NextjsDistribution.property.fallbackOriginRequestPolicyProps"></a>
 
 ```typescript
 public readonly fallbackOriginRequestPolicyProps: OriginRequestPolicyProps;
@@ -1778,7 +1778,7 @@ public readonly fallbackOriginRequestPolicyProps: OriginRequestPolicyProps;
 
 ---
 
-##### `imageCachePolicyProps`<sup>Required</sup> <a name="imageCachePolicyProps" id="cdk-nextjs-standalone.NextjsDistribution.property.imageCachePolicyProps"></a>
+##### `imageCachePolicyProps`<sup>Required</sup> <a name="imageCachePolicyProps" id="open-next-cdk.NextjsDistribution.property.imageCachePolicyProps"></a>
 
 ```typescript
 public readonly imageCachePolicyProps: CachePolicyProps;
@@ -1790,7 +1790,7 @@ The default CloudFront cache policy properties for images.
 
 ---
 
-##### `imageOptimizationOriginRequestPolicyProps`<sup>Required</sup> <a name="imageOptimizationOriginRequestPolicyProps" id="cdk-nextjs-standalone.NextjsDistribution.property.imageOptimizationOriginRequestPolicyProps"></a>
+##### `imageOptimizationOriginRequestPolicyProps`<sup>Required</sup> <a name="imageOptimizationOriginRequestPolicyProps" id="open-next-cdk.NextjsDistribution.property.imageOptimizationOriginRequestPolicyProps"></a>
 
 ```typescript
 public readonly imageOptimizationOriginRequestPolicyProps: OriginRequestPolicyProps;
@@ -1800,7 +1800,7 @@ public readonly imageOptimizationOriginRequestPolicyProps: OriginRequestPolicyPr
 
 ---
 
-##### `lambdaCachePolicyProps`<sup>Required</sup> <a name="lambdaCachePolicyProps" id="cdk-nextjs-standalone.NextjsDistribution.property.lambdaCachePolicyProps"></a>
+##### `lambdaCachePolicyProps`<sup>Required</sup> <a name="lambdaCachePolicyProps" id="open-next-cdk.NextjsDistribution.property.lambdaCachePolicyProps"></a>
 
 ```typescript
 public readonly lambdaCachePolicyProps: CachePolicyProps;
@@ -1812,7 +1812,7 @@ The default CloudFront cache policy properties for the Lambda server handler.
 
 ---
 
-##### `lambdaOriginRequestPolicyProps`<sup>Required</sup> <a name="lambdaOriginRequestPolicyProps" id="cdk-nextjs-standalone.NextjsDistribution.property.lambdaOriginRequestPolicyProps"></a>
+##### `lambdaOriginRequestPolicyProps`<sup>Required</sup> <a name="lambdaOriginRequestPolicyProps" id="open-next-cdk.NextjsDistribution.property.lambdaOriginRequestPolicyProps"></a>
 
 ```typescript
 public readonly lambdaOriginRequestPolicyProps: OriginRequestPolicyProps;
@@ -1824,7 +1824,7 @@ The default CloudFront lambda origin request policy.
 
 ---
 
-##### `staticCachePolicyProps`<sup>Required</sup> <a name="staticCachePolicyProps" id="cdk-nextjs-standalone.NextjsDistribution.property.staticCachePolicyProps"></a>
+##### `staticCachePolicyProps`<sup>Required</sup> <a name="staticCachePolicyProps" id="open-next-cdk.NextjsDistribution.property.staticCachePolicyProps"></a>
 
 ```typescript
 public readonly staticCachePolicyProps: CachePolicyProps;
@@ -1836,7 +1836,7 @@ The default CloudFront cache policy properties for static pages.
 
 ---
 
-##### `distributionDomain`<sup>Required</sup> <a name="distributionDomain" id="cdk-nextjs-standalone.NextjsDistribution.property.distributionDomain"></a>
+##### `distributionDomain`<sup>Required</sup> <a name="distributionDomain" id="open-next-cdk.NextjsDistribution.property.distributionDomain"></a>
 
 ```typescript
 public readonly distributionDomain: string;
@@ -1848,7 +1848,7 @@ The domain name of the internally created CloudFront Distribution.
 
 ---
 
-##### `distributionId`<sup>Required</sup> <a name="distributionId" id="cdk-nextjs-standalone.NextjsDistribution.property.distributionId"></a>
+##### `distributionId`<sup>Required</sup> <a name="distributionId" id="open-next-cdk.NextjsDistribution.property.distributionId"></a>
 
 ```typescript
 public readonly distributionId: string;
@@ -1860,7 +1860,7 @@ The ID of the internally created CloudFront Distribution.
 
 ---
 
-##### `url`<sup>Required</sup> <a name="url" id="cdk-nextjs-standalone.NextjsDistribution.property.url"></a>
+##### `url`<sup>Required</sup> <a name="url" id="open-next-cdk.NextjsDistribution.property.url"></a>
 
 ```typescript
 public readonly url: string;
@@ -1872,7 +1872,7 @@ The CloudFront URL of the website.
 
 ---
 
-##### `customDomainName`<sup>Optional</sup> <a name="customDomainName" id="cdk-nextjs-standalone.NextjsDistribution.property.customDomainName"></a>
+##### `customDomainName`<sup>Optional</sup> <a name="customDomainName" id="open-next-cdk.NextjsDistribution.property.customDomainName"></a>
 
 ```typescript
 public readonly customDomainName: string;
@@ -1882,7 +1882,7 @@ public readonly customDomainName: string;
 
 ---
 
-##### `customDomainUrl`<sup>Optional</sup> <a name="customDomainUrl" id="cdk-nextjs-standalone.NextjsDistribution.property.customDomainUrl"></a>
+##### `customDomainUrl`<sup>Optional</sup> <a name="customDomainUrl" id="open-next-cdk.NextjsDistribution.property.customDomainUrl"></a>
 
 ```typescript
 public readonly customDomainUrl: string;
@@ -1894,7 +1894,7 @@ If the custom domain is enabled, this is the URL of the website with the custom 
 
 ---
 
-##### `distribution`<sup>Required</sup> <a name="distribution" id="cdk-nextjs-standalone.NextjsDistribution.property.distribution"></a>
+##### `distribution`<sup>Required</sup> <a name="distribution" id="open-next-cdk.NextjsDistribution.property.distribution"></a>
 
 ```typescript
 public readonly distribution: Distribution;
@@ -1906,7 +1906,7 @@ The internally created CloudFront `Distribution` instance.
 
 ---
 
-##### `tempBuildDir`<sup>Required</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsDistribution.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Required</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsDistribution.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -1916,7 +1916,7 @@ public readonly tempBuildDir: string;
 
 ---
 
-##### `certificate`<sup>Optional</sup> <a name="certificate" id="cdk-nextjs-standalone.NextjsDistribution.property.certificate"></a>
+##### `certificate`<sup>Optional</sup> <a name="certificate" id="open-next-cdk.NextjsDistribution.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;
@@ -1928,7 +1928,7 @@ The AWS Certificate Manager certificate for the custom domain.
 
 ---
 
-##### `hostedZone`<sup>Optional</sup> <a name="hostedZone" id="cdk-nextjs-standalone.NextjsDistribution.property.hostedZone"></a>
+##### `hostedZone`<sup>Optional</sup> <a name="hostedZone" id="open-next-cdk.NextjsDistribution.property.hostedZone"></a>
 
 ```typescript
 public readonly hostedZone: IHostedZone;
@@ -1941,41 +1941,41 @@ The Route 53 hosted zone for the custom domain.
 ---
 
 
-### NextJsLambda <a name="NextJsLambda" id="cdk-nextjs-standalone.NextJsLambda"></a>
+### NextJsLambda <a name="NextJsLambda" id="open-next-cdk.NextJsLambda"></a>
 
 Build a lambda function from a NextJS application to handle server-side rendering, API routes, and image optimization.
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.NextJsLambda.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.NextJsLambda.Initializer"></a>
 
 ```typescript
-import { NextJsLambda } from 'cdk-nextjs-standalone'
+import { NextJsLambda } from 'open-next-cdk'
 
 new NextJsLambda(scope: Construct, id: string, props: NextjsLambdaProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps">NextjsLambdaProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsLambda.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsLambda.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsLambda.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.NextjsLambdaProps">NextjsLambdaProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextJsLambda.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextJsLambda.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextJsLambda.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextJsLambda.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.NextJsLambda.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.NextJsLambda.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsLambdaProps">NextjsLambdaProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsLambdaProps">NextjsLambdaProps</a>
 
 ---
 
@@ -1983,11 +1983,11 @@ new NextJsLambda(scope: Construct, id: string, props: NextjsLambdaProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.NextJsLambda.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.NextJsLambda.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.NextJsLambda.toString"></a>
 
 ```typescript
 public toString(): string
@@ -1999,21 +1999,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.NextJsLambda.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.NextJsLambda.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.NextJsLambda.isConstruct"></a>
 
 ```typescript
-import { NextJsLambda } from 'cdk-nextjs-standalone'
+import { NextJsLambda } from 'open-next-cdk'
 
 NextJsLambda.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.NextJsLambda.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.NextJsLambda.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -2025,13 +2025,13 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.property.lambdaFunction">lambdaFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextJsLambda.property.configBucket">configBucket</a></code> | <code>aws-cdk-lib.aws_s3.Bucket</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsLambda.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.NextJsLambda.property.lambdaFunction">lambdaFunction</a></code> | <code>aws-cdk-lib.aws_lambda.Function</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextJsLambda.property.configBucket">configBucket</a></code> | <code>aws-cdk-lib.aws_s3.Bucket</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.NextJsLambda.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.NextJsLambda.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -2043,7 +2043,7 @@ The tree node.
 
 ---
 
-##### `lambdaFunction`<sup>Required</sup> <a name="lambdaFunction" id="cdk-nextjs-standalone.NextJsLambda.property.lambdaFunction"></a>
+##### `lambdaFunction`<sup>Required</sup> <a name="lambdaFunction" id="open-next-cdk.NextJsLambda.property.lambdaFunction"></a>
 
 ```typescript
 public readonly lambdaFunction: Function;
@@ -2053,7 +2053,7 @@ public readonly lambdaFunction: Function;
 
 ---
 
-##### `configBucket`<sup>Optional</sup> <a name="configBucket" id="cdk-nextjs-standalone.NextJsLambda.property.configBucket"></a>
+##### `configBucket`<sup>Optional</sup> <a name="configBucket" id="open-next-cdk.NextJsLambda.property.configBucket"></a>
 
 ```typescript
 public readonly configBucket: Bucket;
@@ -2064,41 +2064,41 @@ public readonly configBucket: Bucket;
 ---
 
 
-### NextjsLayer <a name="NextjsLayer" id="cdk-nextjs-standalone.NextjsLayer"></a>
+### NextjsLayer <a name="NextjsLayer" id="open-next-cdk.NextjsLayer"></a>
 
 Lambda layer for Next.js. Contains Sharp 0.30.0.
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.NextjsLayer.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.NextjsLayer.Initializer"></a>
 
 ```typescript
-import { NextjsLayer } from 'cdk-nextjs-standalone'
+import { NextjsLayer } from 'open-next-cdk'
 
 new NextjsLayer(scope: Construct, id: string, props: NextjsLayerProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsLayerProps">NextjsLayerProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsLayer.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsLayer.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsLayer.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.NextjsLayerProps">NextjsLayerProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextjsLayer.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextjsLayer.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextjsLayer.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextjsLayer.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.NextjsLayer.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.NextjsLayer.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsLayerProps">NextjsLayerProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsLayerProps">NextjsLayerProps</a>
 
 ---
 
@@ -2106,13 +2106,13 @@ new NextjsLayer(scope: Construct, id: string, props: NextjsLayerProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.addPermission">addPermission</a></code> | Add permission for this layer version to specific entities. |
+| <code><a href="#open-next-cdk.NextjsLayer.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.NextjsLayer.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
+| <code><a href="#open-next-cdk.NextjsLayer.addPermission">addPermission</a></code> | Add permission for this layer version to specific entities. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.NextjsLayer.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.NextjsLayer.toString"></a>
 
 ```typescript
 public toString(): string
@@ -2120,7 +2120,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="cdk-nextjs-standalone.NextjsLayer.applyRemovalPolicy"></a>
+##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="open-next-cdk.NextjsLayer.applyRemovalPolicy"></a>
 
 ```typescript
 public applyRemovalPolicy(policy: RemovalPolicy): void
@@ -2136,13 +2136,13 @@ to be replaced.
 The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
 account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 
-###### `policy`<sup>Required</sup> <a name="policy" id="cdk-nextjs-standalone.NextjsLayer.applyRemovalPolicy.parameter.policy"></a>
+###### `policy`<sup>Required</sup> <a name="policy" id="open-next-cdk.NextjsLayer.applyRemovalPolicy.parameter.policy"></a>
 
 - *Type:* aws-cdk-lib.RemovalPolicy
 
 ---
 
-##### `addPermission` <a name="addPermission" id="cdk-nextjs-standalone.NextjsLayer.addPermission"></a>
+##### `addPermission` <a name="addPermission" id="open-next-cdk.NextjsLayer.addPermission"></a>
 
 ```typescript
 public addPermission(id: string, permission: LayerVersionPermission): void
@@ -2157,13 +2157,13 @@ Lambda function using the layer (for example, a CloudFormation changeset
 execution role) also needs to have the ``lambda:GetLayerVersion``
 permission on the layer version.
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextjsLayer.addPermission.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextjsLayer.addPermission.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `permission`<sup>Required</sup> <a name="permission" id="cdk-nextjs-standalone.NextjsLayer.addPermission.parameter.permission"></a>
+###### `permission`<sup>Required</sup> <a name="permission" id="open-next-cdk.NextjsLayer.addPermission.parameter.permission"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.LayerVersionPermission
 
@@ -2173,25 +2173,25 @@ permission on the layer version.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.fromLayerVersionArn">fromLayerVersionArn</a></code> | Imports a layer version by ARN. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.fromLayerVersionAttributes">fromLayerVersionAttributes</a></code> | Imports a Layer that has been defined externally. |
+| <code><a href="#open-next-cdk.NextjsLayer.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.NextjsLayer.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
+| <code><a href="#open-next-cdk.NextjsLayer.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
+| <code><a href="#open-next-cdk.NextjsLayer.fromLayerVersionArn">fromLayerVersionArn</a></code> | Imports a layer version by ARN. |
+| <code><a href="#open-next-cdk.NextjsLayer.fromLayerVersionAttributes">fromLayerVersionAttributes</a></code> | Imports a Layer that has been defined externally. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.NextjsLayer.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.NextjsLayer.isConstruct"></a>
 
 ```typescript
-import { NextjsLayer } from 'cdk-nextjs-standalone'
+import { NextjsLayer } from 'open-next-cdk'
 
 NextjsLayer.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.NextjsLayer.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.NextjsLayer.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -2199,42 +2199,42 @@ Any object.
 
 ---
 
-##### `isOwnedResource` <a name="isOwnedResource" id="cdk-nextjs-standalone.NextjsLayer.isOwnedResource"></a>
+##### `isOwnedResource` <a name="isOwnedResource" id="open-next-cdk.NextjsLayer.isOwnedResource"></a>
 
 ```typescript
-import { NextjsLayer } from 'cdk-nextjs-standalone'
+import { NextjsLayer } from 'open-next-cdk'
 
 NextjsLayer.isOwnedResource(construct: IConstruct)
 ```
 
 Returns true if the construct was created by CDK, and false otherwise.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="cdk-nextjs-standalone.NextjsLayer.isOwnedResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="open-next-cdk.NextjsLayer.isOwnedResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `isResource` <a name="isResource" id="cdk-nextjs-standalone.NextjsLayer.isResource"></a>
+##### `isResource` <a name="isResource" id="open-next-cdk.NextjsLayer.isResource"></a>
 
 ```typescript
-import { NextjsLayer } from 'cdk-nextjs-standalone'
+import { NextjsLayer } from 'open-next-cdk'
 
 NextjsLayer.isResource(construct: IConstruct)
 ```
 
 Check whether the given construct is a Resource.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="cdk-nextjs-standalone.NextjsLayer.isResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="open-next-cdk.NextjsLayer.isResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `fromLayerVersionArn` <a name="fromLayerVersionArn" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionArn"></a>
+##### `fromLayerVersionArn` <a name="fromLayerVersionArn" id="open-next-cdk.NextjsLayer.fromLayerVersionArn"></a>
 
 ```typescript
-import { NextjsLayer } from 'cdk-nextjs-standalone'
+import { NextjsLayer } from 'open-next-cdk'
 
 NextjsLayer.fromLayerVersionArn(scope: Construct, id: string, layerVersionArn: string)
 ```
@@ -2243,35 +2243,35 @@ Imports a layer version by ARN.
 
 Assumes it is compatible with all Lambda runtimes.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionArn.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextjsLayer.fromLayerVersionArn.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionArn.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextjsLayer.fromLayerVersionArn.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `layerVersionArn`<sup>Required</sup> <a name="layerVersionArn" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionArn.parameter.layerVersionArn"></a>
+###### `layerVersionArn`<sup>Required</sup> <a name="layerVersionArn" id="open-next-cdk.NextjsLayer.fromLayerVersionArn.parameter.layerVersionArn"></a>
 
 - *Type:* string
 
 ---
 
-##### `fromLayerVersionAttributes` <a name="fromLayerVersionAttributes" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionAttributes"></a>
+##### `fromLayerVersionAttributes` <a name="fromLayerVersionAttributes" id="open-next-cdk.NextjsLayer.fromLayerVersionAttributes"></a>
 
 ```typescript
-import { NextjsLayer } from 'cdk-nextjs-standalone'
+import { NextjsLayer } from 'open-next-cdk'
 
 NextjsLayer.fromLayerVersionAttributes(scope: Construct, id: string, attrs: LayerVersionAttributes)
 ```
 
 Imports a Layer that has been defined externally.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionAttributes.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextjsLayer.fromLayerVersionAttributes.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -2279,7 +2279,7 @@ the parent Construct that will use the imported layer.
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionAttributes.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextjsLayer.fromLayerVersionAttributes.parameter.id"></a>
 
 - *Type:* string
 
@@ -2287,7 +2287,7 @@ the id of the imported layer in the construct tree.
 
 ---
 
-###### `attrs`<sup>Required</sup> <a name="attrs" id="cdk-nextjs-standalone.NextjsLayer.fromLayerVersionAttributes.parameter.attrs"></a>
+###### `attrs`<sup>Required</sup> <a name="attrs" id="open-next-cdk.NextjsLayer.fromLayerVersionAttributes.parameter.attrs"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.LayerVersionAttributes
 
@@ -2299,15 +2299,15 @@ the properties of the imported layer.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.property.layerVersionArn">layerVersionArn</a></code> | <code>string</code> | The ARN of the Lambda Layer version that this Layer defines. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLayer.property.compatibleRuntimes">compatibleRuntimes</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime[]</code> | The runtimes compatible with this Layer. |
+| <code><a href="#open-next-cdk.NextjsLayer.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.NextjsLayer.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#open-next-cdk.NextjsLayer.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#open-next-cdk.NextjsLayer.property.layerVersionArn">layerVersionArn</a></code> | <code>string</code> | The ARN of the Lambda Layer version that this Layer defines. |
+| <code><a href="#open-next-cdk.NextjsLayer.property.compatibleRuntimes">compatibleRuntimes</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime[]</code> | The runtimes compatible with this Layer. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.NextjsLayer.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.NextjsLayer.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -2319,7 +2319,7 @@ The tree node.
 
 ---
 
-##### `env`<sup>Required</sup> <a name="env" id="cdk-nextjs-standalone.NextjsLayer.property.env"></a>
+##### `env`<sup>Required</sup> <a name="env" id="open-next-cdk.NextjsLayer.property.env"></a>
 
 ```typescript
 public readonly env: ResourceEnvironment;
@@ -2338,7 +2338,7 @@ that might be different than the stack they were imported into.
 
 ---
 
-##### `stack`<sup>Required</sup> <a name="stack" id="cdk-nextjs-standalone.NextjsLayer.property.stack"></a>
+##### `stack`<sup>Required</sup> <a name="stack" id="open-next-cdk.NextjsLayer.property.stack"></a>
 
 ```typescript
 public readonly stack: Stack;
@@ -2350,7 +2350,7 @@ The stack in which this resource is defined.
 
 ---
 
-##### `layerVersionArn`<sup>Required</sup> <a name="layerVersionArn" id="cdk-nextjs-standalone.NextjsLayer.property.layerVersionArn"></a>
+##### `layerVersionArn`<sup>Required</sup> <a name="layerVersionArn" id="open-next-cdk.NextjsLayer.property.layerVersionArn"></a>
 
 ```typescript
 public readonly layerVersionArn: string;
@@ -2362,7 +2362,7 @@ The ARN of the Lambda Layer version that this Layer defines.
 
 ---
 
-##### `compatibleRuntimes`<sup>Optional</sup> <a name="compatibleRuntimes" id="cdk-nextjs-standalone.NextjsLayer.property.compatibleRuntimes"></a>
+##### `compatibleRuntimes`<sup>Optional</sup> <a name="compatibleRuntimes" id="open-next-cdk.NextjsLayer.property.compatibleRuntimes"></a>
 
 ```typescript
 public readonly compatibleRuntimes: Runtime[];
@@ -2375,44 +2375,44 @@ The runtimes compatible with this Layer.
 ---
 
 
-### NextjsS3EnvRewriter <a name="NextjsS3EnvRewriter" id="cdk-nextjs-standalone.NextjsS3EnvRewriter"></a>
+### NextjsS3EnvRewriter <a name="NextjsS3EnvRewriter" id="open-next-cdk.NextjsS3EnvRewriter"></a>
 
 Rewrites variables in S3 objects after a deployment happens to replace CloudFormation tokens with their values.
 
 These values are not resolved at build time because they are
 only known at deploy time.
 
-#### Initializers <a name="Initializers" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.Initializer"></a>
+#### Initializers <a name="Initializers" id="open-next-cdk.NextjsS3EnvRewriter.Initializer"></a>
 
 ```typescript
-import { NextjsS3EnvRewriter } from 'cdk-nextjs-standalone'
+import { NextjsS3EnvRewriter } from 'open-next-cdk'
 
 new NextjsS3EnvRewriter(scope: Construct, id: string, props: NextjsS3EnvRewriterProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps">NextjsS3EnvRewriterProps</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriter.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriter.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriter.Initializer.parameter.props">props</a></code> | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps">NextjsS3EnvRewriterProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="open-next-cdk.NextjsS3EnvRewriter.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="open-next-cdk.NextjsS3EnvRewriter.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="open-next-cdk.NextjsS3EnvRewriter.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps">NextjsS3EnvRewriterProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsS3EnvRewriterProps">NextjsS3EnvRewriterProps</a>
 
 ---
 
@@ -2420,11 +2420,11 @@ new NextjsS3EnvRewriter(scope: Construct, id: string, props: NextjsS3EnvRewriter
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriter.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.toString"></a>
+##### `toString` <a name="toString" id="open-next-cdk.NextjsS3EnvRewriter.toString"></a>
 
 ```typescript
 public toString(): string
@@ -2436,21 +2436,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriter.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="open-next-cdk.NextjsS3EnvRewriter.isConstruct"></a>
 
 ```typescript
-import { NextjsS3EnvRewriter } from 'cdk-nextjs-standalone'
+import { NextjsS3EnvRewriter } from 'open-next-cdk'
 
 NextjsS3EnvRewriter.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="open-next-cdk.NextjsS3EnvRewriter.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -2462,12 +2462,12 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriter.property.rewriteNode">rewriteNode</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriter.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriter.property.rewriteNode">rewriteNode</a></code> | <code>constructs.Construct</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="open-next-cdk.NextjsS3EnvRewriter.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -2479,7 +2479,7 @@ The tree node.
 
 ---
 
-##### `rewriteNode`<sup>Optional</sup> <a name="rewriteNode" id="cdk-nextjs-standalone.NextjsS3EnvRewriter.property.rewriteNode"></a>
+##### `rewriteNode`<sup>Optional</sup> <a name="rewriteNode" id="open-next-cdk.NextjsS3EnvRewriter.property.rewriteNode"></a>
 
 ```typescript
 public readonly rewriteNode: Construct;
@@ -2492,12 +2492,12 @@ public readonly rewriteNode: Construct;
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### BaseSiteDomainProps <a name="BaseSiteDomainProps" id="cdk-nextjs-standalone.BaseSiteDomainProps"></a>
+### BaseSiteDomainProps <a name="BaseSiteDomainProps" id="open-next-cdk.BaseSiteDomainProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.BaseSiteDomainProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.BaseSiteDomainProps.Initializer"></a>
 
 ```typescript
-import { BaseSiteDomainProps } from 'cdk-nextjs-standalone'
+import { BaseSiteDomainProps } from 'open-next-cdk'
 
 const baseSiteDomainProps: BaseSiteDomainProps = { ... }
 ```
@@ -2506,16 +2506,16 @@ const baseSiteDomainProps: BaseSiteDomainProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteDomainProps.property.domainName">domainName</a></code> | <code>string</code> | The domain to be assigned to the website URL (ie. domain.com). |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteDomainProps.property.alternateNames">alternateNames</a></code> | <code>string[]</code> | Specify additional names that should route to the Cloudfront Distribution. |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteDomainProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | Import the certificate for the domain. |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteDomainProps.property.domainAlias">domainAlias</a></code> | <code>string</code> | An alternative domain to be assigned to the website URL. |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteDomainProps.property.hostedZone">hostedZone</a></code> | <code>aws-cdk-lib.aws_route53.IHostedZone</code> | Import the underlying Route 53 hosted zone. |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteDomainProps.property.isExternalDomain">isExternalDomain</a></code> | <code>boolean</code> | Set this option if the domain is not hosted on Amazon Route 53. |
+| <code><a href="#open-next-cdk.BaseSiteDomainProps.property.domainName">domainName</a></code> | <code>string</code> | The domain to be assigned to the website URL (ie. domain.com). |
+| <code><a href="#open-next-cdk.BaseSiteDomainProps.property.alternateNames">alternateNames</a></code> | <code>string[]</code> | Specify additional names that should route to the Cloudfront Distribution. |
+| <code><a href="#open-next-cdk.BaseSiteDomainProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | Import the certificate for the domain. |
+| <code><a href="#open-next-cdk.BaseSiteDomainProps.property.domainAlias">domainAlias</a></code> | <code>string</code> | An alternative domain to be assigned to the website URL. |
+| <code><a href="#open-next-cdk.BaseSiteDomainProps.property.hostedZone">hostedZone</a></code> | <code>aws-cdk-lib.aws_route53.IHostedZone</code> | Import the underlying Route 53 hosted zone. |
+| <code><a href="#open-next-cdk.BaseSiteDomainProps.property.isExternalDomain">isExternalDomain</a></code> | <code>boolean</code> | Set this option if the domain is not hosted on Amazon Route 53. |
 
 ---
 
-##### `domainName`<sup>Required</sup> <a name="domainName" id="cdk-nextjs-standalone.BaseSiteDomainProps.property.domainName"></a>
+##### `domainName`<sup>Required</sup> <a name="domainName" id="open-next-cdk.BaseSiteDomainProps.property.domainName"></a>
 
 ```typescript
 public readonly domainName: string;
@@ -2529,7 +2529,7 @@ Supports domains that are hosted either on [Route 53](https://aws.amazon.com/rou
 
 ---
 
-##### `alternateNames`<sup>Optional</sup> <a name="alternateNames" id="cdk-nextjs-standalone.BaseSiteDomainProps.property.alternateNames"></a>
+##### `alternateNames`<sup>Optional</sup> <a name="alternateNames" id="open-next-cdk.BaseSiteDomainProps.property.alternateNames"></a>
 
 ```typescript
 public readonly alternateNames: string[];
@@ -2543,7 +2543,7 @@ Note, certificates for these names will not be automatically generated so the `c
 
 ---
 
-##### `certificate`<sup>Optional</sup> <a name="certificate" id="cdk-nextjs-standalone.BaseSiteDomainProps.property.certificate"></a>
+##### `certificate`<sup>Optional</sup> <a name="certificate" id="open-next-cdk.BaseSiteDomainProps.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;
@@ -2559,7 +2559,7 @@ Set this option if you have an existing certificate in the `us-east-1` region in
 
 ---
 
-##### `domainAlias`<sup>Optional</sup> <a name="domainAlias" id="cdk-nextjs-standalone.BaseSiteDomainProps.property.domainAlias"></a>
+##### `domainAlias`<sup>Optional</sup> <a name="domainAlias" id="open-next-cdk.BaseSiteDomainProps.property.domainAlias"></a>
 
 ```typescript
 public readonly domainAlias: string;
@@ -2575,7 +2575,7 @@ Use this to create a `www.` version of your domain and redirect visitors to the 
 
 ---
 
-##### `hostedZone`<sup>Optional</sup> <a name="hostedZone" id="cdk-nextjs-standalone.BaseSiteDomainProps.property.hostedZone"></a>
+##### `hostedZone`<sup>Optional</sup> <a name="hostedZone" id="open-next-cdk.BaseSiteDomainProps.property.hostedZone"></a>
 
 ```typescript
 public readonly hostedZone: IHostedZone;
@@ -2587,7 +2587,7 @@ Import the underlying Route 53 hosted zone.
 
 ---
 
-##### `isExternalDomain`<sup>Optional</sup> <a name="isExternalDomain" id="cdk-nextjs-standalone.BaseSiteDomainProps.property.isExternalDomain"></a>
+##### `isExternalDomain`<sup>Optional</sup> <a name="isExternalDomain" id="open-next-cdk.BaseSiteDomainProps.property.isExternalDomain"></a>
 
 ```typescript
 public readonly isExternalDomain: boolean;
@@ -2599,12 +2599,12 @@ Set this option if the domain is not hosted on Amazon Route 53.
 
 ---
 
-### BaseSiteEnvironmentOutputsInfo <a name="BaseSiteEnvironmentOutputsInfo" id="cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo"></a>
+### BaseSiteEnvironmentOutputsInfo <a name="BaseSiteEnvironmentOutputsInfo" id="open-next-cdk.BaseSiteEnvironmentOutputsInfo"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.BaseSiteEnvironmentOutputsInfo.Initializer"></a>
 
 ```typescript
-import { BaseSiteEnvironmentOutputsInfo } from 'cdk-nextjs-standalone'
+import { BaseSiteEnvironmentOutputsInfo } from 'open-next-cdk'
 
 const baseSiteEnvironmentOutputsInfo: BaseSiteEnvironmentOutputsInfo = { ... }
 ```
@@ -2613,13 +2613,13 @@ const baseSiteEnvironmentOutputsInfo: BaseSiteEnvironmentOutputsInfo = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo.property.environmentOutputs">environmentOutputs</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo.property.path">path</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo.property.stack">stack</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.BaseSiteEnvironmentOutputsInfo.property.environmentOutputs">environmentOutputs</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#open-next-cdk.BaseSiteEnvironmentOutputsInfo.property.path">path</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.BaseSiteEnvironmentOutputsInfo.property.stack">stack</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `environmentOutputs`<sup>Required</sup> <a name="environmentOutputs" id="cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo.property.environmentOutputs"></a>
+##### `environmentOutputs`<sup>Required</sup> <a name="environmentOutputs" id="open-next-cdk.BaseSiteEnvironmentOutputsInfo.property.environmentOutputs"></a>
 
 ```typescript
 public readonly environmentOutputs: {[ key: string ]: string};
@@ -2629,7 +2629,7 @@ public readonly environmentOutputs: {[ key: string ]: string};
 
 ---
 
-##### `path`<sup>Required</sup> <a name="path" id="cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo.property.path"></a>
+##### `path`<sup>Required</sup> <a name="path" id="open-next-cdk.BaseSiteEnvironmentOutputsInfo.property.path"></a>
 
 ```typescript
 public readonly path: string;
@@ -2639,7 +2639,7 @@ public readonly path: string;
 
 ---
 
-##### `stack`<sup>Required</sup> <a name="stack" id="cdk-nextjs-standalone.BaseSiteEnvironmentOutputsInfo.property.stack"></a>
+##### `stack`<sup>Required</sup> <a name="stack" id="open-next-cdk.BaseSiteEnvironmentOutputsInfo.property.stack"></a>
 
 ```typescript
 public readonly stack: string;
@@ -2649,12 +2649,12 @@ public readonly stack: string;
 
 ---
 
-### BaseSiteReplaceProps <a name="BaseSiteReplaceProps" id="cdk-nextjs-standalone.BaseSiteReplaceProps"></a>
+### BaseSiteReplaceProps <a name="BaseSiteReplaceProps" id="open-next-cdk.BaseSiteReplaceProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.BaseSiteReplaceProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.BaseSiteReplaceProps.Initializer"></a>
 
 ```typescript
-import { BaseSiteReplaceProps } from 'cdk-nextjs-standalone'
+import { BaseSiteReplaceProps } from 'open-next-cdk'
 
 const baseSiteReplaceProps: BaseSiteReplaceProps = { ... }
 ```
@@ -2663,13 +2663,13 @@ const baseSiteReplaceProps: BaseSiteReplaceProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteReplaceProps.property.files">files</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteReplaceProps.property.replace">replace</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.BaseSiteReplaceProps.property.search">search</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.BaseSiteReplaceProps.property.files">files</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.BaseSiteReplaceProps.property.replace">replace</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.BaseSiteReplaceProps.property.search">search</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `files`<sup>Required</sup> <a name="files" id="cdk-nextjs-standalone.BaseSiteReplaceProps.property.files"></a>
+##### `files`<sup>Required</sup> <a name="files" id="open-next-cdk.BaseSiteReplaceProps.property.files"></a>
 
 ```typescript
 public readonly files: string;
@@ -2679,7 +2679,7 @@ public readonly files: string;
 
 ---
 
-##### `replace`<sup>Required</sup> <a name="replace" id="cdk-nextjs-standalone.BaseSiteReplaceProps.property.replace"></a>
+##### `replace`<sup>Required</sup> <a name="replace" id="open-next-cdk.BaseSiteReplaceProps.property.replace"></a>
 
 ```typescript
 public readonly replace: string;
@@ -2689,7 +2689,7 @@ public readonly replace: string;
 
 ---
 
-##### `search`<sup>Required</sup> <a name="search" id="cdk-nextjs-standalone.BaseSiteReplaceProps.property.search"></a>
+##### `search`<sup>Required</sup> <a name="search" id="open-next-cdk.BaseSiteReplaceProps.property.search"></a>
 
 ```typescript
 public readonly search: string;
@@ -2699,12 +2699,12 @@ public readonly search: string;
 
 ---
 
-### CreateArchiveArgs <a name="CreateArchiveArgs" id="cdk-nextjs-standalone.CreateArchiveArgs"></a>
+### CreateArchiveArgs <a name="CreateArchiveArgs" id="open-next-cdk.CreateArchiveArgs"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.CreateArchiveArgs.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.CreateArchiveArgs.Initializer"></a>
 
 ```typescript
-import { CreateArchiveArgs } from 'cdk-nextjs-standalone'
+import { CreateArchiveArgs } from 'open-next-cdk'
 
 const createArchiveArgs: CreateArchiveArgs = { ... }
 ```
@@ -2713,16 +2713,16 @@ const createArchiveArgs: CreateArchiveArgs = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.CreateArchiveArgs.property.directory">directory</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.CreateArchiveArgs.property.zipFileName">zipFileName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.CreateArchiveArgs.property.zipOutDir">zipOutDir</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.CreateArchiveArgs.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.CreateArchiveArgs.property.fileGlob">fileGlob</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.CreateArchiveArgs.property.quiet">quiet</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#open-next-cdk.CreateArchiveArgs.property.directory">directory</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.CreateArchiveArgs.property.zipFileName">zipFileName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.CreateArchiveArgs.property.zipOutDir">zipOutDir</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.CreateArchiveArgs.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#open-next-cdk.CreateArchiveArgs.property.fileGlob">fileGlob</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.CreateArchiveArgs.property.quiet">quiet</a></code> | <code>boolean</code> | *No description.* |
 
 ---
 
-##### `directory`<sup>Required</sup> <a name="directory" id="cdk-nextjs-standalone.CreateArchiveArgs.property.directory"></a>
+##### `directory`<sup>Required</sup> <a name="directory" id="open-next-cdk.CreateArchiveArgs.property.directory"></a>
 
 ```typescript
 public readonly directory: string;
@@ -2732,7 +2732,7 @@ public readonly directory: string;
 
 ---
 
-##### `zipFileName`<sup>Required</sup> <a name="zipFileName" id="cdk-nextjs-standalone.CreateArchiveArgs.property.zipFileName"></a>
+##### `zipFileName`<sup>Required</sup> <a name="zipFileName" id="open-next-cdk.CreateArchiveArgs.property.zipFileName"></a>
 
 ```typescript
 public readonly zipFileName: string;
@@ -2742,7 +2742,7 @@ public readonly zipFileName: string;
 
 ---
 
-##### `zipOutDir`<sup>Required</sup> <a name="zipOutDir" id="cdk-nextjs-standalone.CreateArchiveArgs.property.zipOutDir"></a>
+##### `zipOutDir`<sup>Required</sup> <a name="zipOutDir" id="open-next-cdk.CreateArchiveArgs.property.zipOutDir"></a>
 
 ```typescript
 public readonly zipOutDir: string;
@@ -2752,7 +2752,7 @@ public readonly zipOutDir: string;
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.CreateArchiveArgs.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.CreateArchiveArgs.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -2762,7 +2762,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `fileGlob`<sup>Optional</sup> <a name="fileGlob" id="cdk-nextjs-standalone.CreateArchiveArgs.property.fileGlob"></a>
+##### `fileGlob`<sup>Optional</sup> <a name="fileGlob" id="open-next-cdk.CreateArchiveArgs.property.fileGlob"></a>
 
 ```typescript
 public readonly fileGlob: string;
@@ -2772,7 +2772,7 @@ public readonly fileGlob: string;
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.CreateArchiveArgs.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.CreateArchiveArgs.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -2782,12 +2782,12 @@ public readonly quiet: boolean;
 
 ---
 
-### ImageOptimizationProps <a name="ImageOptimizationProps" id="cdk-nextjs-standalone.ImageOptimizationProps"></a>
+### ImageOptimizationProps <a name="ImageOptimizationProps" id="open-next-cdk.ImageOptimizationProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.ImageOptimizationProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.ImageOptimizationProps.Initializer"></a>
 
 ```typescript
-import { ImageOptimizationProps } from 'cdk-nextjs-standalone'
+import { ImageOptimizationProps } from 'open-next-cdk'
 
 const imageOptimizationProps: ImageOptimizationProps = { ... }
 ```
@@ -2796,24 +2796,24 @@ const imageOptimizationProps: ImageOptimizationProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | The S3 bucket holding application images. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.nextBuild">nextBuild</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a></code> | The `NextjsBuild` instance representing the built Nextjs application. |
-| <code><a href="#cdk-nextjs-standalone.ImageOptimizationProps.property.lambdaOptions">lambdaOptions</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override function properties. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | The S3 bucket holding application images. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | The `NextjsBuild` instance representing the built Nextjs application. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.lambdaOptions">lambdaOptions</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override function properties. |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.ImageOptimizationProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.ImageOptimizationProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -2827,7 +2827,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.ImageOptimizationProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.ImageOptimizationProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -2841,7 +2841,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.ImageOptimizationProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.ImageOptimizationProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -2857,7 +2857,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.ImageOptimizationProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.ImageOptimizationProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -2870,7 +2870,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.ImageOptimizationProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.ImageOptimizationProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -2882,7 +2882,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.ImageOptimizationProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.ImageOptimizationProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -2896,7 +2896,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.ImageOptimizationProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.ImageOptimizationProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -2908,7 +2908,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.ImageOptimizationProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.ImageOptimizationProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -2922,7 +2922,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.ImageOptimizationProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.ImageOptimizationProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -2934,7 +2934,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.ImageOptimizationProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.ImageOptimizationProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -2948,7 +2948,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.ImageOptimizationProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.ImageOptimizationProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -2962,7 +2962,7 @@ Defaults to os.tmpdir().
 
 ---
 
-##### `bucket`<sup>Required</sup> <a name="bucket" id="cdk-nextjs-standalone.ImageOptimizationProps.property.bucket"></a>
+##### `bucket`<sup>Required</sup> <a name="bucket" id="open-next-cdk.ImageOptimizationProps.property.bucket"></a>
 
 ```typescript
 public readonly bucket: IBucket;
@@ -2974,19 +2974,19 @@ The S3 bucket holding application images.
 
 ---
 
-##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="cdk-nextjs-standalone.ImageOptimizationProps.property.nextBuild"></a>
+##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="open-next-cdk.ImageOptimizationProps.property.nextBuild"></a>
 
 ```typescript
 public readonly nextBuild: NextjsBuild;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a>
+- *Type:* <a href="#open-next-cdk.NextjsBuild">NextjsBuild</a>
 
 The `NextjsBuild` instance representing the built Nextjs application.
 
 ---
 
-##### `lambdaOptions`<sup>Optional</sup> <a name="lambdaOptions" id="cdk-nextjs-standalone.ImageOptimizationProps.property.lambdaOptions"></a>
+##### `lambdaOptions`<sup>Optional</sup> <a name="lambdaOptions" id="open-next-cdk.ImageOptimizationProps.property.lambdaOptions"></a>
 
 ```typescript
 public readonly lambdaOptions: FunctionOptions;
@@ -2998,12 +2998,12 @@ Override function properties.
 
 ---
 
-### NextjsAssetsCachePolicyProps <a name="NextjsAssetsCachePolicyProps" id="cdk-nextjs-standalone.NextjsAssetsCachePolicyProps"></a>
+### NextjsAssetsCachePolicyProps <a name="NextjsAssetsCachePolicyProps" id="open-next-cdk.NextjsAssetsCachePolicyProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsAssetsCachePolicyProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsAssetsCachePolicyProps.Initializer"></a>
 
 ```typescript
-import { NextjsAssetsCachePolicyProps } from 'cdk-nextjs-standalone'
+import { NextjsAssetsCachePolicyProps } from 'open-next-cdk'
 
 const nextjsAssetsCachePolicyProps: NextjsAssetsCachePolicyProps = { ... }
 ```
@@ -3012,12 +3012,12 @@ const nextjsAssetsCachePolicyProps: NextjsAssetsCachePolicyProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsCachePolicyProps.property.staticMaxAgeDefault">staticMaxAgeDefault</a></code> | <code>aws-cdk-lib.Duration</code> | Cache-control max-age default for S3 static assets. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsCachePolicyProps.property.staticStaleWhileRevalidateDefault">staticStaleWhileRevalidateDefault</a></code> | <code>aws-cdk-lib.Duration</code> | Cache-control stale-while-revalidate default for S3 static assets. |
+| <code><a href="#open-next-cdk.NextjsAssetsCachePolicyProps.property.staticMaxAgeDefault">staticMaxAgeDefault</a></code> | <code>aws-cdk-lib.Duration</code> | Cache-control max-age default for S3 static assets. |
+| <code><a href="#open-next-cdk.NextjsAssetsCachePolicyProps.property.staticStaleWhileRevalidateDefault">staticStaleWhileRevalidateDefault</a></code> | <code>aws-cdk-lib.Duration</code> | Cache-control stale-while-revalidate default for S3 static assets. |
 
 ---
 
-##### `staticMaxAgeDefault`<sup>Optional</sup> <a name="staticMaxAgeDefault" id="cdk-nextjs-standalone.NextjsAssetsCachePolicyProps.property.staticMaxAgeDefault"></a>
+##### `staticMaxAgeDefault`<sup>Optional</sup> <a name="staticMaxAgeDefault" id="open-next-cdk.NextjsAssetsCachePolicyProps.property.staticMaxAgeDefault"></a>
 
 ```typescript
 public readonly staticMaxAgeDefault: Duration;
@@ -3031,7 +3031,7 @@ Default: 30 days.
 
 ---
 
-##### `staticStaleWhileRevalidateDefault`<sup>Optional</sup> <a name="staticStaleWhileRevalidateDefault" id="cdk-nextjs-standalone.NextjsAssetsCachePolicyProps.property.staticStaleWhileRevalidateDefault"></a>
+##### `staticStaleWhileRevalidateDefault`<sup>Optional</sup> <a name="staticStaleWhileRevalidateDefault" id="open-next-cdk.NextjsAssetsCachePolicyProps.property.staticStaleWhileRevalidateDefault"></a>
 
 ```typescript
 public readonly staticStaleWhileRevalidateDefault: Duration;
@@ -3045,12 +3045,12 @@ Default: 1 day.
 
 ---
 
-### NextjsAssetsDeploymentProps <a name="NextjsAssetsDeploymentProps" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps"></a>
+### NextjsAssetsDeploymentProps <a name="NextjsAssetsDeploymentProps" id="open-next-cdk.NextjsAssetsDeploymentProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsAssetsDeploymentProps.Initializer"></a>
 
 ```typescript
-import { NextjsAssetsDeploymentProps } from 'cdk-nextjs-standalone'
+import { NextjsAssetsDeploymentProps } from 'open-next-cdk'
 
 const nextjsAssetsDeploymentProps: NextjsAssetsDeploymentProps = { ... }
 ```
@@ -3059,30 +3059,30 @@ const nextjsAssetsDeploymentProps: NextjsAssetsDeploymentProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Properties for the S3 bucket containing the NextJS assets. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.nextBuild">nextBuild</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a></code> | The `NextjsBuild` instance representing the built Nextjs application. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.cachePolicies">cachePolicies</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsAssetsCachePolicyProps">NextjsAssetsCachePolicyProps</a></code> | Override the default S3 cache policies created internally. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.IDistribution</code> | Distribution to invalidate when assets change. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.ephemeralStorageSize">ephemeralStorageSize</a></code> | <code>aws-cdk-lib.Size</code> | ephemeralStorageSize for lambda function which been run by BucketDeployment. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.memoryLimit">memoryLimit</a></code> | <code>number</code> | memoryLimit for lambda function which been run by BucketDeployment. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.prune">prune</a></code> | <code>boolean</code> | Set to true to delete old assets (defaults to false). |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.useEfs">useEfs</a></code> | <code>boolean</code> | In case of useEfs, vpc is required. |
-| <code><a href="#cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | In case of useEfs, vpc is required. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Properties for the S3 bucket containing the NextJS assets. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | The `NextjsBuild` instance representing the built Nextjs application. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.cachePolicies">cachePolicies</a></code> | <code><a href="#open-next-cdk.NextjsAssetsCachePolicyProps">NextjsAssetsCachePolicyProps</a></code> | Override the default S3 cache policies created internally. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.IDistribution</code> | Distribution to invalidate when assets change. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.ephemeralStorageSize">ephemeralStorageSize</a></code> | <code>aws-cdk-lib.Size</code> | ephemeralStorageSize for lambda function which been run by BucketDeployment. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.memoryLimit">memoryLimit</a></code> | <code>number</code> | memoryLimit for lambda function which been run by BucketDeployment. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.prune">prune</a></code> | <code>boolean</code> | Set to true to delete old assets (defaults to false). |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.useEfs">useEfs</a></code> | <code>boolean</code> | In case of useEfs, vpc is required. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | In case of useEfs, vpc is required. |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsAssetsDeploymentProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -3096,7 +3096,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsAssetsDeploymentProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -3110,7 +3110,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsAssetsDeploymentProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -3126,7 +3126,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsAssetsDeploymentProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -3139,7 +3139,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsAssetsDeploymentProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -3151,7 +3151,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsAssetsDeploymentProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3165,7 +3165,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsAssetsDeploymentProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -3177,7 +3177,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsAssetsDeploymentProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -3191,7 +3191,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsAssetsDeploymentProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -3203,7 +3203,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsAssetsDeploymentProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -3217,7 +3217,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsAssetsDeploymentProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -3231,7 +3231,7 @@ Defaults to os.tmpdir().
 
 ---
 
-##### `bucket`<sup>Required</sup> <a name="bucket" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.bucket"></a>
+##### `bucket`<sup>Required</sup> <a name="bucket" id="open-next-cdk.NextjsAssetsDeploymentProps.property.bucket"></a>
 
 ```typescript
 public readonly bucket: IBucket;
@@ -3243,31 +3243,31 @@ Properties for the S3 bucket containing the NextJS assets.
 
 ---
 
-##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.nextBuild"></a>
+##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="open-next-cdk.NextjsAssetsDeploymentProps.property.nextBuild"></a>
 
 ```typescript
 public readonly nextBuild: NextjsBuild;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a>
+- *Type:* <a href="#open-next-cdk.NextjsBuild">NextjsBuild</a>
 
 The `NextjsBuild` instance representing the built Nextjs application.
 
 ---
 
-##### `cachePolicies`<sup>Optional</sup> <a name="cachePolicies" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.cachePolicies"></a>
+##### `cachePolicies`<sup>Optional</sup> <a name="cachePolicies" id="open-next-cdk.NextjsAssetsDeploymentProps.property.cachePolicies"></a>
 
 ```typescript
 public readonly cachePolicies: NextjsAssetsCachePolicyProps;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsAssetsCachePolicyProps">NextjsAssetsCachePolicyProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsAssetsCachePolicyProps">NextjsAssetsCachePolicyProps</a>
 
 Override the default S3 cache policies created internally.
 
 ---
 
-##### `distribution`<sup>Optional</sup> <a name="distribution" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.distribution"></a>
+##### `distribution`<sup>Optional</sup> <a name="distribution" id="open-next-cdk.NextjsAssetsDeploymentProps.property.distribution"></a>
 
 ```typescript
 public readonly distribution: IDistribution;
@@ -3279,7 +3279,7 @@ Distribution to invalidate when assets change.
 
 ---
 
-##### `ephemeralStorageSize`<sup>Optional</sup> <a name="ephemeralStorageSize" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.ephemeralStorageSize"></a>
+##### `ephemeralStorageSize`<sup>Optional</sup> <a name="ephemeralStorageSize" id="open-next-cdk.NextjsAssetsDeploymentProps.property.ephemeralStorageSize"></a>
 
 ```typescript
 public readonly ephemeralStorageSize: Size;
@@ -3291,7 +3291,7 @@ ephemeralStorageSize for lambda function which been run by BucketDeployment.
 
 ---
 
-##### `memoryLimit`<sup>Optional</sup> <a name="memoryLimit" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.memoryLimit"></a>
+##### `memoryLimit`<sup>Optional</sup> <a name="memoryLimit" id="open-next-cdk.NextjsAssetsDeploymentProps.property.memoryLimit"></a>
 
 ```typescript
 public readonly memoryLimit: number;
@@ -3303,7 +3303,7 @@ memoryLimit for lambda function which been run by BucketDeployment.
 
 ---
 
-##### `prune`<sup>Optional</sup> <a name="prune" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.prune"></a>
+##### `prune`<sup>Optional</sup> <a name="prune" id="open-next-cdk.NextjsAssetsDeploymentProps.property.prune"></a>
 
 ```typescript
 public readonly prune: boolean;
@@ -3317,7 +3317,7 @@ Recommended to only set to true if you don't need the ability to roll back deplo
 
 ---
 
-##### `useEfs`<sup>Optional</sup> <a name="useEfs" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.useEfs"></a>
+##### `useEfs`<sup>Optional</sup> <a name="useEfs" id="open-next-cdk.NextjsAssetsDeploymentProps.property.useEfs"></a>
 
 ```typescript
 public readonly useEfs: boolean;
@@ -3329,7 +3329,7 @@ In case of useEfs, vpc is required.
 
 ---
 
-##### `vpc`<sup>Optional</sup> <a name="vpc" id="cdk-nextjs-standalone.NextjsAssetsDeploymentProps.property.vpc"></a>
+##### `vpc`<sup>Optional</sup> <a name="vpc" id="open-next-cdk.NextjsAssetsDeploymentProps.property.vpc"></a>
 
 ```typescript
 public readonly vpc: IVpc;
@@ -3341,14 +3341,14 @@ In case of useEfs, vpc is required.
 
 ---
 
-### NextjsBaseProps <a name="NextjsBaseProps" id="cdk-nextjs-standalone.NextjsBaseProps"></a>
+### NextjsBaseProps <a name="NextjsBaseProps" id="open-next-cdk.NextjsBaseProps"></a>
 
 Common props shared across NextJS-related CDK constructs.
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsBaseProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsBaseProps.Initializer"></a>
 
 ```typescript
-import { NextjsBaseProps } from 'cdk-nextjs-standalone'
+import { NextjsBaseProps } from 'open-next-cdk'
 
 const nextjsBaseProps: NextjsBaseProps = { ... }
 ```
@@ -3357,21 +3357,21 @@ const nextjsBaseProps: NextjsBaseProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBaseProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.NextjsBaseProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsBaseProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -3385,7 +3385,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.NextjsBaseProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsBaseProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -3399,7 +3399,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.NextjsBaseProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsBaseProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -3415,7 +3415,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.NextjsBaseProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsBaseProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -3428,7 +3428,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.NextjsBaseProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsBaseProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -3440,7 +3440,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.NextjsBaseProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsBaseProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3454,7 +3454,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.NextjsBaseProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsBaseProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -3466,7 +3466,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsBaseProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsBaseProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -3480,7 +3480,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.NextjsBaseProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsBaseProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -3492,7 +3492,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.NextjsBaseProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsBaseProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -3506,7 +3506,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsBaseProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsBaseProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -3520,12 +3520,12 @@ Defaults to os.tmpdir().
 
 ---
 
-### NextjsBuildProps <a name="NextjsBuildProps" id="cdk-nextjs-standalone.NextjsBuildProps"></a>
+### NextjsBuildProps <a name="NextjsBuildProps" id="open-next-cdk.NextjsBuildProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsBuildProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsBuildProps.Initializer"></a>
 
 ```typescript
-import { NextjsBuildProps } from 'cdk-nextjs-standalone'
+import { NextjsBuildProps } from 'open-next-cdk'
 
 const nextjsBuildProps: NextjsBuildProps = { ... }
 ```
@@ -3534,21 +3534,21 @@ const nextjsBuildProps: NextjsBuildProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.NextjsBuildProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.NextjsBuildProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsBuildProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -3562,7 +3562,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.NextjsBuildProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsBuildProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -3576,7 +3576,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.NextjsBuildProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsBuildProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -3592,7 +3592,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.NextjsBuildProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsBuildProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -3605,7 +3605,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.NextjsBuildProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsBuildProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -3617,7 +3617,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.NextjsBuildProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsBuildProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3631,7 +3631,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.NextjsBuildProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsBuildProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -3643,7 +3643,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsBuildProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsBuildProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -3657,7 +3657,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.NextjsBuildProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsBuildProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -3669,7 +3669,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.NextjsBuildProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsBuildProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -3683,7 +3683,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsBuildProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsBuildProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -3697,12 +3697,12 @@ Defaults to os.tmpdir().
 
 ---
 
-### NextjsCachePolicyProps <a name="NextjsCachePolicyProps" id="cdk-nextjs-standalone.NextjsCachePolicyProps"></a>
+### NextjsCachePolicyProps <a name="NextjsCachePolicyProps" id="open-next-cdk.NextjsCachePolicyProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsCachePolicyProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsCachePolicyProps.Initializer"></a>
 
 ```typescript
-import { NextjsCachePolicyProps } from 'cdk-nextjs-standalone'
+import { NextjsCachePolicyProps } from 'open-next-cdk'
 
 const nextjsCachePolicyProps: NextjsCachePolicyProps = { ... }
 ```
@@ -3711,14 +3711,14 @@ const nextjsCachePolicyProps: NextjsCachePolicyProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsCachePolicyProps.property.imageCachePolicy">imageCachePolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.ICachePolicy</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsCachePolicyProps.property.lambdaCachePolicy">lambdaCachePolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.ICachePolicy</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsCachePolicyProps.property.staticCachePolicy">staticCachePolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.ICachePolicy</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsCachePolicyProps.property.staticClientMaxAgeDefault">staticClientMaxAgeDefault</a></code> | <code>aws-cdk-lib.Duration</code> | Cache-control max-age default for static assets (/_next/*). |
+| <code><a href="#open-next-cdk.NextjsCachePolicyProps.property.imageCachePolicy">imageCachePolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.ICachePolicy</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsCachePolicyProps.property.lambdaCachePolicy">lambdaCachePolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.ICachePolicy</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsCachePolicyProps.property.staticCachePolicy">staticCachePolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.ICachePolicy</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsCachePolicyProps.property.staticClientMaxAgeDefault">staticClientMaxAgeDefault</a></code> | <code>aws-cdk-lib.Duration</code> | Cache-control max-age default for static assets (/_next/*). |
 
 ---
 
-##### `imageCachePolicy`<sup>Optional</sup> <a name="imageCachePolicy" id="cdk-nextjs-standalone.NextjsCachePolicyProps.property.imageCachePolicy"></a>
+##### `imageCachePolicy`<sup>Optional</sup> <a name="imageCachePolicy" id="open-next-cdk.NextjsCachePolicyProps.property.imageCachePolicy"></a>
 
 ```typescript
 public readonly imageCachePolicy: ICachePolicy;
@@ -3728,7 +3728,7 @@ public readonly imageCachePolicy: ICachePolicy;
 
 ---
 
-##### `lambdaCachePolicy`<sup>Optional</sup> <a name="lambdaCachePolicy" id="cdk-nextjs-standalone.NextjsCachePolicyProps.property.lambdaCachePolicy"></a>
+##### `lambdaCachePolicy`<sup>Optional</sup> <a name="lambdaCachePolicy" id="open-next-cdk.NextjsCachePolicyProps.property.lambdaCachePolicy"></a>
 
 ```typescript
 public readonly lambdaCachePolicy: ICachePolicy;
@@ -3738,7 +3738,7 @@ public readonly lambdaCachePolicy: ICachePolicy;
 
 ---
 
-##### `staticCachePolicy`<sup>Optional</sup> <a name="staticCachePolicy" id="cdk-nextjs-standalone.NextjsCachePolicyProps.property.staticCachePolicy"></a>
+##### `staticCachePolicy`<sup>Optional</sup> <a name="staticCachePolicy" id="open-next-cdk.NextjsCachePolicyProps.property.staticCachePolicy"></a>
 
 ```typescript
 public readonly staticCachePolicy: ICachePolicy;
@@ -3748,7 +3748,7 @@ public readonly staticCachePolicy: ICachePolicy;
 
 ---
 
-##### `staticClientMaxAgeDefault`<sup>Optional</sup> <a name="staticClientMaxAgeDefault" id="cdk-nextjs-standalone.NextjsCachePolicyProps.property.staticClientMaxAgeDefault"></a>
+##### `staticClientMaxAgeDefault`<sup>Optional</sup> <a name="staticClientMaxAgeDefault" id="open-next-cdk.NextjsCachePolicyProps.property.staticClientMaxAgeDefault"></a>
 
 ```typescript
 public readonly staticClientMaxAgeDefault: Duration;
@@ -3762,16 +3762,16 @@ Default: 30 days.
 
 ---
 
-### NextjsDefaultsProps <a name="NextjsDefaultsProps" id="cdk-nextjs-standalone.NextjsDefaultsProps"></a>
+### NextjsDefaultsProps <a name="NextjsDefaultsProps" id="open-next-cdk.NextjsDefaultsProps"></a>
 
 Defaults for created resources.
 
 Why `any`? see https://github.com/aws/jsii/issues/2901
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsDefaultsProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsDefaultsProps.Initializer"></a>
 
 ```typescript
-import { NextjsDefaultsProps } from 'cdk-nextjs-standalone'
+import { NextjsDefaultsProps } from 'open-next-cdk'
 
 const nextjsDefaultsProps: NextjsDefaultsProps = { ... }
 ```
@@ -3780,13 +3780,13 @@ const nextjsDefaultsProps: NextjsDefaultsProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDefaultsProps.property.assetDeployment">assetDeployment</a></code> | <code>any</code> | Override static file deployment settings. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDefaultsProps.property.distribution">distribution</a></code> | <code>any</code> | Override CloudFront distribution settings. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDefaultsProps.property.lambda">lambda</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override server lambda function settings. |
+| <code><a href="#open-next-cdk.NextjsDefaultsProps.property.assetDeployment">assetDeployment</a></code> | <code>any</code> | Override static file deployment settings. |
+| <code><a href="#open-next-cdk.NextjsDefaultsProps.property.distribution">distribution</a></code> | <code>any</code> | Override CloudFront distribution settings. |
+| <code><a href="#open-next-cdk.NextjsDefaultsProps.property.lambda">lambda</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override server lambda function settings. |
 
 ---
 
-##### `assetDeployment`<sup>Optional</sup> <a name="assetDeployment" id="cdk-nextjs-standalone.NextjsDefaultsProps.property.assetDeployment"></a>
+##### `assetDeployment`<sup>Optional</sup> <a name="assetDeployment" id="open-next-cdk.NextjsDefaultsProps.property.assetDeployment"></a>
 
 ```typescript
 public readonly assetDeployment: any;
@@ -3798,7 +3798,7 @@ Override static file deployment settings.
 
 ---
 
-##### `distribution`<sup>Optional</sup> <a name="distribution" id="cdk-nextjs-standalone.NextjsDefaultsProps.property.distribution"></a>
+##### `distribution`<sup>Optional</sup> <a name="distribution" id="open-next-cdk.NextjsDefaultsProps.property.distribution"></a>
 
 ```typescript
 public readonly distribution: any;
@@ -3812,7 +3812,7 @@ These properties should all be optional but cannot be due to a limitation in jsi
 
 ---
 
-##### `lambda`<sup>Optional</sup> <a name="lambda" id="cdk-nextjs-standalone.NextjsDefaultsProps.property.lambda"></a>
+##### `lambda`<sup>Optional</sup> <a name="lambda" id="open-next-cdk.NextjsDefaultsProps.property.lambda"></a>
 
 ```typescript
 public readonly lambda: FunctionOptions;
@@ -3824,12 +3824,12 @@ Override server lambda function settings.
 
 ---
 
-### NextjsDistributionCdkProps <a name="NextjsDistributionCdkProps" id="cdk-nextjs-standalone.NextjsDistributionCdkProps"></a>
+### NextjsDistributionCdkProps <a name="NextjsDistributionCdkProps" id="open-next-cdk.NextjsDistributionCdkProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsDistributionCdkProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsDistributionCdkProps.Initializer"></a>
 
 ```typescript
-import { NextjsDistributionCdkProps } from 'cdk-nextjs-standalone'
+import { NextjsDistributionCdkProps } from 'open-next-cdk'
 
 const nextjsDistributionCdkProps: NextjsDistributionCdkProps = { ... }
 ```
@@ -3838,11 +3838,11 @@ const nextjsDistributionCdkProps: NextjsDistributionCdkProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionCdkProps.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.DistributionProps</code> | Pass in a value to override the default settings this construct uses to create the CloudFront `Distribution` internally. |
+| <code><a href="#open-next-cdk.NextjsDistributionCdkProps.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.DistributionProps</code> | Pass in a value to override the default settings this construct uses to create the CloudFront `Distribution` internally. |
 
 ---
 
-##### `distribution`<sup>Optional</sup> <a name="distribution" id="cdk-nextjs-standalone.NextjsDistributionCdkProps.property.distribution"></a>
+##### `distribution`<sup>Optional</sup> <a name="distribution" id="open-next-cdk.NextjsDistributionCdkProps.property.distribution"></a>
 
 ```typescript
 public readonly distribution: DistributionProps;
@@ -3854,12 +3854,12 @@ Pass in a value to override the default settings this construct uses to create t
 
 ---
 
-### NextjsDistributionProps <a name="NextjsDistributionProps" id="cdk-nextjs-standalone.NextjsDistributionProps"></a>
+### NextjsDistributionProps <a name="NextjsDistributionProps" id="open-next-cdk.NextjsDistributionProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsDistributionProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsDistributionProps.Initializer"></a>
 
 ```typescript
-import { NextjsDistributionProps } from 'cdk-nextjs-standalone'
+import { NextjsDistributionProps } from 'open-next-cdk'
 
 const nextjsDistributionProps: NextjsDistributionProps = { ... }
 ```
@@ -3868,32 +3868,32 @@ const nextjsDistributionProps: NextjsDistributionProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.imageOptFunction">imageOptFunction</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | Lambda function to optimize images. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.nextBuild">nextBuild</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a></code> | Built NextJS app. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.serverFunction">serverFunction</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | Lambda function to route all non-static requests to. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.staticAssetsBucket">staticAssetsBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Bucket containing static assets. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.cachePolicies">cachePolicies</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsCachePolicyProps">NextjsCachePolicyProps</a></code> | Override the default CloudFront cache policies created internally. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.cdk">cdk</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsDistributionCdkProps">NextjsDistributionCdkProps</a></code> | Overrides for created CDK resources. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.customDomain">customDomain</a></code> | <code>string \| <a href="#cdk-nextjs-standalone.NextjsDomainProps">NextjsDomainProps</a></code> | The customDomain for this website. Supports domains that are hosted either on [Route 53](https://aws.amazon.com/route53/) or externally. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.functionUrlAuthType">functionUrlAuthType</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionUrlAuthType</code> | Override lambda function url auth type. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.originRequestPolicies">originRequestPolicies</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsOriginRequestPolicyProps">NextjsOriginRequestPolicyProps</a></code> | Override the default CloudFront origin request policies created internally. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.stackPrefix">stackPrefix</a></code> | <code>string</code> | Optional value to prefix the edge function stack It defaults to "Nextjs". |
-| <code><a href="#cdk-nextjs-standalone.NextjsDistributionProps.property.stageName">stageName</a></code> | <code>string</code> | Include the name of your deployment stage if present. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.imageOptFunction">imageOptFunction</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | Lambda function to optimize images. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | Built NextJS app. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.serverFunction">serverFunction</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | Lambda function to route all non-static requests to. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.staticAssetsBucket">staticAssetsBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Bucket containing static assets. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.cachePolicies">cachePolicies</a></code> | <code><a href="#open-next-cdk.NextjsCachePolicyProps">NextjsCachePolicyProps</a></code> | Override the default CloudFront cache policies created internally. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.cdk">cdk</a></code> | <code><a href="#open-next-cdk.NextjsDistributionCdkProps">NextjsDistributionCdkProps</a></code> | Overrides for created CDK resources. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.customDomain">customDomain</a></code> | <code>string \| <a href="#open-next-cdk.NextjsDomainProps">NextjsDomainProps</a></code> | The customDomain for this website. Supports domains that are hosted either on [Route 53](https://aws.amazon.com/route53/) or externally. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.functionUrlAuthType">functionUrlAuthType</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionUrlAuthType</code> | Override lambda function url auth type. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.originRequestPolicies">originRequestPolicies</a></code> | <code><a href="#open-next-cdk.NextjsOriginRequestPolicyProps">NextjsOriginRequestPolicyProps</a></code> | Override the default CloudFront origin request policies created internally. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.stackPrefix">stackPrefix</a></code> | <code>string</code> | Optional value to prefix the edge function stack It defaults to "Nextjs". |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.stageName">stageName</a></code> | <code>string</code> | Include the name of your deployment stage if present. |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.NextjsDistributionProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsDistributionProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -3907,7 +3907,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.NextjsDistributionProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsDistributionProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -3921,7 +3921,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.NextjsDistributionProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsDistributionProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -3937,7 +3937,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.NextjsDistributionProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsDistributionProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -3950,7 +3950,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.NextjsDistributionProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsDistributionProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -3962,7 +3962,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.NextjsDistributionProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsDistributionProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3976,7 +3976,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.NextjsDistributionProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsDistributionProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -3988,7 +3988,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsDistributionProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsDistributionProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -4002,7 +4002,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.NextjsDistributionProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsDistributionProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -4014,7 +4014,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.NextjsDistributionProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsDistributionProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -4028,7 +4028,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsDistributionProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsDistributionProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -4042,7 +4042,7 @@ Defaults to os.tmpdir().
 
 ---
 
-##### `imageOptFunction`<sup>Required</sup> <a name="imageOptFunction" id="cdk-nextjs-standalone.NextjsDistributionProps.property.imageOptFunction"></a>
+##### `imageOptFunction`<sup>Required</sup> <a name="imageOptFunction" id="open-next-cdk.NextjsDistributionProps.property.imageOptFunction"></a>
 
 ```typescript
 public readonly imageOptFunction: IFunction;
@@ -4056,19 +4056,19 @@ Must be provided if you want to serve dynamic requests.
 
 ---
 
-##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="cdk-nextjs-standalone.NextjsDistributionProps.property.nextBuild"></a>
+##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="open-next-cdk.NextjsDistributionProps.property.nextBuild"></a>
 
 ```typescript
 public readonly nextBuild: NextjsBuild;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a>
+- *Type:* <a href="#open-next-cdk.NextjsBuild">NextjsBuild</a>
 
 Built NextJS app.
 
 ---
 
-##### `serverFunction`<sup>Required</sup> <a name="serverFunction" id="cdk-nextjs-standalone.NextjsDistributionProps.property.serverFunction"></a>
+##### `serverFunction`<sup>Required</sup> <a name="serverFunction" id="open-next-cdk.NextjsDistributionProps.property.serverFunction"></a>
 
 ```typescript
 public readonly serverFunction: IFunction;
@@ -4082,7 +4082,7 @@ Must be provided if you want to serve dynamic requests.
 
 ---
 
-##### `staticAssetsBucket`<sup>Required</sup> <a name="staticAssetsBucket" id="cdk-nextjs-standalone.NextjsDistributionProps.property.staticAssetsBucket"></a>
+##### `staticAssetsBucket`<sup>Required</sup> <a name="staticAssetsBucket" id="open-next-cdk.NextjsDistributionProps.property.staticAssetsBucket"></a>
 
 ```typescript
 public readonly staticAssetsBucket: IBucket;
@@ -4096,37 +4096,37 @@ Must be provided if you want to serve static files.
 
 ---
 
-##### `cachePolicies`<sup>Optional</sup> <a name="cachePolicies" id="cdk-nextjs-standalone.NextjsDistributionProps.property.cachePolicies"></a>
+##### `cachePolicies`<sup>Optional</sup> <a name="cachePolicies" id="open-next-cdk.NextjsDistributionProps.property.cachePolicies"></a>
 
 ```typescript
 public readonly cachePolicies: NextjsCachePolicyProps;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsCachePolicyProps">NextjsCachePolicyProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsCachePolicyProps">NextjsCachePolicyProps</a>
 
 Override the default CloudFront cache policies created internally.
 
 ---
 
-##### `cdk`<sup>Optional</sup> <a name="cdk" id="cdk-nextjs-standalone.NextjsDistributionProps.property.cdk"></a>
+##### `cdk`<sup>Optional</sup> <a name="cdk" id="open-next-cdk.NextjsDistributionProps.property.cdk"></a>
 
 ```typescript
 public readonly cdk: NextjsDistributionCdkProps;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsDistributionCdkProps">NextjsDistributionCdkProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsDistributionCdkProps">NextjsDistributionCdkProps</a>
 
 Overrides for created CDK resources.
 
 ---
 
-##### `customDomain`<sup>Optional</sup> <a name="customDomain" id="cdk-nextjs-standalone.NextjsDistributionProps.property.customDomain"></a>
+##### `customDomain`<sup>Optional</sup> <a name="customDomain" id="open-next-cdk.NextjsDistributionProps.property.customDomain"></a>
 
 ```typescript
 public readonly customDomain: string | NextjsDomainProps;
 ```
 
-- *Type:* string | <a href="#cdk-nextjs-standalone.NextjsDomainProps">NextjsDomainProps</a>
+- *Type:* string | <a href="#open-next-cdk.NextjsDomainProps">NextjsDomainProps</a>
 
 The customDomain for this website. Supports domains that are hosted either on [Route 53](https://aws.amazon.com/route53/) or externally.
 
@@ -4152,7 +4152,7 @@ new NextjsDistribution(this, "Dist", {
 ```
 
 
-##### `functionUrlAuthType`<sup>Optional</sup> <a name="functionUrlAuthType" id="cdk-nextjs-standalone.NextjsDistributionProps.property.functionUrlAuthType"></a>
+##### `functionUrlAuthType`<sup>Optional</sup> <a name="functionUrlAuthType" id="open-next-cdk.NextjsDistributionProps.property.functionUrlAuthType"></a>
 
 ```typescript
 public readonly functionUrlAuthType: FunctionUrlAuthType;
@@ -4165,19 +4165,19 @@ Override lambda function url auth type.
 
 ---
 
-##### `originRequestPolicies`<sup>Optional</sup> <a name="originRequestPolicies" id="cdk-nextjs-standalone.NextjsDistributionProps.property.originRequestPolicies"></a>
+##### `originRequestPolicies`<sup>Optional</sup> <a name="originRequestPolicies" id="open-next-cdk.NextjsDistributionProps.property.originRequestPolicies"></a>
 
 ```typescript
 public readonly originRequestPolicies: NextjsOriginRequestPolicyProps;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsOriginRequestPolicyProps">NextjsOriginRequestPolicyProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsOriginRequestPolicyProps">NextjsOriginRequestPolicyProps</a>
 
 Override the default CloudFront origin request policies created internally.
 
 ---
 
-##### `stackPrefix`<sup>Optional</sup> <a name="stackPrefix" id="cdk-nextjs-standalone.NextjsDistributionProps.property.stackPrefix"></a>
+##### `stackPrefix`<sup>Optional</sup> <a name="stackPrefix" id="open-next-cdk.NextjsDistributionProps.property.stackPrefix"></a>
 
 ```typescript
 public readonly stackPrefix: string;
@@ -4189,7 +4189,7 @@ Optional value to prefix the edge function stack It defaults to "Nextjs".
 
 ---
 
-##### `stageName`<sup>Optional</sup> <a name="stageName" id="cdk-nextjs-standalone.NextjsDistributionProps.property.stageName"></a>
+##### `stageName`<sup>Optional</sup> <a name="stageName" id="open-next-cdk.NextjsDistributionProps.property.stageName"></a>
 
 ```typescript
 public readonly stageName: string;
@@ -4204,12 +4204,12 @@ Required if using SST.
 
 ---
 
-### NextjsDomainProps <a name="NextjsDomainProps" id="cdk-nextjs-standalone.NextjsDomainProps"></a>
+### NextjsDomainProps <a name="NextjsDomainProps" id="open-next-cdk.NextjsDomainProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsDomainProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsDomainProps.Initializer"></a>
 
 ```typescript
-import { NextjsDomainProps } from 'cdk-nextjs-standalone'
+import { NextjsDomainProps } from 'open-next-cdk'
 
 const nextjsDomainProps: NextjsDomainProps = { ... }
 ```
@@ -4218,16 +4218,16 @@ const nextjsDomainProps: NextjsDomainProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsDomainProps.property.domainName">domainName</a></code> | <code>string</code> | The domain to be assigned to the website URL (ie. domain.com). |
-| <code><a href="#cdk-nextjs-standalone.NextjsDomainProps.property.alternateNames">alternateNames</a></code> | <code>string[]</code> | Specify additional names that should route to the Cloudfront Distribution. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDomainProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | Import the certificate for the domain. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDomainProps.property.domainAlias">domainAlias</a></code> | <code>string</code> | An alternative domain to be assigned to the website URL. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDomainProps.property.hostedZone">hostedZone</a></code> | <code>aws-cdk-lib.aws_route53.IHostedZone</code> | Import the underlying Route 53 hosted zone. |
-| <code><a href="#cdk-nextjs-standalone.NextjsDomainProps.property.isExternalDomain">isExternalDomain</a></code> | <code>boolean</code> | Set this option if the domain is not hosted on Amazon Route 53. |
+| <code><a href="#open-next-cdk.NextjsDomainProps.property.domainName">domainName</a></code> | <code>string</code> | The domain to be assigned to the website URL (ie. domain.com). |
+| <code><a href="#open-next-cdk.NextjsDomainProps.property.alternateNames">alternateNames</a></code> | <code>string[]</code> | Specify additional names that should route to the Cloudfront Distribution. |
+| <code><a href="#open-next-cdk.NextjsDomainProps.property.certificate">certificate</a></code> | <code>aws-cdk-lib.aws_certificatemanager.ICertificate</code> | Import the certificate for the domain. |
+| <code><a href="#open-next-cdk.NextjsDomainProps.property.domainAlias">domainAlias</a></code> | <code>string</code> | An alternative domain to be assigned to the website URL. |
+| <code><a href="#open-next-cdk.NextjsDomainProps.property.hostedZone">hostedZone</a></code> | <code>aws-cdk-lib.aws_route53.IHostedZone</code> | Import the underlying Route 53 hosted zone. |
+| <code><a href="#open-next-cdk.NextjsDomainProps.property.isExternalDomain">isExternalDomain</a></code> | <code>boolean</code> | Set this option if the domain is not hosted on Amazon Route 53. |
 
 ---
 
-##### `domainName`<sup>Required</sup> <a name="domainName" id="cdk-nextjs-standalone.NextjsDomainProps.property.domainName"></a>
+##### `domainName`<sup>Required</sup> <a name="domainName" id="open-next-cdk.NextjsDomainProps.property.domainName"></a>
 
 ```typescript
 public readonly domainName: string;
@@ -4241,7 +4241,7 @@ Supports domains that are hosted either on [Route 53](https://aws.amazon.com/rou
 
 ---
 
-##### `alternateNames`<sup>Optional</sup> <a name="alternateNames" id="cdk-nextjs-standalone.NextjsDomainProps.property.alternateNames"></a>
+##### `alternateNames`<sup>Optional</sup> <a name="alternateNames" id="open-next-cdk.NextjsDomainProps.property.alternateNames"></a>
 
 ```typescript
 public readonly alternateNames: string[];
@@ -4255,7 +4255,7 @@ Note, certificates for these names will not be automatically generated so the `c
 
 ---
 
-##### `certificate`<sup>Optional</sup> <a name="certificate" id="cdk-nextjs-standalone.NextjsDomainProps.property.certificate"></a>
+##### `certificate`<sup>Optional</sup> <a name="certificate" id="open-next-cdk.NextjsDomainProps.property.certificate"></a>
 
 ```typescript
 public readonly certificate: ICertificate;
@@ -4271,7 +4271,7 @@ Set this option if you have an existing certificate in the `us-east-1` region in
 
 ---
 
-##### `domainAlias`<sup>Optional</sup> <a name="domainAlias" id="cdk-nextjs-standalone.NextjsDomainProps.property.domainAlias"></a>
+##### `domainAlias`<sup>Optional</sup> <a name="domainAlias" id="open-next-cdk.NextjsDomainProps.property.domainAlias"></a>
 
 ```typescript
 public readonly domainAlias: string;
@@ -4287,7 +4287,7 @@ Use this to create a `www.` version of your domain and redirect visitors to the 
 
 ---
 
-##### `hostedZone`<sup>Optional</sup> <a name="hostedZone" id="cdk-nextjs-standalone.NextjsDomainProps.property.hostedZone"></a>
+##### `hostedZone`<sup>Optional</sup> <a name="hostedZone" id="open-next-cdk.NextjsDomainProps.property.hostedZone"></a>
 
 ```typescript
 public readonly hostedZone: IHostedZone;
@@ -4299,7 +4299,7 @@ Import the underlying Route 53 hosted zone.
 
 ---
 
-##### `isExternalDomain`<sup>Optional</sup> <a name="isExternalDomain" id="cdk-nextjs-standalone.NextjsDomainProps.property.isExternalDomain"></a>
+##### `isExternalDomain`<sup>Optional</sup> <a name="isExternalDomain" id="open-next-cdk.NextjsDomainProps.property.isExternalDomain"></a>
 
 ```typescript
 public readonly isExternalDomain: boolean;
@@ -4311,12 +4311,12 @@ Set this option if the domain is not hosted on Amazon Route 53.
 
 ---
 
-### NextjsLambdaProps <a name="NextjsLambdaProps" id="cdk-nextjs-standalone.NextjsLambdaProps"></a>
+### NextjsLambdaProps <a name="NextjsLambdaProps" id="open-next-cdk.NextjsLambdaProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsLambdaProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsLambdaProps.Initializer"></a>
 
 ```typescript
-import { NextjsLambdaProps } from 'cdk-nextjs-standalone'
+import { NextjsLambdaProps } from 'open-next-cdk'
 
 const nextjsLambdaProps: NextjsLambdaProps = { ... }
 ```
@@ -4325,23 +4325,23 @@ const nextjsLambdaProps: NextjsLambdaProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.nextBuild">nextBuild</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a></code> | Built nextJS application. |
-| <code><a href="#cdk-nextjs-standalone.NextjsLambdaProps.property.lambda">lambda</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override function properties. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | Built nextJS application. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.lambda">lambda</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override function properties. |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.NextjsLambdaProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsLambdaProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -4355,7 +4355,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.NextjsLambdaProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsLambdaProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -4369,7 +4369,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.NextjsLambdaProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsLambdaProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -4385,7 +4385,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.NextjsLambdaProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsLambdaProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -4398,7 +4398,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.NextjsLambdaProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsLambdaProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -4410,7 +4410,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.NextjsLambdaProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsLambdaProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -4424,7 +4424,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.NextjsLambdaProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsLambdaProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -4436,7 +4436,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsLambdaProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsLambdaProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -4450,7 +4450,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.NextjsLambdaProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsLambdaProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -4462,7 +4462,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.NextjsLambdaProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsLambdaProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -4476,7 +4476,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsLambdaProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsLambdaProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -4490,19 +4490,19 @@ Defaults to os.tmpdir().
 
 ---
 
-##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="cdk-nextjs-standalone.NextjsLambdaProps.property.nextBuild"></a>
+##### `nextBuild`<sup>Required</sup> <a name="nextBuild" id="open-next-cdk.NextjsLambdaProps.property.nextBuild"></a>
 
 ```typescript
 public readonly nextBuild: NextjsBuild;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsBuild">NextjsBuild</a>
+- *Type:* <a href="#open-next-cdk.NextjsBuild">NextjsBuild</a>
 
 Built nextJS application.
 
 ---
 
-##### `lambda`<sup>Optional</sup> <a name="lambda" id="cdk-nextjs-standalone.NextjsLambdaProps.property.lambda"></a>
+##### `lambda`<sup>Optional</sup> <a name="lambda" id="open-next-cdk.NextjsLambdaProps.property.lambda"></a>
 
 ```typescript
 public readonly lambda: FunctionOptions;
@@ -4514,23 +4514,23 @@ Override function properties.
 
 ---
 
-### NextjsLayerProps <a name="NextjsLayerProps" id="cdk-nextjs-standalone.NextjsLayerProps"></a>
+### NextjsLayerProps <a name="NextjsLayerProps" id="open-next-cdk.NextjsLayerProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsLayerProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsLayerProps.Initializer"></a>
 
 ```typescript
-import { NextjsLayerProps } from 'cdk-nextjs-standalone'
+import { NextjsLayerProps } from 'open-next-cdk'
 
 const nextjsLayerProps: NextjsLayerProps = { ... }
 ```
 
 
-### NextjsOriginRequestPolicyProps <a name="NextjsOriginRequestPolicyProps" id="cdk-nextjs-standalone.NextjsOriginRequestPolicyProps"></a>
+### NextjsOriginRequestPolicyProps <a name="NextjsOriginRequestPolicyProps" id="open-next-cdk.NextjsOriginRequestPolicyProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsOriginRequestPolicyProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsOriginRequestPolicyProps.Initializer"></a>
 
 ```typescript
-import { NextjsOriginRequestPolicyProps } from 'cdk-nextjs-standalone'
+import { NextjsOriginRequestPolicyProps } from 'open-next-cdk'
 
 const nextjsOriginRequestPolicyProps: NextjsOriginRequestPolicyProps = { ... }
 ```
@@ -4539,13 +4539,13 @@ const nextjsOriginRequestPolicyProps: NextjsOriginRequestPolicyProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsOriginRequestPolicyProps.property.fallbackOriginRequestPolicy">fallbackOriginRequestPolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginRequestPolicy</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsOriginRequestPolicyProps.property.imageOptimizationOriginRequestPolicy">imageOptimizationOriginRequestPolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginRequestPolicy</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsOriginRequestPolicyProps.property.lambdaOriginRequestPolicy">lambdaOriginRequestPolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginRequestPolicy</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsOriginRequestPolicyProps.property.fallbackOriginRequestPolicy">fallbackOriginRequestPolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginRequestPolicy</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsOriginRequestPolicyProps.property.imageOptimizationOriginRequestPolicy">imageOptimizationOriginRequestPolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginRequestPolicy</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsOriginRequestPolicyProps.property.lambdaOriginRequestPolicy">lambdaOriginRequestPolicy</a></code> | <code>aws-cdk-lib.aws_cloudfront.IOriginRequestPolicy</code> | *No description.* |
 
 ---
 
-##### `fallbackOriginRequestPolicy`<sup>Optional</sup> <a name="fallbackOriginRequestPolicy" id="cdk-nextjs-standalone.NextjsOriginRequestPolicyProps.property.fallbackOriginRequestPolicy"></a>
+##### `fallbackOriginRequestPolicy`<sup>Optional</sup> <a name="fallbackOriginRequestPolicy" id="open-next-cdk.NextjsOriginRequestPolicyProps.property.fallbackOriginRequestPolicy"></a>
 
 ```typescript
 public readonly fallbackOriginRequestPolicy: IOriginRequestPolicy;
@@ -4555,7 +4555,7 @@ public readonly fallbackOriginRequestPolicy: IOriginRequestPolicy;
 
 ---
 
-##### `imageOptimizationOriginRequestPolicy`<sup>Optional</sup> <a name="imageOptimizationOriginRequestPolicy" id="cdk-nextjs-standalone.NextjsOriginRequestPolicyProps.property.imageOptimizationOriginRequestPolicy"></a>
+##### `imageOptimizationOriginRequestPolicy`<sup>Optional</sup> <a name="imageOptimizationOriginRequestPolicy" id="open-next-cdk.NextjsOriginRequestPolicyProps.property.imageOptimizationOriginRequestPolicy"></a>
 
 ```typescript
 public readonly imageOptimizationOriginRequestPolicy: IOriginRequestPolicy;
@@ -4565,7 +4565,7 @@ public readonly imageOptimizationOriginRequestPolicy: IOriginRequestPolicy;
 
 ---
 
-##### `lambdaOriginRequestPolicy`<sup>Optional</sup> <a name="lambdaOriginRequestPolicy" id="cdk-nextjs-standalone.NextjsOriginRequestPolicyProps.property.lambdaOriginRequestPolicy"></a>
+##### `lambdaOriginRequestPolicy`<sup>Optional</sup> <a name="lambdaOriginRequestPolicy" id="open-next-cdk.NextjsOriginRequestPolicyProps.property.lambdaOriginRequestPolicy"></a>
 
 ```typescript
 public readonly lambdaOriginRequestPolicy: IOriginRequestPolicy;
@@ -4575,12 +4575,12 @@ public readonly lambdaOriginRequestPolicy: IOriginRequestPolicy;
 
 ---
 
-### NextjsProps <a name="NextjsProps" id="cdk-nextjs-standalone.NextjsProps"></a>
+### NextjsProps <a name="NextjsProps" id="open-next-cdk.NextjsProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsProps.Initializer"></a>
 
 ```typescript
-import { NextjsProps } from 'cdk-nextjs-standalone'
+import { NextjsProps } from 'open-next-cdk'
 
 const nextjsProps: NextjsProps = { ... }
 ```
@@ -4589,23 +4589,23 @@ const nextjsProps: NextjsProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.defaults">defaults</a></code> | <code><a href="#cdk-nextjs-standalone.NextjsDefaultsProps">NextjsDefaultsProps</a></code> | Allows you to override defaults for the resources created by this construct. |
-| <code><a href="#cdk-nextjs-standalone.NextjsProps.property.imageOptimizationBucket">imageOptimizationBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Optional S3 Bucket to use, defaults to assets bucket. |
+| <code><a href="#open-next-cdk.NextjsProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsProps.property.defaults">defaults</a></code> | <code><a href="#open-next-cdk.NextjsDefaultsProps">NextjsDefaultsProps</a></code> | Allows you to override defaults for the resources created by this construct. |
+| <code><a href="#open-next-cdk.NextjsProps.property.imageOptimizationBucket">imageOptimizationBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Optional S3 Bucket to use, defaults to assets bucket. |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.NextjsProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -4619,7 +4619,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.NextjsProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -4633,7 +4633,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.NextjsProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -4649,7 +4649,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.NextjsProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -4662,7 +4662,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.NextjsProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -4674,7 +4674,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.NextjsProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -4688,7 +4688,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.NextjsProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -4700,7 +4700,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -4714,7 +4714,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.NextjsProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -4726,7 +4726,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.NextjsProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -4740,7 +4740,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -4754,19 +4754,19 @@ Defaults to os.tmpdir().
 
 ---
 
-##### `defaults`<sup>Optional</sup> <a name="defaults" id="cdk-nextjs-standalone.NextjsProps.property.defaults"></a>
+##### `defaults`<sup>Optional</sup> <a name="defaults" id="open-next-cdk.NextjsProps.property.defaults"></a>
 
 ```typescript
 public readonly defaults: NextjsDefaultsProps;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.NextjsDefaultsProps">NextjsDefaultsProps</a>
+- *Type:* <a href="#open-next-cdk.NextjsDefaultsProps">NextjsDefaultsProps</a>
 
 Allows you to override defaults for the resources created by this construct.
 
 ---
 
-##### `imageOptimizationBucket`<sup>Optional</sup> <a name="imageOptimizationBucket" id="cdk-nextjs-standalone.NextjsProps.property.imageOptimizationBucket"></a>
+##### `imageOptimizationBucket`<sup>Optional</sup> <a name="imageOptimizationBucket" id="open-next-cdk.NextjsProps.property.imageOptimizationBucket"></a>
 
 ```typescript
 public readonly imageOptimizationBucket: IBucket;
@@ -4778,12 +4778,12 @@ Optional S3 Bucket to use, defaults to assets bucket.
 
 ---
 
-### NextjsS3EnvRewriterProps <a name="NextjsS3EnvRewriterProps" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps"></a>
+### NextjsS3EnvRewriterProps <a name="NextjsS3EnvRewriterProps" id="open-next-cdk.NextjsS3EnvRewriterProps"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsS3EnvRewriterProps.Initializer"></a>
 
 ```typescript
-import { NextjsS3EnvRewriterProps } from 'cdk-nextjs-standalone'
+import { NextjsS3EnvRewriterProps } from 'open-next-cdk'
 
 const nextjsS3EnvRewriterProps: NextjsS3EnvRewriterProps = { ... }
 ```
@@ -4792,26 +4792,26 @@ const nextjsS3EnvRewriterProps: NextjsS3EnvRewriterProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.replacementConfig">replacementConfig</a></code> | <code><a href="#cdk-nextjs-standalone.RewriteReplacementsConfig">RewriteReplacementsConfig</a></code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.s3Bucket">s3Bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.s3keys">s3keys</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.cloudfrontDistributionId">cloudfrontDistributionId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.debug">debug</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.replacementConfig">replacementConfig</a></code> | <code><a href="#open-next-cdk.RewriteReplacementsConfig">RewriteReplacementsConfig</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.s3Bucket">s3Bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.s3keys">s3keys</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.cloudfrontDistributionId">cloudfrontDistributionId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.debug">debug</a></code> | <code>boolean</code> | *No description.* |
 
 ---
 
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.nextjsPath"></a>
+##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsS3EnvRewriterProps.property.nextjsPath"></a>
 
 ```typescript
 public readonly nextjsPath: string;
@@ -4825,7 +4825,7 @@ Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
-##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.buildCommand"></a>
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsS3EnvRewriterProps.property.buildCommand"></a>
 
 ```typescript
 public readonly buildCommand: string;
@@ -4839,7 +4839,7 @@ It defaults to 'npx --yes open-next@latest build'
 
 ---
 
-##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.buildPath"></a>
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsS3EnvRewriterProps.property.buildPath"></a>
 
 ```typescript
 public readonly buildPath: string;
@@ -4855,7 +4855,7 @@ at the root of the project.
 
 ---
 
-##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.compressionLevel"></a>
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsS3EnvRewriterProps.property.compressionLevel"></a>
 
 ```typescript
 public readonly compressionLevel: number;
@@ -4868,7 +4868,7 @@ public readonly compressionLevel: number;
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsS3EnvRewriterProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -4880,7 +4880,7 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.isPlaceholder"></a>
+##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsS3EnvRewriterProps.property.isPlaceholder"></a>
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -4894,7 +4894,7 @@ Useful when using `next dev` for local development.
 
 ---
 
-##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.nodeEnv"></a>
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsS3EnvRewriterProps.property.nodeEnv"></a>
 
 ```typescript
 public readonly nodeEnv: string;
@@ -4906,7 +4906,7 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.projectRoot"></a>
+##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsS3EnvRewriterProps.property.projectRoot"></a>
 
 ```typescript
 public readonly projectRoot: string;
@@ -4920,7 +4920,7 @@ Defaults to current working directory.
 
 ---
 
-##### `quiet`<sup>Optional</sup> <a name="quiet" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.quiet"></a>
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsS3EnvRewriterProps.property.quiet"></a>
 
 ```typescript
 public readonly quiet: boolean;
@@ -4932,7 +4932,7 @@ Less build output.
 
 ---
 
-##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.sharpLayerArn"></a>
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsS3EnvRewriterProps.property.sharpLayerArn"></a>
 
 ```typescript
 public readonly sharpLayerArn: string;
@@ -4946,7 +4946,7 @@ If omitted, the layer will be created.
 
 ---
 
-##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.tempBuildDir"></a>
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsS3EnvRewriterProps.property.tempBuildDir"></a>
 
 ```typescript
 public readonly tempBuildDir: string;
@@ -4960,17 +4960,17 @@ Defaults to os.tmpdir().
 
 ---
 
-##### `replacementConfig`<sup>Required</sup> <a name="replacementConfig" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.replacementConfig"></a>
+##### `replacementConfig`<sup>Required</sup> <a name="replacementConfig" id="open-next-cdk.NextjsS3EnvRewriterProps.property.replacementConfig"></a>
 
 ```typescript
 public readonly replacementConfig: RewriteReplacementsConfig;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.RewriteReplacementsConfig">RewriteReplacementsConfig</a>
+- *Type:* <a href="#open-next-cdk.RewriteReplacementsConfig">RewriteReplacementsConfig</a>
 
 ---
 
-##### `s3Bucket`<sup>Required</sup> <a name="s3Bucket" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.s3Bucket"></a>
+##### `s3Bucket`<sup>Required</sup> <a name="s3Bucket" id="open-next-cdk.NextjsS3EnvRewriterProps.property.s3Bucket"></a>
 
 ```typescript
 public readonly s3Bucket: IBucket;
@@ -4980,7 +4980,7 @@ public readonly s3Bucket: IBucket;
 
 ---
 
-##### `s3keys`<sup>Required</sup> <a name="s3keys" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.s3keys"></a>
+##### `s3keys`<sup>Required</sup> <a name="s3keys" id="open-next-cdk.NextjsS3EnvRewriterProps.property.s3keys"></a>
 
 ```typescript
 public readonly s3keys: string[];
@@ -4990,7 +4990,7 @@ public readonly s3keys: string[];
 
 ---
 
-##### `cloudfrontDistributionId`<sup>Optional</sup> <a name="cloudfrontDistributionId" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.cloudfrontDistributionId"></a>
+##### `cloudfrontDistributionId`<sup>Optional</sup> <a name="cloudfrontDistributionId" id="open-next-cdk.NextjsS3EnvRewriterProps.property.cloudfrontDistributionId"></a>
 
 ```typescript
 public readonly cloudfrontDistributionId: string;
@@ -5000,7 +5000,7 @@ public readonly cloudfrontDistributionId: string;
 
 ---
 
-##### `debug`<sup>Optional</sup> <a name="debug" id="cdk-nextjs-standalone.NextjsS3EnvRewriterProps.property.debug"></a>
+##### `debug`<sup>Optional</sup> <a name="debug" id="open-next-cdk.NextjsS3EnvRewriterProps.property.debug"></a>
 
 ```typescript
 public readonly debug: boolean;
@@ -5010,12 +5010,12 @@ public readonly debug: boolean;
 
 ---
 
-### RewriteReplacementsConfig <a name="RewriteReplacementsConfig" id="cdk-nextjs-standalone.RewriteReplacementsConfig"></a>
+### RewriteReplacementsConfig <a name="RewriteReplacementsConfig" id="open-next-cdk.RewriteReplacementsConfig"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.RewriteReplacementsConfig.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.RewriteReplacementsConfig.Initializer"></a>
 
 ```typescript
-import { RewriteReplacementsConfig } from 'cdk-nextjs-standalone'
+import { RewriteReplacementsConfig } from 'open-next-cdk'
 
 const rewriteReplacementsConfig: RewriteReplacementsConfig = { ... }
 ```
@@ -5024,13 +5024,13 @@ const rewriteReplacementsConfig: RewriteReplacementsConfig = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.RewriteReplacementsConfig.property.env">env</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.RewriteReplacementsConfig.property.jsonS3Bucket">jsonS3Bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.RewriteReplacementsConfig.property.jsonS3Key">jsonS3Key</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriteReplacementsConfig.property.env">env</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriteReplacementsConfig.property.jsonS3Bucket">jsonS3Bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriteReplacementsConfig.property.jsonS3Key">jsonS3Key</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `env`<sup>Optional</sup> <a name="env" id="cdk-nextjs-standalone.RewriteReplacementsConfig.property.env"></a>
+##### `env`<sup>Optional</sup> <a name="env" id="open-next-cdk.RewriteReplacementsConfig.property.env"></a>
 
 ```typescript
 public readonly env: {[ key: string ]: string};
@@ -5040,7 +5040,7 @@ public readonly env: {[ key: string ]: string};
 
 ---
 
-##### `jsonS3Bucket`<sup>Optional</sup> <a name="jsonS3Bucket" id="cdk-nextjs-standalone.RewriteReplacementsConfig.property.jsonS3Bucket"></a>
+##### `jsonS3Bucket`<sup>Optional</sup> <a name="jsonS3Bucket" id="open-next-cdk.RewriteReplacementsConfig.property.jsonS3Bucket"></a>
 
 ```typescript
 public readonly jsonS3Bucket: IBucket;
@@ -5050,7 +5050,7 @@ public readonly jsonS3Bucket: IBucket;
 
 ---
 
-##### `jsonS3Key`<sup>Optional</sup> <a name="jsonS3Key" id="cdk-nextjs-standalone.RewriteReplacementsConfig.property.jsonS3Key"></a>
+##### `jsonS3Key`<sup>Optional</sup> <a name="jsonS3Key" id="open-next-cdk.RewriteReplacementsConfig.property.jsonS3Key"></a>
 
 ```typescript
 public readonly jsonS3Key: string;
@@ -5060,12 +5060,12 @@ public readonly jsonS3Key: string;
 
 ---
 
-### RewriterParams <a name="RewriterParams" id="cdk-nextjs-standalone.RewriterParams"></a>
+### RewriterParams <a name="RewriterParams" id="open-next-cdk.RewriterParams"></a>
 
-#### Initializer <a name="Initializer" id="cdk-nextjs-standalone.RewriterParams.Initializer"></a>
+#### Initializer <a name="Initializer" id="open-next-cdk.RewriterParams.Initializer"></a>
 
 ```typescript
-import { RewriterParams } from 'cdk-nextjs-standalone'
+import { RewriterParams } from 'open-next-cdk'
 
 const rewriterParams: RewriterParams = { ... }
 ```
@@ -5074,25 +5074,25 @@ const rewriterParams: RewriterParams = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-nextjs-standalone.RewriterParams.property.replacementConfig">replacementConfig</a></code> | <code><a href="#cdk-nextjs-standalone.RewriteReplacementsConfig">RewriteReplacementsConfig</a></code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.RewriterParams.property.s3Bucket">s3Bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.RewriterParams.property.s3keys">s3keys</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.RewriterParams.property.cloudfrontDistributionId">cloudfrontDistributionId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-nextjs-standalone.RewriterParams.property.debug">debug</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriterParams.property.replacementConfig">replacementConfig</a></code> | <code><a href="#open-next-cdk.RewriteReplacementsConfig">RewriteReplacementsConfig</a></code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriterParams.property.s3Bucket">s3Bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriterParams.property.s3keys">s3keys</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriterParams.property.cloudfrontDistributionId">cloudfrontDistributionId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#open-next-cdk.RewriterParams.property.debug">debug</a></code> | <code>boolean</code> | *No description.* |
 
 ---
 
-##### `replacementConfig`<sup>Required</sup> <a name="replacementConfig" id="cdk-nextjs-standalone.RewriterParams.property.replacementConfig"></a>
+##### `replacementConfig`<sup>Required</sup> <a name="replacementConfig" id="open-next-cdk.RewriterParams.property.replacementConfig"></a>
 
 ```typescript
 public readonly replacementConfig: RewriteReplacementsConfig;
 ```
 
-- *Type:* <a href="#cdk-nextjs-standalone.RewriteReplacementsConfig">RewriteReplacementsConfig</a>
+- *Type:* <a href="#open-next-cdk.RewriteReplacementsConfig">RewriteReplacementsConfig</a>
 
 ---
 
-##### `s3Bucket`<sup>Required</sup> <a name="s3Bucket" id="cdk-nextjs-standalone.RewriterParams.property.s3Bucket"></a>
+##### `s3Bucket`<sup>Required</sup> <a name="s3Bucket" id="open-next-cdk.RewriterParams.property.s3Bucket"></a>
 
 ```typescript
 public readonly s3Bucket: IBucket;
@@ -5102,7 +5102,7 @@ public readonly s3Bucket: IBucket;
 
 ---
 
-##### `s3keys`<sup>Required</sup> <a name="s3keys" id="cdk-nextjs-standalone.RewriterParams.property.s3keys"></a>
+##### `s3keys`<sup>Required</sup> <a name="s3keys" id="open-next-cdk.RewriterParams.property.s3keys"></a>
 
 ```typescript
 public readonly s3keys: string[];
@@ -5112,7 +5112,7 @@ public readonly s3keys: string[];
 
 ---
 
-##### `cloudfrontDistributionId`<sup>Optional</sup> <a name="cloudfrontDistributionId" id="cdk-nextjs-standalone.RewriterParams.property.cloudfrontDistributionId"></a>
+##### `cloudfrontDistributionId`<sup>Optional</sup> <a name="cloudfrontDistributionId" id="open-next-cdk.RewriterParams.property.cloudfrontDistributionId"></a>
 
 ```typescript
 public readonly cloudfrontDistributionId: string;
@@ -5122,7 +5122,7 @@ public readonly cloudfrontDistributionId: string;
 
 ---
 
-##### `debug`<sup>Optional</sup> <a name="debug" id="cdk-nextjs-standalone.RewriterParams.property.debug"></a>
+##### `debug`<sup>Optional</sup> <a name="debug" id="open-next-cdk.RewriterParams.property.debug"></a>
 
 ```typescript
 public readonly debug: boolean;
