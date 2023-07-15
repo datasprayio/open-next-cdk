@@ -1559,10 +1559,10 @@ Any object.
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#open-next-cdk.NextjsBuild.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#open-next-cdk.NextjsBuild.property.openNextPath">openNextPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#open-next-cdk.NextjsBuild.property.nextImageFnDir">nextImageFnDir</a></code> | <code>string</code> | Contains function for processessing image requests. |
 | <code><a href="#open-next-cdk.NextjsBuild.property.nextServerFnDir">nextServerFnDir</a></code> | <code>string</code> | Contains server code and dependencies. |
 | <code><a href="#open-next-cdk.NextjsBuild.property.nextStaticDir">nextStaticDir</a></code> | <code>string</code> | Static files containing client-side code. |
-| <code><a href="#open-next-cdk.NextjsBuild.property.projectRoot">projectRoot</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#open-next-cdk.NextjsBuild.property.props">props</a></code> | <code><a href="#open-next-cdk.NextjsBuildProps">NextjsBuildProps</a></code> | *No description.* |
 | <code><a href="#open-next-cdk.NextjsBuild.property.nextMiddlewareFnDir">nextMiddlewareFnDir</a></code> | <code>string</code> | Contains code for middleware. |
 
@@ -1577,6 +1577,16 @@ public readonly node: Node;
 - *Type:* constructs.Node
 
 The tree node.
+
+---
+
+##### `openNextPath`<sup>Required</sup> <a name="openNextPath" id="open-next-cdk.NextjsBuild.property.openNextPath"></a>
+
+```typescript
+public readonly openNextPath: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -1615,16 +1625,6 @@ public readonly nextStaticDir: string;
 - *Type:* string
 
 Static files containing client-side code.
-
----
-
-##### `projectRoot`<sup>Required</sup> <a name="projectRoot" id="open-next-cdk.NextjsBuild.property.projectRoot"></a>
-
-```typescript
-public readonly projectRoot: string;
-```
-
-- *Type:* string
 
 ---
 
@@ -2796,34 +2796,21 @@ const imageOptimizationProps: ImageOptimizationProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.ImageOptimizationProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.ImageOptimizationProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.ImageOptimizationProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.ImageOptimizationProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | The S3 bucket holding application images. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | The `NextjsBuild` instance representing the built Nextjs application. |
 | <code><a href="#open-next-cdk.ImageOptimizationProps.property.lambdaOptions">lambdaOptions</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override function properties. |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.ImageOptimizationProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -2882,7 +2869,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.ImageOptimizationProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.ImageOptimizationProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -2890,9 +2879,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.ImageOptimizationProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.ImageOptimizationProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -2908,17 +2929,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.ImageOptimizationProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.ImageOptimizationProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3059,14 +3080,15 @@ const nextjsAssetsDeploymentProps: NextjsAssetsDeploymentProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
@@ -3079,20 +3101,6 @@ const nextjsAssetsDeploymentProps: NextjsAssetsDeploymentProps = { ... }
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.prune">prune</a></code> | <code>boolean</code> | Set to true to delete old assets (defaults to false). |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.useEfs">useEfs</a></code> | <code>boolean</code> | In case of useEfs, vpc is required. |
 | <code><a href="#open-next-cdk.NextjsAssetsDeploymentProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | In case of useEfs, vpc is required. |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsAssetsDeploymentProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -3151,7 +3159,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsAssetsDeploymentProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsAssetsDeploymentProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3159,9 +3169,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsAssetsDeploymentProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsAssetsDeploymentProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3177,17 +3219,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsAssetsDeploymentProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsAssetsDeploymentProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3357,31 +3399,18 @@ const nextjsBaseProps: NextjsBaseProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsBaseProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.NextjsBaseProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.NextjsBaseProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsBaseProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.NextjsBaseProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsBaseProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -3440,7 +3469,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsBaseProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsBaseProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3448,9 +3479,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsBaseProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsBaseProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3466,17 +3529,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsBaseProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsBaseProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3534,31 +3597,18 @@ const nextjsBuildProps: NextjsBuildProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsBuildProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.NextjsBuildProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.NextjsBuildProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsBuildProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.NextjsBuildProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsBuildProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -3617,7 +3667,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsBuildProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsBuildProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3625,9 +3677,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsBuildProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsBuildProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3643,17 +3727,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsBuildProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsBuildProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3868,14 +3952,15 @@ const nextjsDistributionProps: NextjsDistributionProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsDistributionProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.NextjsDistributionProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.NextjsDistributionProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsDistributionProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
@@ -3890,20 +3975,6 @@ const nextjsDistributionProps: NextjsDistributionProps = { ... }
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.originRequestPolicies">originRequestPolicies</a></code> | <code><a href="#open-next-cdk.NextjsOriginRequestPolicyProps">NextjsOriginRequestPolicyProps</a></code> | Override the default CloudFront origin request policies created internally. |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.stackPrefix">stackPrefix</a></code> | <code>string</code> | Optional value to prefix the edge function stack It defaults to "Nextjs". |
 | <code><a href="#open-next-cdk.NextjsDistributionProps.property.stageName">stageName</a></code> | <code>string</code> | Include the name of your deployment stage if present. |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsDistributionProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -3962,7 +4033,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsDistributionProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsDistributionProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -3970,9 +4043,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsDistributionProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsDistributionProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -3988,17 +4093,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsDistributionProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsDistributionProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -4325,33 +4430,20 @@ const nextjsLambdaProps: NextjsLambdaProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsLambdaProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.NextjsLambdaProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.NextjsLambdaProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsLambdaProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | Built nextJS application. |
 | <code><a href="#open-next-cdk.NextjsLambdaProps.property.lambda">lambda</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override function properties. |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsLambdaProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -4410,7 +4502,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsLambdaProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsLambdaProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -4418,9 +4512,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsLambdaProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsLambdaProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -4436,17 +4562,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsLambdaProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsLambdaProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -4589,33 +4715,20 @@ const nextjsProps: NextjsProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.NextjsProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.NextjsProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.NextjsProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.NextjsProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.NextjsProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.NextjsProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.NextjsProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.NextjsProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
 | <code><a href="#open-next-cdk.NextjsProps.property.defaults">defaults</a></code> | <code><a href="#open-next-cdk.NextjsDefaultsProps">NextjsDefaultsProps</a></code> | Allows you to override defaults for the resources created by this construct. |
 | <code><a href="#open-next-cdk.NextjsProps.property.imageOptimizationBucket">imageOptimizationBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Optional S3 Bucket to use, defaults to assets bucket. |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -4674,7 +4787,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -4682,9 +4797,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -4700,17 +4847,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -4792,14 +4939,15 @@ const nextjsS3EnvRewriterProps: NextjsS3EnvRewriterProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
-| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Skip building app and deploy a placeholder. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
-| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.projectRoot">projectRoot</a></code> | <code>string</code> | Root of your project, if different from `nextjsPath`. |
+| <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
@@ -4808,20 +4956,6 @@ const nextjsS3EnvRewriterProps: NextjsS3EnvRewriterProps = { ... }
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.s3keys">s3keys</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.cloudfrontDistributionId">cloudfrontDistributionId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#open-next-cdk.NextjsS3EnvRewriterProps.property.debug">debug</a></code> | <code>boolean</code> | *No description.* |
-
----
-
-##### `nextjsPath`<sup>Required</sup> <a name="nextjsPath" id="open-next-cdk.NextjsS3EnvRewriterProps.property.nextjsPath"></a>
-
-```typescript
-public readonly nextjsPath: string;
-```
-
-- *Type:* string
-
-Relative path to the directory where the NextJS project is located.
-
-Can be the root of your project (`.`) or a subdirectory (`packages/web`).
 
 ---
 
@@ -4880,7 +5014,9 @@ Custom environment variables to pass to the NextJS build and runtime.
 
 ---
 
-##### `isPlaceholder`<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsS3EnvRewriterProps.property.isPlaceholder"></a>
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsS3EnvRewriterProps.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
 
 ```typescript
 public readonly isPlaceholder: boolean;
@@ -4888,9 +5024,41 @@ public readonly isPlaceholder: boolean;
 
 - *Type:* boolean
 
-Skip building app and deploy a placeholder.
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
 
-Useful when using `next dev` for local development.
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsS3EnvRewriterProps.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsS3EnvRewriterProps.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 
@@ -4906,17 +5074,17 @@ Optional value for NODE_ENV during build and runtime.
 
 ---
 
-##### `projectRoot`<sup>Optional</sup> <a name="projectRoot" id="open-next-cdk.NextjsS3EnvRewriterProps.property.projectRoot"></a>
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsS3EnvRewriterProps.property.openNextPath"></a>
 
 ```typescript
-public readonly projectRoot: string;
+public readonly openNextPath: string;
 ```
 
 - *Type:* string
 
-Root of your project, if different from `nextjsPath`.
+Relative path to the OpenNext package named `.open-next` by default.
 
-Defaults to current working directory.
+One of `openNextPath` or `nextJsPath` must be supplied.
 
 ---
 

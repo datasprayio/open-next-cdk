@@ -1,6 +1,6 @@
 {
   "name": "open-next-cdk",
-  "description": "Deploy a NextJS app using OpenNEXT packaging to serverless AWS using CDK",
+  "description": "Deploy a NextJS app using OpenNext packaging to serverless AWS using CDK",
   "repository": {
     "type": "git",
     "url": "https://github.com/datasprayio/open-next-cdk.git"

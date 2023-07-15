@@ -1,4 +1,4 @@
-// Deploy a NextJS app using OpenNEXT packaging to serverless AWS using CDK
+// Deploy a NextJS app using OpenNext packaging to serverless AWS using CDK
 package opennextcdk
 
 import (

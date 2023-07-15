@@ -41,38 +41,43 @@ export class NextjsBuild extends Construct {
 
   public props: NextjsBuildProps;
 
-  // public nextDir: string;
-  public projectRoot: string;
+  readonly openNextPath: string;
 
   constructor(scope: Construct, id: string, props: NextjsBuildProps) {
     super(scope, id);
     this.props = props;
 
-    // validate paths
-    const baseOutputDir = path.resolve(this.props.nextjsPath);
-    if (!fs.existsSync(baseOutputDir)) throw new Error(`NextJS application not found at "${baseOutputDir}"`);
+    const nextJsPath = props.nextJsPath || props.nextjsPath;
+    const openNextPath = props.openNextPath;
 
-    // root of project
-    this.projectRoot = props.projectRoot ? path.resolve(props.projectRoot) : path.resolve();
+    if (nextJsPath) {
+      if (openNextPath) throw new Error(`Cannot supply both nextJsPath and openNextPath`);
+      if (!fs.existsSync(nextJsPath)) throw new Error(`NextJS application not found at "${nextJsPath}"`);
 
-    // build app
-    this.runNpmBuild();
+      // build app
+      if (nextJsPath) {
+        this.runNpmBuild(nextJsPath);
+      }
 
-    // check for output
-    const serverBuildDir = path.join(baseOutputDir, NEXTJS_BUILD_DIR);
-    if (!props.isPlaceholder && !fs.existsSync(serverBuildDir))
-      throw new Error(`No server build output found at "${serverBuildDir}"`);
+      this.openNextPath = path.join(nextJsPath, NEXTJS_BUILD_DIR);
+      if (!fs.existsSync(this.openNextPath))
+        throw new Error(`OpenNext package failed to build at "${this.openNextPath}"`);
+    } else if (openNextPath) {
+      this.openNextPath = path.resolve(openNextPath);
+      if (!fs.existsSync(this.openNextPath)) throw new Error(`OpenNext package not found at "${this.openNextPath}"`);
+    } else {
+      throw new Error(`Must supply either nextJsPath or openNextPath`);
+    }
 
     // our outputs
     this.nextStaticDir = this._getNextStaticDir();
     this.nextImageFnDir = this._getOutputDir(NEXTJS_BUILD_IMAGE_FN_DIR);
     this.nextServerFnDir = this._getOutputDir(NEXTJS_BUILD_SERVER_FN_DIR);
     this.nextMiddlewareFnDir = this._getOutputDir(NEXTJS_BUILD_MIDDLEWARE_FN_DIR, true);
-    // this.nextDir = this._getNextDir();
   }
 
-  private runNpmBuild() {
-    const { nextjsPath, isPlaceholder, quiet } = this.props;
+  private runNpmBuild(nextjsPath: string) {
+    const { isPlaceholder, quiet } = this.props;
 
     if (isPlaceholder) {
       if (!quiet) console.debug(`Skipping build for placeholder NextjsBuild at ${nextjsPath}`);
@@ -115,38 +120,24 @@ export class NextjsBuild extends Construct {
     }
   }
 
-  // getNextBuildId() {
-  //   return fs.readFileSync(path.join(this._getNextStandaloneBuildDir(), 'BUILD_ID'), 'utf-8');
-  // }
-
   readPublicFileList() {
     const publicDir = this._getNextStaticDir();
     if (!fs.existsSync(publicDir)) return [];
     return listDirectory(publicDir).map((file) => path.join('/', path.relative(publicDir, file)));
   }
 
-  // get the absolute path to the directory containing the nextjs project
-  // it may be the project root or a subdirectory in a monorepo setup
-  private _getNextDir() {
-    const { nextjsPath } = this.props; // path to nextjs dir inside project
-    const absolutePath = path.resolve(nextjsPath); // e.g. /home/me/myapp/web
-    if (!fs.existsSync(absolutePath)) {
-      throw new Error(`Could not find ${absolutePath} directory.`);
-    }
-    return absolutePath;
-  }
-
-  // .next
   private _getNextBuildDir() {
-    return path.join(this._getNextDir(), NEXTJS_BUILD_DIR);
+    return this.openNextPath;
   }
 
-  private _getOutputDir(subdir: string, silent = false) {
+  private _getOutputDir(subdir: string, suppressMissing = false) {
+    const { isPlaceholder } = this.props;
+
     const nextDir = this._getNextBuildDir();
     const standaloneDir = path.join(nextDir, subdir);
 
-    if (!fs.existsSync(standaloneDir) && !this.props.isPlaceholder) {
-      if (!silent) throw new Error(`Could not find ${standaloneDir} directory.`);
+    if (!suppressMissing && !isPlaceholder && !fs.existsSync(standaloneDir)) {
+      throw new Error(`Could not find ${standaloneDir} directory.`);
     }
     return standaloneDir;
   }
