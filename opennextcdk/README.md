@@ -6,7 +6,7 @@
       <img align="middle" alt="Python" src="./resources/python.svg" width=15>
       <img align="middle" alt=".NET" src="./resources/dotnet.svg" width=30>
   </div>
-  OpenNEXT CDK
+  OpenNext CDK
 </h1>
 <div align="center">
   <a href="https://github.com/datasprayio/open-next-cdk/actions?query=workflow%3A%22build%22">
@@ -19,7 +19,7 @@
     <img align="middle" alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?label=RELEASE&color=blue&style=for-the-badge">
   </a>
 </div>
-<h3 align="center">Deploy NextJS on AWS using CDK IaC and OpenNEXT packaging</h3>
+<h3 align="center">Deploy NextJS on AWS using CDK IaC and OpenNext packaging</h3>
 
 ### Contents
 
@@ -27,7 +27,7 @@
 * [Quickstart](#quickstart)
 * [Advanced](#advanced)
 
-  * [Pre-built OpenNEXT package](#pre-built-opennext-package)
+  * [Pre-built OpenNext package](#pre-built-opennext-package)
   * [Additional security](#additional-security)
 * [About](#about)
 
@@ -43,7 +43,7 @@
 A building block for Amazon's infrastructure-as-code CDK toolkit to deploy a NextJS app using AWS serverless services.
 Supported NextJs versions: >=12.3.0+ (includes 13.0.0+)
 
-Your NextJS app is packaged using OpenNEXT to fit the serverless format on Lambda
+Your NextJS app is packaged using OpenNext to fit the serverless format on Lambda
 
 # Quickstart
 
@@ -150,18 +150,18 @@ If you would prefer to package it separately, see below:
 
 # Advanced
 
-### Pre-built OpenNEXT package
+### Pre-built OpenNext package
 
 <details>
   <summary>How-to</summary>
 
-You may also provide already pre-built OpenNEXT package directly by building it yourself first:
+You may also provide already pre-built OpenNext package directly by building it yourself first:
 
 ```shell
 open-next build
 ```
 
-You will find a new folder `.open-next` which contains the packaging for your NextJS App. Now you can use the construct by instructing it not to build your app, just use the OpenNEXT folder directly:
+You will find a new folder `.open-next` which contains the packaging for your NextJS App. Now you can use the construct by instructing it not to build your app, just use the OpenNext folder directly:
 
 ```go
 import { Nextjs } from 'open-next-cdk';

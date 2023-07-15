@@ -5,7 +5,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.73.0',
   defaultReleaseBranch: 'main',
   dependabot: true,
-  name: 'OpenNEXT via CDK',
+  name: 'OpenNext via CDK',
   repositoryUrl: 'https://github.com/datasprayio/open-next-cdk.git',
   authorOrganization: true,
   packageName: 'open-next-cdk',
@@ -26,7 +26,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     packageId: 'Dataspray.OpenNextCdk',
     dotNetNamespace: 'Dataspray.OpenNextCdk',
   },
-  description: 'Deploy a NextJS app using OpenNEXT packaging to serverless AWS using CDK',
+  description: 'Deploy a NextJS app using OpenNext packaging to serverless AWS using CDK',
   keywords: ['open-next', 'opennext', 'nextjs', 'next', 'aws-cdk', 'awscdk', 'cdk', 'serverless'],
   eslintOptions: {
     prettier: true,

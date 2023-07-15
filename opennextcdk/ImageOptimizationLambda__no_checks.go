@@ -1,6 +1,6 @@
 //go:build no_runtime_type_checking
 
-// Deploy a NextJS app using OpenNEXT packaging to serverless AWS using CDK
+// Deploy a NextJS app using OpenNext packaging to serverless AWS using CDK
 package opennextcdk
 
 // Building without runtime type checking enabled, so all the below just return nil
