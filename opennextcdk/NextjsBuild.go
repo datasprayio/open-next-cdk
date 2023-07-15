@@ -33,8 +33,7 @@ type NextjsBuild interface {
 	SetNextStaticDir(val *string)
 	// The tree node.
 	Node() constructs.Node
-	ProjectRoot() *string
-	SetProjectRoot(val *string)
+	OpenNextPath() *string
 	Props() *NextjsBuildProps
 	SetProps(val *NextjsBuildProps)
 	ReadPublicFileList() *[]*string
@@ -97,11 +96,11 @@ func (j *jsiiProxy_NextjsBuild) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_NextjsBuild) ProjectRoot() *string {
+func (j *jsiiProxy_NextjsBuild) OpenNextPath() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"projectRoot",
+		"openNextPath",
 		&returns,
 	)
 	return returns
@@ -182,17 +181,6 @@ func (j *jsiiProxy_NextjsBuild)SetNextStaticDir(val *string) {
 	_jsii_.Set(
 		j,
 		"nextStaticDir",
-		val,
-	)
-}
-
-func (j *jsiiProxy_NextjsBuild)SetProjectRoot(val *string) {
-	if err := j.validateSetProjectRootParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"projectRoot",
 		val,
 	)
 }

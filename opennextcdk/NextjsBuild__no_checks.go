@@ -21,10 +21,6 @@ func (j *jsiiProxy_NextjsBuild) validateSetNextStaticDirParameters(val *string) 
 	return nil
 }
 
-func (j *jsiiProxy_NextjsBuild) validateSetProjectRootParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_NextjsBuild) validateSetPropsParameters(val *NextjsBuildProps) error {
 	return nil
 }

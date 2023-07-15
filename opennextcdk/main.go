@@ -166,7 +166,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "nextServerFnDir", GoGetter: "NextServerFnDir"},
 			_jsii_.MemberProperty{JsiiProperty: "nextStaticDir", GoGetter: "NextStaticDir"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
-			_jsii_.MemberProperty{JsiiProperty: "projectRoot", GoGetter: "ProjectRoot"},
+			_jsii_.MemberProperty{JsiiProperty: "openNextPath", GoGetter: "OpenNextPath"},
 			_jsii_.MemberProperty{JsiiProperty: "props", GoGetter: "Props"},
 			_jsii_.MemberMethod{JsiiMethod: "readPublicFileList", GoMethod: "ReadPublicFileList"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
