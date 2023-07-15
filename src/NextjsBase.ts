@@ -9,10 +9,29 @@ export type CompressionLevel = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
  */
 export interface NextjsBaseProps {
   /**
+   * Relative path to the OpenNext package named `.open-next` by default.
+   *
+   * One of `openNextPath` or `nextJsPath` must be supplied.
+   */
+  readonly openNextPath?: string;
+
+  /**
    * Relative path to the directory where the NextJS project is located.
    * Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+   *
+   * One of `openNextPath` or `nextJsPath` must be supplied.
    */
-  readonly nextjsPath: string;
+  readonly nextJsPath?: string;
+
+  /**
+   * Relative path to the directory where the NextJS project is located.
+   * Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+   *
+   * One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+   *
+   * @deprecated use `nextJsPath` instead
+   */
+  readonly nextjsPath?: string;
 
   /**
    * The directory to execute `npm run build` from. By default, it is `nextjsPath`.
@@ -22,19 +41,16 @@ export interface NextjsBaseProps {
   readonly buildPath?: string;
 
   /**
-   * Root of your project, if different from `nextjsPath`.
-   * Defaults to current working directory.
-   */
-  readonly projectRoot?: string;
-
-  /**
    * Custom environment variables to pass to the NextJS build and runtime.
    */
   readonly environment?: Record<string, string>;
 
   /**
-   * Skip building app and deploy a placeholder.
+   * Used in conjunction with nextJsPath to skip building NextJS
+   * app and assume .open-next folder already exists.
    * Useful when using `next dev` for local development.
+   *
+   * @deprecated use `openNextPath` instead
    */
   readonly isPlaceholder?: boolean;
 

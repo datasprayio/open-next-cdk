@@ -83,7 +83,7 @@ function getSigV4(region: string): SignatureV4 {
 }
 
 export function getRegionFromLambdaUrl(url: string): string {
-  const region = url.split('.').at(2);
+  const region = url.split('.')[2];
   if (!region) throw new Error("Region couldn't be extracted from Lambda Function URL");
   return region;
 }
