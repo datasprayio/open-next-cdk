@@ -167,8 +167,7 @@ If you would prefer to package it separately, see below:
   import { Nextjs } from 'open-next-cdk';
 
   new Nextjs(this, 'Web', {
-    nextjsPath: './web', // relative path to nextjs project containing .open-next folder
-    isPlaceholder: true, // Do not build, assume .open-next folder already exists
+    openNextPath: './web/.open-next', // relative path to .open-next folder
   });
   ```
 </details>
