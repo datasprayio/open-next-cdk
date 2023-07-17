@@ -113,7 +113,7 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   <summary><img align="middle" alt="Go" src="./resources/go.svg" width=20> Go</summary>
 
   <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
-    <img align="middle" alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/main?filename=opennextcdk%2Fgo.mod&label=GO&style=for-the-badge">
+    <img align="middle" alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/go?filename=opennextcdk%2Fgo.mod&label=GO&style=for-the-badge">
   </a>
 
   Install the dependency:
