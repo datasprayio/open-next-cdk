@@ -13,3 +13,8 @@
   </a>
 </div>
 <h3 align="center">This is the Go release branch<br/> See the <a href="https://github.com/datasprayio/open-next-cdk">main branch</a> for docs</h3>
+
+
+```shell
+go get github.com:datasprayio/open-next-cdk.git@go
+```
