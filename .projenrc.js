@@ -36,6 +36,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   publishToGo: {
     moduleName: 'github.com/datasprayio/open-next-cdk',
+    gitBranch: 'go',
   },
   publishToNuget: {
     packageId: 'Dataspray.OpenNextCdk',

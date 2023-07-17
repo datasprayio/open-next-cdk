@@ -248,6 +248,7 @@ jobs:
         run: mv .repo/dist dist
       - name: Release
         env:
+          GIT_BRANCH: go
           GIT_USER_NAME: github-actions
           GIT_USER_EMAIL: github-actions@github.com
           GITHUB_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}

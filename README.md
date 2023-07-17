@@ -119,7 +119,7 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   Install the dependency:
 
   ```shell
-  go get github.com:datasprayio/open-next-cdk.git
+  go get github.com:datasprayio/open-next-cdk.git@go
   ```
 </details>
 <details>
