@@ -135,7 +135,7 @@
       "description": "Install project dependencies and update lockfile (non-frozen)",
       "steps": [
         {
-          "exec": "yarn install --check-files"
+          "exec": "yarn install --ignore-platform --check-files"
         }
       ]
     },
@@ -144,7 +144,7 @@
       "description": "Install project dependencies using frozen lockfile",
       "steps": [
         {
-          "exec": "yarn install --check-files --frozen-lockfile"
+          "exec": "yarn install --ignore-platform --check-files --frozen-lockfile"
         }
       ]
     },

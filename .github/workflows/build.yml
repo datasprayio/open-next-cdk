@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 16.x
       - name: Install dependencies
-        run: yarn install --check-files
+        run: yarn install --ignore-platform --check-files
       - name: build
         run: npx projen build
       - name: Find mutations
@@ -101,7 +101,7 @@ jobs:
       - name: Prepare Repository
         run: mv dist .repo
       - name: Install Dependencies
-        run: cd .repo && yarn install --check-files --frozen-lockfile
+        run: cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile
       - name: Create js artifact
         run: cd .repo && npx projen package:js
       - name: Collect js Artifact
@@ -130,7 +130,7 @@ jobs:
       - name: Prepare Repository
         run: mv dist .repo
       - name: Install Dependencies
-        run: cd .repo && yarn install --check-files --frozen-lockfile
+        run: cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile
       - name: Create java artifact
         run: cd .repo && npx projen package:java
       - name: Collect java Artifact
@@ -158,7 +158,7 @@ jobs:
       - name: Prepare Repository
         run: mv dist .repo
       - name: Install Dependencies
-        run: cd .repo && yarn install --check-files --frozen-lockfile
+        run: cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile
       - name: Create python artifact
         run: cd .repo && npx projen package:python
       - name: Collect python Artifact
@@ -186,7 +186,7 @@ jobs:
       - name: Prepare Repository
         run: mv dist .repo
       - name: Install Dependencies
-        run: cd .repo && yarn install --check-files --frozen-lockfile
+        run: cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile
       - name: Create dotnet artifact
         run: cd .repo && npx projen package:dotnet
       - name: Collect dotnet Artifact
@@ -214,7 +214,7 @@ jobs:
       - name: Prepare Repository
         run: mv dist .repo
       - name: Install Dependencies
-        run: cd .repo && yarn install --check-files --frozen-lockfile
+        run: cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile
       - name: Create go artifact
         run: cd .repo && npx projen package:go
       - name: Collect go Artifact

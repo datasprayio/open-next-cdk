@@ -25,6 +25,7 @@
 
 - [What is this?](#what-is-this)
 - [Quickstart](#quickstart)
+- [Requirements](#requirements)
 - [Advanced](#advanced)
     - [Pre-built OpenNext package](#pre-built-opennext-package)
     - [Additional security](#additional-security)
@@ -38,9 +39,14 @@
 # What is this?
 
 A building block for Amazon's infrastructure-as-code CDK toolkit to deploy a NextJS app using AWS serverless services.
-Supported NextJs versions: >=12.3.0+ (includes 13.0.0+)
 
 Your NextJS app is packaged using OpenNext to fit the serverless format on Lambda
+
+# Requirements
+
+NextJs versions: >=12.3.0+ (includes 13.0.0+)
+
+Platforms: darwin-x64, linux-arm64, linux-x64, win32-arm64, win32-x64
 
 # Quickstart
 
@@ -113,7 +119,7 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   Install the dependency:
 
   ```shell
-  go get github.com:datasprayio/open-next-cdk.git
+  go get github.com:datasprayio/open-next-cdk.git@go
   ```
 </details>
 <details>
@@ -167,8 +173,7 @@ If you would prefer to package it separately, see below:
   import { Nextjs } from 'open-next-cdk';
 
   new Nextjs(this, 'Web', {
-    nextjsPath: './web', // relative path to nextjs project containing .open-next folder
-    isPlaceholder: true, // Do not build, assume .open-next folder already exists
+    openNextPath: './web/.open-next', // relative path to .open-next folder
   });
   ```
 </details>
@@ -255,7 +260,10 @@ Built on top of [open-next](https://open-next.js.org/), which was partially buil
   - [NextjsSite](https://github.com/serverless-stack/sst/blob/master/packages/resources/src/RemixSite.ts) construct
 
 ### Fork from cdk-nextjs
-This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223) including Java, Go, .NET, Python using JSII.
+This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223). So far notable changes are:
+- Extended language support: TS, Java, Go, .NET, Python.
+- Extended platform support: darwin-x64, linux-arm64, linux-x64, win32-arm64, win32-x64
+- Use pre-built open-next package
 
 # Contributing
 
