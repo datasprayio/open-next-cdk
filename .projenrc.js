@@ -1,5 +1,29 @@
-const { awscdk, JsonPatch } = require('projen');
+const { awscdk, JsonPatch, Tasks } = require('projen');
+
+/**
+ * To add additional platforms, ensure esbuild supports it here: https://esbuild.github.io/getting-started/#download-a-build
+ */
+const supportedOsCpus = [
+  ['darwin', 'x64'],
+  ['linux', 'arm64'],
+  ['linux', 'x64'],
+  ['win32', 'arm64'],
+  ['win32', 'x64'],
+];
+const supportedOses = [...new Set(supportedOsCpus.map(([os, _]) => os))];
+const supportedCpus = [...new Set(supportedOsCpus.map(([_, cpu]) => cpu))];
+
 const project = new awscdk.AwsCdkConstructLibrary({
+  workflowBootstrapSteps: [
+    {
+      name: 'Install dependencies',
+      run: 'yarn install --ignore-platform --frozen-lockfile',
+    },
+    {
+      name: 'Build',
+      run: 'yarn projen',
+    },
+  ],
   author: 'Dataspray',
   authorAddress: 'matus@matus.io',
   cdkVersion: '2.73.0',
@@ -47,7 +71,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@types/fs-extra',
     '@types/micromatch',
     '@types/aws-lambda',
-    'esbuild@0.17.16',
+    // Bundle versions of esbuild for all supported platforms
+    ...['esbuild', ...supportedOsCpus.map(([os, cpu]) => `@esbuild/${os}-${cpu}`)].map(
+      (esBuildPackage) => `${esBuildPackage}@0.17.16` // If version changed, also chane in README.md
+    ),
     'aws-lambda',
     'serverless-http',
     'jszip',
@@ -61,6 +88,18 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // do not generate sample test files
   sampleCode: false,
 });
+
+// Ignore platform check when installing esbuild for other supported platforms
+[project.removeTask('install'), project.removeTask('install:ci')]
+  .filter((task) => !!task)
+  .forEach((task) => {
+    project.addTask(task.name, {
+      description: task.description,
+      exec: task.steps[0].exec.replace('yarn install', 'yarn install --ignore-platform'),
+    });
+  });
+
+// Patch package.json to adjust jest matching
 const packageJson = project.tryFindObjectFile('package.json');
 if (packageJson) {
   packageJson.patch(
@@ -69,6 +108,9 @@ if (packageJson) {
       '<rootDir>/(test|src|assets)/**/*(*.)@(spec|test).ts?(x)',
     ])
   );
+  // With esbuild, we only support these platforms
+  packageJson.patch(JsonPatch.replace('/os', supportedOses));
+  packageJson.patch(JsonPatch.replace('/cpu', supportedCpus));
 }
 
 project.synth();

@@ -125,6 +125,31 @@
       "type": "bundled"
     },
     {
+      "name": "@esbuild/darwin-x64",
+      "version": "0.17.16",
+      "type": "bundled"
+    },
+    {
+      "name": "@esbuild/linux-arm64",
+      "version": "0.17.16",
+      "type": "bundled"
+    },
+    {
+      "name": "@esbuild/linux-x64",
+      "version": "0.17.16",
+      "type": "bundled"
+    },
+    {
+      "name": "@esbuild/win32-arm64",
+      "version": "0.17.16",
+      "type": "bundled"
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.17.16",
+      "type": "bundled"
+    },
+    {
       "name": "@types/aws-lambda",
       "type": "bundled"
     },
