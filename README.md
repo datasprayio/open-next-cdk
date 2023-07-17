@@ -121,6 +121,8 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   ```shell
   go get github.com:datasprayio/open-next-cdk.git@go
   ```
+
+  Or checkout [the code in the `go` branch](https://github.com/datasprayio/open-next-cdk/tree/go).
 </details>
 <details>
   <summary><img align="middle" alt="Python" src="./resources/python.svg" width=20> Python</summary>
