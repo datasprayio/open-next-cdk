@@ -14,16 +14,7 @@ const supportedOses = [...new Set(supportedOsCpus.map(([os, _]) => os))];
 const supportedCpus = [...new Set(supportedOsCpus.map(([_, cpu]) => cpu))];
 
 const project = new awscdk.AwsCdkConstructLibrary({
-  workflowBootstrapSteps: [
-    {
-      name: 'Install dependencies',
-      run: 'yarn install --ignore-platform --frozen-lockfile',
-    },
-    {
-      name: 'Build',
-      run: 'yarn projen',
-    },
-  ],
+  package: { installCommand: 'yarn install --ignoreAA-platform --check-files --frozen-lockfile' },
   author: 'Dataspray',
   authorAddress: 'matus@matus.io',
   cdkVersion: '2.73.0',
@@ -90,6 +81,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
 });
 
 // Ignore platform check when installing esbuild for other supported platforms
+// Replace in all tasks
 [project.removeTask('install'), project.removeTask('install:ci')]
   .filter((task) => !!task)
   .forEach((task) => {
@@ -98,6 +90,43 @@ const project = new awscdk.AwsCdkConstructLibrary({
       exec: task.steps[0].exec.replace('yarn install', 'yarn install --ignore-platform'),
     });
   });
+// Replace in all Github Actions
+// This is a very unstable way to patch the Github Actions workflows to add --ignore-platform.
+project.github?.tryFindWorkflow('build')?.file?.patch(
+  JsonPatch.replace('/jobs/build/steps/2/run', 'yarn install --ignore-platform --check-files'),
+  JsonPatch.replace('/jobs/package-js/steps/4/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/package-java/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/package-python/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/package-dotnet/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/package-go/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+);
+project.github?.tryFindWorkflow('release')?.file?.patch(
+  JsonPatch.replace('/jobs/release/steps/3/run', 'yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/release_npm/steps/4/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/release_maven/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/release_pypi/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/release_nuget/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+  JsonPatch.replace('/jobs/release_golang/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
+);
+// An attempted more stable way is the following, but it doesn't work well with publishing actions particularly
+// release_* jobs that are not rendered until syntch presumably
+// const resolve = value => {
+//   // Resolve based on projen/projen _resolve.ts
+//   if (!value) return []
+//   if (typeof value === 'function') return resolve(value.apply());
+//   if (typeof value === 'object') return Object.entries(value);
+//   if (value instanceof Map) return Array.from(value.values());
+//   if (Array.isArray(value)) return value
+//   return []
+// }
+// project.github.workflows.forEach(workflow => {
+//   [...resolve(workflow.jobs), ...resolve(workflow.actions?.actions?.values())]
+//     .forEach(([jobId, job]) => {
+//       resolve(job.steps)?.forEach(([stepId, step]) => {
+//         step.run = step.run?.replace('yarn install', 'yarn install --ignore-platform')
+//       })
+//     });
+// });
 
 // Patch package.json to adjust jest matching
 const packageJson = project.tryFindObjectFile('package.json');
