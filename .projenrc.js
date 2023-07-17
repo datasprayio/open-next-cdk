@@ -92,22 +92,56 @@ const project = new awscdk.AwsCdkConstructLibrary({
   });
 // Replace in all Github Actions
 // This is a very unstable way to patch the Github Actions workflows to add --ignore-platform.
-project.github?.tryFindWorkflow('build')?.file?.patch(
-  JsonPatch.replace('/jobs/build/steps/2/run', 'yarn install --ignore-platform --check-files'),
-  JsonPatch.replace('/jobs/package-js/steps/4/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/package-java/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/package-python/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/package-dotnet/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/package-go/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-);
-project.github?.tryFindWorkflow('release')?.file?.patch(
-  JsonPatch.replace('/jobs/release/steps/3/run', 'yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/release_npm/steps/4/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/release_maven/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/release_pypi/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/release_nuget/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-  JsonPatch.replace('/jobs/release_golang/steps/5/run', 'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'),
-);
+project.github
+  ?.tryFindWorkflow('build')
+  ?.file?.patch(
+    JsonPatch.replace('/jobs/build/steps/2/run', 'yarn install --ignore-platform --check-files'),
+    JsonPatch.replace(
+      '/jobs/package-js/steps/4/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/package-java/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/package-python/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/package-dotnet/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/package-go/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    )
+  );
+project.github
+  ?.tryFindWorkflow('release')
+  ?.file?.patch(
+    JsonPatch.replace('/jobs/release/steps/3/run', 'yarn install --ignore-platform --check-files --frozen-lockfile'),
+    JsonPatch.replace(
+      '/jobs/release_npm/steps/4/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/release_maven/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/release_pypi/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/release_nuget/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    ),
+    JsonPatch.replace(
+      '/jobs/release_golang/steps/5/run',
+      'cd .repo && yarn install --ignore-platform --check-files --frozen-lockfile'
+    )
+  );
 // An attempted more stable way is the following, but it doesn't work well with publishing actions particularly
 // release_* jobs that are not rendered until syntch presumably
 // const resolve = value => {
