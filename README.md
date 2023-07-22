@@ -63,7 +63,7 @@ npm install --save-dev esbuild@0.17.16
 Use this construct in your CDK application to deploy your NextJS app to AWS.
 
 <details>
-  <summary><img align="middle" alt="Typescript" src="./resources/typescript.svg" width=20> Typescript</summary>
+  <summary>Typescript <img align="middle" alt="Typescript" src="./resources/typescript.svg" width=20></summary>
 
   <a href="https://www.npmjs.com/package/open-next-cdk">
     <img align="middle" alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
@@ -86,7 +86,7 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   ```
 </details>
 <details>
-  <summary><img align="middle" alt="Java" src="./resources/java.svg" width=20> Java</summary>
+  <summary>Java <img align="middle" alt="Java" src="./resources/java.svg" width=20></summary>
   <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
     <img align="middle" alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
   </a>
@@ -110,7 +110,7 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   ```
 </details>
 <details>
-  <summary><img align="middle" alt="Go" src="./resources/go.svg" width=20> Go</summary>
+  <summary>Go <img align="middle" alt="Go" src="./resources/go.svg" width=20></summary>
 
   <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
     <img align="middle" alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/go?filename=opennextcdk%2Fgo.mod&label=GO&style=for-the-badge">
@@ -125,7 +125,7 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   Or checkout [the code in the `go` branch](https://github.com/datasprayio/open-next-cdk/tree/go).
 </details>
 <details>
-  <summary><img align="middle" alt="Python" src="./resources/python.svg" width=20> Python</summary>
+  <summary>Python <img align="middle" alt="Python" src="./resources/python.svg" width=20></summary>
 
   <a href="https://pypi.org/project/open-next-cdk/">
     <img align="middle" alt="Pypi release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
@@ -138,7 +138,7 @@ Use this construct in your CDK application to deploy your NextJS app to AWS.
   ```
 </details>
 <details>
-  <summary><img align="middle" alt=".NET" src="./resources/dotnet.svg" width=20> .NET</summary>
+  <summary>.NET <img align="middle" alt=".NET" src="./resources/dotnet.svg" width=20></summary>
 
   <a href="https://www.nuget.org/packages/Dataspray.OpenNextCdk">
     <img align="middle" alt="Nuget release" src="https://img.shields.io/nuget/v/Dataspray.OpenNextCdk?style=for-the-badge">
