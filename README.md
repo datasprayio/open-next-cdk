@@ -33,6 +33,7 @@
     - [Benefits](#benefits)
     - [Dependencies](#dependencies)
     - [Similar projects](#similar-projects)
+       - [Fork from cdk-nextjs](#fork-from-cdk-nextjs)
 - [Contributing](#contributing)
     - [Using Projen](#using-projen)
 
@@ -250,8 +251,7 @@ You may want to look at [Serverless Stack](https://sst.dev) and its [NextjsSite]
 Built on top of [open-next](https://open-next.js.org/), which was partially built using the original core of cdk-nextjs-standalone.
 
 ## Similar projects
-
-### Heavily based on
+This project is heavily based on
 
 - [Open-next](https://open-next.js.org/)
 - <https://github.com/iiroj/iiro.fi/commit/bd43222032d0dbb765e1111825f64dbb5db851d9>
@@ -262,6 +262,8 @@ Built on top of [open-next](https://open-next.js.org/), which was partially buil
   - [NextjsSite](https://github.com/serverless-stack/sst/blob/master/packages/resources/src/RemixSite.ts) construct
 
 ### Fork from cdk-nextjs
+Compatible with: `cdk-nextjs`[@3.2.1](https://github.com/jetbridge/cdk-nextjs/releases/tag/v3.2.1)
+
 This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223). So far notable changes are:
 - Extended language support: TS, Java, Go, .NET, Python.
 - Extended platform support: darwin-x64, linux-arm64, linux-x64, win32-arm64, win32-x64
