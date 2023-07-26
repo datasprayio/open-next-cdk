@@ -154,6 +154,10 @@ func init() {
 		reflect.TypeOf((*NextjsAssetsDeploymentProps)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
+		"open-next-cdk.NextjsAssetsDeploymentPropsDefaults",
+		reflect.TypeOf((*NextjsAssetsDeploymentPropsDefaults)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
 		"open-next-cdk.NextjsBaseProps",
 		reflect.TypeOf((*NextjsBaseProps)(nil)).Elem(),
 	)
@@ -221,6 +225,10 @@ func init() {
 	_jsii_.RegisterStruct(
 		"open-next-cdk.NextjsDistributionProps",
 		reflect.TypeOf((*NextjsDistributionProps)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"open-next-cdk.NextjsDistributionPropsDefaults",
+		reflect.TypeOf((*NextjsDistributionPropsDefaults)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
 		"open-next-cdk.NextjsDomainProps",

@@ -35,6 +35,8 @@
   * [Benefits](#benefits)
   * [Dependencies](#dependencies)
   * [Similar projects](#similar-projects)
+
+    * [Fork from cdk-nextjs](#fork-from-cdk-nextjs)
 * [Contributing](#contributing)
 
   * [Using Projen](#using-projen)
@@ -66,7 +68,7 @@ npm install --save-dev esbuild@0.17.16
 Use this construct in your CDK application to deploy your NextJS app to AWS.
 
 <details>
-  <summary><img align="middle" alt="Typescript" src="./resources/typescript.svg" width=20> Typescript</summary>  <a href="https://www.npmjs.com/package/open-next-cdk">
+  <summary>Typescript <img align="middle" alt="Typescript" src="./resources/typescript.svg" width=20></summary>  <a href="https://www.npmjs.com/package/open-next-cdk">
     <img align="middle" alt="NPM release" src="https://img.shields.io/npm/v/open-next-cdk?style=for-the-badge">
   </a>
 
@@ -88,7 +90,7 @@ new Nextjs(this, 'Web', {
 
 </details>
 <details>
-  <summary><img align="middle" alt="Java" src="./resources/java.svg" width=20> Java</summary>
+  <summary>Java <img align="middle" alt="Java" src="./resources/java.svg" width=20></summary>
   <a href="https://search.maven.org/artifact/io.dataspray/open-next-cdk">
     <img align="middle" alt="Maven Central release" src="https://img.shields.io/maven-central/v/io.dataspray/open-next-cdk?style=for-the-badge">
   </a>
@@ -113,8 +115,8 @@ Nextjs.Builder.create(this, getConstructId())
 
 </details>
 <details>
-  <summary><img align="middle" alt="Go" src="./resources/go.svg" width=20> Go</summary>  <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
-    <img align="middle" alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/main?filename=opennextcdk%2Fgo.mod&label=GO&style=for-the-badge">
+  <summary>Go <img align="middle" alt="Go" src="./resources/go.svg" width=20></summary>  <a href="https://github.com/datasprayio/open-next-cdk/tree/main/opennextcdk">
+    <img align="middle" alt="Go release" src="https://img.shields.io/github/go-mod/go-version/datasprayio/open-next-cdk/go?filename=opennextcdk%2Fgo.mod&label=GO&style=for-the-badge">
   </a>
 
 Install the dependency:
@@ -123,9 +125,11 @@ Install the dependency:
 go get github.com:datasprayio/open-next-cdk.git@go
 ```
 
+Or checkout [the code in the `go` branch](https://github.com/datasprayio/open-next-cdk/tree/go).
+
 </details>
 <details>
-  <summary><img align="middle" alt="Python" src="./resources/python.svg" width=20> Python</summary>  <a href="https://pypi.org/project/open-next-cdk/">
+  <summary>Python <img align="middle" alt="Python" src="./resources/python.svg" width=20></summary>  <a href="https://pypi.org/project/open-next-cdk/">
     <img align="middle" alt="Pypi release" src="https://img.shields.io/pypi/v/open-next-cdk?style=for-the-badge">
   </a>
 
@@ -137,7 +141,7 @@ pip install open-next-cdk
 
 </details>
 <details>
-  <summary><img align="middle" alt=".NET" src="./resources/dotnet.svg" width=20> .NET</summary>  <a href="https://www.nuget.org/packages/Dataspray.OpenNextCdk">
+  <summary>.NET <img align="middle" alt=".NET" src="./resources/dotnet.svg" width=20></summary>  <a href="https://www.nuget.org/packages/Dataspray.OpenNextCdk">
     <img align="middle" alt="Nuget release" src="https://img.shields.io/nuget/v/Dataspray.OpenNextCdk?style=for-the-badge">
   </a>
 
@@ -251,7 +255,7 @@ Built on top of [open-next](https://open-next.js.org/), which was partially buil
 
 ## Similar projects
 
-### Heavily based on
+This project is heavily based on
 
 * [Open-next](https://open-next.js.org/)
 * [https://github.com/iiroj/iiro.fi/commit/bd43222032d0dbb765e1111825f64dbb5db851d9](https://github.com/iiroj/iiro.fi/commit/bd43222032d0dbb765e1111825f64dbb5db851d9)
@@ -263,6 +267,8 @@ Built on top of [open-next](https://open-next.js.org/), which was partially buil
   * [NextjsSite](https://github.com/serverless-stack/sst/blob/master/packages/resources/src/RemixSite.ts) construct
 
 ### Fork from cdk-nextjs
+
+Compatible with: `cdk-nextjs`[@3.2.1](https://github.com/jetbridge/cdk-nextjs/releases/tag/v3.2.1)
 
 This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223). So far notable changes are:
 

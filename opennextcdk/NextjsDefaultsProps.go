@@ -10,11 +10,9 @@ import (
 // Why `any`? see https://github.com/aws/jsii/issues/2901
 type NextjsDefaultsProps struct {
 	// Override static file deployment settings.
-	AssetDeployment interface{} `field:"optional" json:"assetDeployment" yaml:"assetDeployment"`
+	AssetDeployment *NextjsAssetsDeploymentPropsDefaults `field:"optional" json:"assetDeployment" yaml:"assetDeployment"`
 	// Override CloudFront distribution settings.
-	//
-	// These properties should all be optional but cannot be due to a limitation in jsii.
-	Distribution interface{} `field:"optional" json:"distribution" yaml:"distribution"`
+	Distribution *NextjsDistributionPropsDefaults `field:"optional" json:"distribution" yaml:"distribution"`
 	// Override server lambda function settings.
 	Lambda *awslambda.FunctionOptions `field:"optional" json:"lambda" yaml:"lambda"`
 }
