@@ -8,10 +8,10 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
 import * as fs from 'fs-extra';
 import { ImageOptimizationLambda } from './ImageOptimizationLambda';
-import { NextJsAssetsDeployment, NextjsAssetsDeploymentProps } from './NextjsAssetsDeployment';
+import { NextJsAssetsDeployment, NextjsAssetsDeploymentPropsDefaults } from './NextjsAssetsDeployment';
 import { BaseSiteDomainProps, NextjsBaseProps } from './NextjsBase';
 import { NextjsBuild } from './NextjsBuild';
-import { NextjsDistribution, NextjsDistributionProps } from './NextjsDistribution';
+import { NextjsDistribution, NextjsDistributionPropsDefaults } from './NextjsDistribution';
 import { NextJsLambda } from './NextjsLambda';
 
 // contains server-side resolved environment vars in config bucket
@@ -27,7 +27,7 @@ export interface NextjsDefaultsProps {
   /**
    * Override static file deployment settings.
    */
-  readonly assetDeployment?: NextjsAssetsDeploymentProps | any;
+  readonly assetDeployment?: NextjsAssetsDeploymentPropsDefaults;
 
   /**
    * Override server lambda function settings.
@@ -36,10 +36,8 @@ export interface NextjsDefaultsProps {
 
   /**
    * Override CloudFront distribution settings.
-   *
-   * These properties should all be optional but cannot be due to a limitation in jsii.
    */
-  readonly distribution?: NextjsDistributionProps | any;
+  readonly distribution?: NextjsDistributionPropsDefaults;
 }
 
 export interface NextjsProps extends NextjsBaseProps {

@@ -135,6 +135,90 @@ export interface NextjsDistributionProps extends NextjsBaseProps {
 }
 
 /**
+ * Effectively a Partial<NextjsDistributionProps> to satisfy JSII
+ */
+export interface NextjsDistributionPropsDefaults extends NextjsBaseProps {
+  /**
+   * Bucket containing static assets.
+   * Must be provided if you want to serve static files.
+   */
+  readonly staticAssetsBucket?: s3.IBucket;
+
+  /**
+   * Lambda function to route all non-static requests to.
+   * Must be provided if you want to serve dynamic requests.
+   */
+  readonly serverFunction?: lambda.IFunction;
+
+  /**
+   * Lambda function to optimize images.
+   * Must be provided if you want to serve dynamic requests.
+   */
+  readonly imageOptFunction?: lambda.IFunction;
+
+  /**
+   * Overrides for created CDK resources.
+   */
+  readonly cdk?: NextjsDistributionCdkProps;
+
+  /**
+   * Built NextJS app.
+   */
+  readonly nextBuild?: NextjsBuild;
+
+  /**
+   * Override the default CloudFront cache policies created internally.
+   */
+  readonly cachePolicies?: NextjsCachePolicyProps;
+
+  /**
+   * Override the default CloudFront origin request policies created internally.
+   */
+  readonly originRequestPolicies?: NextjsOriginRequestPolicyProps;
+
+  /**
+   * The customDomain for this website. Supports domains that are hosted
+   * either on [Route 53](https://aws.amazon.com/route53/) or externally.
+   *
+   * Note that you can also migrate externally hosted domains to Route 53 by
+   * [following this guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html).
+   *
+   * @example
+   * new NextjsDistribution(this, "Dist", {
+   *   customDomain: "domain.com",
+   * });
+   *
+   * new NextjsDistribution(this, "Dist", {
+   *   customDomain: {
+   *     domainName: "domain.com",
+   *     domainAlias: "www.domain.com",
+   *     hostedZone: "domain.com"
+   *   },
+   * });
+   */
+  readonly customDomain?: string | NextjsDomainProps;
+
+  /**
+   * Include the name of your deployment stage if present.
+   * Used to name the edge functions stack.
+   * Required if using SST.
+   */
+  readonly stageName?: string;
+
+  /**
+   * Optional value to prefix the edge function stack
+   * It defaults to "Nextjs"
+   */
+  readonly stackPrefix?: string;
+
+  /**
+   * Override lambda function url auth type
+   * @default "NONE"
+   */
+  readonly functionUrlAuthType?: lambda.FunctionUrlAuthType;
+}
+
+/**
  * Create a CloudFront distribution to serve a Next.js application.
  */
 export class NextjsDistribution extends Construct {

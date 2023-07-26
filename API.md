@@ -3383,6 +3383,325 @@ In case of useEfs, vpc is required.
 
 ---
 
+### NextjsAssetsDeploymentPropsDefaults <a name="NextjsAssetsDeploymentPropsDefaults" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults"></a>
+
+Effectively a Partial<NextjsAssetsCachePolicyProps> to satisfy JSII.
+
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.Initializer"></a>
+
+```typescript
+import { NextjsAssetsDeploymentPropsDefaults } from 'open-next-cdk'
+
+const nextjsAssetsDeploymentPropsDefaults: NextjsAssetsDeploymentPropsDefaults = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.bucket">bucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Properties for the S3 bucket containing the NextJS assets. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.cachePolicies">cachePolicies</a></code> | <code><a href="#open-next-cdk.NextjsAssetsCachePolicyProps">NextjsAssetsCachePolicyProps</a></code> | Override the default S3 cache policies created internally. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.distribution">distribution</a></code> | <code>aws-cdk-lib.aws_cloudfront.IDistribution</code> | Distribution to invalidate when assets change. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.ephemeralStorageSize">ephemeralStorageSize</a></code> | <code>aws-cdk-lib.Size</code> | ephemeralStorageSize for lambda function which been run by BucketDeployment. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.memoryLimit">memoryLimit</a></code> | <code>number</code> | memoryLimit for lambda function which been run by BucketDeployment. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | The `NextjsBuild` instance representing the built Nextjs application. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.prune">prune</a></code> | <code>boolean</code> | Set to true to delete old assets (defaults to false). |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.useEfs">useEfs</a></code> | <code>boolean</code> | In case of useEfs, vpc is required. |
+| <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | In case of useEfs, vpc is required. |
+
+---
+
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.buildCommand"></a>
+
+```typescript
+public readonly buildCommand: string;
+```
+
+- *Type:* string
+
+Optional value used to install NextJS node dependencies.
+
+It defaults to 'npx --yes open-next@latest build'
+
+---
+
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.buildPath"></a>
+
+```typescript
+public readonly buildPath: string;
+```
+
+- *Type:* string
+
+The directory to execute `npm run build` from.
+
+By default, it is `nextjsPath`.
+Can be overridden, particularly useful for monorepos where `build` is expected to run
+at the root of the project.
+
+---
+
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.compressionLevel"></a>
+
+```typescript
+public readonly compressionLevel: number;
+```
+
+- *Type:* number
+- *Default:* 1
+
+0 - no compression, fastest 9 - maximum compression, slowest.
+
+---
+
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.environment"></a>
+
+```typescript
+public readonly environment: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+Custom environment variables to pass to the NextJS build and runtime.
+
+---
+
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
+
+```typescript
+public readonly isPlaceholder: boolean;
+```
+
+- *Type:* boolean
+
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
+
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
+
+---
+
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nodeEnv"></a>
+
+```typescript
+public readonly nodeEnv: string;
+```
+
+- *Type:* string
+
+Optional value for NODE_ENV during build and runtime.
+
+---
+
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.openNextPath"></a>
+
+```typescript
+public readonly openNextPath: string;
+```
+
+- *Type:* string
+
+Relative path to the OpenNext package named `.open-next` by default.
+
+One of `openNextPath` or `nextJsPath` must be supplied.
+
+---
+
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.quiet"></a>
+
+```typescript
+public readonly quiet: boolean;
+```
+
+- *Type:* boolean
+
+Less build output.
+
+---
+
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.sharpLayerArn"></a>
+
+```typescript
+public readonly sharpLayerArn: string;
+```
+
+- *Type:* string
+
+Optional arn for the sharp lambda layer.
+
+If omitted, the layer will be created.
+
+---
+
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.tempBuildDir"></a>
+
+```typescript
+public readonly tempBuildDir: string;
+```
+
+- *Type:* string
+
+Directory to store temporary build files in.
+
+Defaults to os.tmpdir().
+
+---
+
+##### `bucket`<sup>Optional</sup> <a name="bucket" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.bucket"></a>
+
+```typescript
+public readonly bucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+
+Properties for the S3 bucket containing the NextJS assets.
+
+---
+
+##### `cachePolicies`<sup>Optional</sup> <a name="cachePolicies" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.cachePolicies"></a>
+
+```typescript
+public readonly cachePolicies: NextjsAssetsCachePolicyProps;
+```
+
+- *Type:* <a href="#open-next-cdk.NextjsAssetsCachePolicyProps">NextjsAssetsCachePolicyProps</a>
+
+Override the default S3 cache policies created internally.
+
+---
+
+##### `distribution`<sup>Optional</sup> <a name="distribution" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.distribution"></a>
+
+```typescript
+public readonly distribution: IDistribution;
+```
+
+- *Type:* aws-cdk-lib.aws_cloudfront.IDistribution
+
+Distribution to invalidate when assets change.
+
+---
+
+##### `ephemeralStorageSize`<sup>Optional</sup> <a name="ephemeralStorageSize" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.ephemeralStorageSize"></a>
+
+```typescript
+public readonly ephemeralStorageSize: Size;
+```
+
+- *Type:* aws-cdk-lib.Size
+
+ephemeralStorageSize for lambda function which been run by BucketDeployment.
+
+---
+
+##### `memoryLimit`<sup>Optional</sup> <a name="memoryLimit" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.memoryLimit"></a>
+
+```typescript
+public readonly memoryLimit: number;
+```
+
+- *Type:* number
+
+memoryLimit for lambda function which been run by BucketDeployment.
+
+---
+
+##### `nextBuild`<sup>Optional</sup> <a name="nextBuild" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.nextBuild"></a>
+
+```typescript
+public readonly nextBuild: NextjsBuild;
+```
+
+- *Type:* <a href="#open-next-cdk.NextjsBuild">NextjsBuild</a>
+
+The `NextjsBuild` instance representing the built Nextjs application.
+
+---
+
+##### `prune`<sup>Optional</sup> <a name="prune" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.prune"></a>
+
+```typescript
+public readonly prune: boolean;
+```
+
+- *Type:* boolean
+
+Set to true to delete old assets (defaults to false).
+
+Recommended to only set to true if you don't need the ability to roll back deployments.
+
+---
+
+##### `useEfs`<sup>Optional</sup> <a name="useEfs" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.useEfs"></a>
+
+```typescript
+public readonly useEfs: boolean;
+```
+
+- *Type:* boolean
+
+In case of useEfs, vpc is required.
+
+---
+
+##### `vpc`<sup>Optional</sup> <a name="vpc" id="open-next-cdk.NextjsAssetsDeploymentPropsDefaults.property.vpc"></a>
+
+```typescript
+public readonly vpc: IVpc;
+```
+
+- *Type:* aws-cdk-lib.aws_ec2.IVpc
+
+In case of useEfs, vpc is required.
+
+---
+
 ### NextjsBaseProps <a name="NextjsBaseProps" id="open-next-cdk.NextjsBaseProps"></a>
 
 Common props shared across NextJS-related CDK constructs.
@@ -3864,8 +4183,8 @@ const nextjsDefaultsProps: NextjsDefaultsProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#open-next-cdk.NextjsDefaultsProps.property.assetDeployment">assetDeployment</a></code> | <code>any</code> | Override static file deployment settings. |
-| <code><a href="#open-next-cdk.NextjsDefaultsProps.property.distribution">distribution</a></code> | <code>any</code> | Override CloudFront distribution settings. |
+| <code><a href="#open-next-cdk.NextjsDefaultsProps.property.assetDeployment">assetDeployment</a></code> | <code><a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults">NextjsAssetsDeploymentPropsDefaults</a></code> | Override static file deployment settings. |
+| <code><a href="#open-next-cdk.NextjsDefaultsProps.property.distribution">distribution</a></code> | <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults">NextjsDistributionPropsDefaults</a></code> | Override CloudFront distribution settings. |
 | <code><a href="#open-next-cdk.NextjsDefaultsProps.property.lambda">lambda</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionOptions</code> | Override server lambda function settings. |
 
 ---
@@ -3873,10 +4192,10 @@ const nextjsDefaultsProps: NextjsDefaultsProps = { ... }
 ##### `assetDeployment`<sup>Optional</sup> <a name="assetDeployment" id="open-next-cdk.NextjsDefaultsProps.property.assetDeployment"></a>
 
 ```typescript
-public readonly assetDeployment: any;
+public readonly assetDeployment: NextjsAssetsDeploymentPropsDefaults;
 ```
 
-- *Type:* any
+- *Type:* <a href="#open-next-cdk.NextjsAssetsDeploymentPropsDefaults">NextjsAssetsDeploymentPropsDefaults</a>
 
 Override static file deployment settings.
 
@@ -3885,14 +4204,12 @@ Override static file deployment settings.
 ##### `distribution`<sup>Optional</sup> <a name="distribution" id="open-next-cdk.NextjsDefaultsProps.property.distribution"></a>
 
 ```typescript
-public readonly distribution: any;
+public readonly distribution: NextjsDistributionPropsDefaults;
 ```
 
-- *Type:* any
+- *Type:* <a href="#open-next-cdk.NextjsDistributionPropsDefaults">NextjsDistributionPropsDefaults</a>
 
 Override CloudFront distribution settings.
-
-These properties should all be optional but cannot be due to a limitation in jsii.
 
 ---
 
@@ -4306,6 +4623,379 @@ Include the name of your deployment stage if present.
 
 Used to name the edge functions stack.
 Required if using SST.
+
+---
+
+### NextjsDistributionPropsDefaults <a name="NextjsDistributionPropsDefaults" id="open-next-cdk.NextjsDistributionPropsDefaults"></a>
+
+Effectively a Partial<NextjsDistributionProps> to satisfy JSII.
+
+#### Initializer <a name="Initializer" id="open-next-cdk.NextjsDistributionPropsDefaults.Initializer"></a>
+
+```typescript
+import { NextjsDistributionPropsDefaults } from 'open-next-cdk'
+
+const nextjsDistributionPropsDefaults: NextjsDistributionPropsDefaults = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.buildCommand">buildCommand</a></code> | <code>string</code> | Optional value used to install NextJS node dependencies. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.buildPath">buildPath</a></code> | <code>string</code> | The directory to execute `npm run build` from. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.compressionLevel">compressionLevel</a></code> | <code>number</code> | 0 - no compression, fastest 9 - maximum compression, slowest. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Custom environment variables to pass to the NextJS build and runtime. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.isPlaceholder">isPlaceholder</a></code> | <code>boolean</code> | Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.nextjsPath">nextjsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.nextJsPath">nextJsPath</a></code> | <code>string</code> | Relative path to the directory where the NextJS project is located. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.nodeEnv">nodeEnv</a></code> | <code>string</code> | Optional value for NODE_ENV during build and runtime. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.openNextPath">openNextPath</a></code> | <code>string</code> | Relative path to the OpenNext package named `.open-next` by default. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.quiet">quiet</a></code> | <code>boolean</code> | Less build output. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.sharpLayerArn">sharpLayerArn</a></code> | <code>string</code> | Optional arn for the sharp lambda layer. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.tempBuildDir">tempBuildDir</a></code> | <code>string</code> | Directory to store temporary build files in. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.cachePolicies">cachePolicies</a></code> | <code><a href="#open-next-cdk.NextjsCachePolicyProps">NextjsCachePolicyProps</a></code> | Override the default CloudFront cache policies created internally. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.cdk">cdk</a></code> | <code><a href="#open-next-cdk.NextjsDistributionCdkProps">NextjsDistributionCdkProps</a></code> | Overrides for created CDK resources. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.customDomain">customDomain</a></code> | <code>string \| <a href="#open-next-cdk.NextjsDomainProps">NextjsDomainProps</a></code> | The customDomain for this website. Supports domains that are hosted either on [Route 53](https://aws.amazon.com/route53/) or externally. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.functionUrlAuthType">functionUrlAuthType</a></code> | <code>aws-cdk-lib.aws_lambda.FunctionUrlAuthType</code> | Override lambda function url auth type. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.imageOptFunction">imageOptFunction</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | Lambda function to optimize images. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.nextBuild">nextBuild</a></code> | <code><a href="#open-next-cdk.NextjsBuild">NextjsBuild</a></code> | Built NextJS app. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.originRequestPolicies">originRequestPolicies</a></code> | <code><a href="#open-next-cdk.NextjsOriginRequestPolicyProps">NextjsOriginRequestPolicyProps</a></code> | Override the default CloudFront origin request policies created internally. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.serverFunction">serverFunction</a></code> | <code>aws-cdk-lib.aws_lambda.IFunction</code> | Lambda function to route all non-static requests to. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.stackPrefix">stackPrefix</a></code> | <code>string</code> | Optional value to prefix the edge function stack It defaults to "Nextjs". |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.stageName">stageName</a></code> | <code>string</code> | Include the name of your deployment stage if present. |
+| <code><a href="#open-next-cdk.NextjsDistributionPropsDefaults.property.staticAssetsBucket">staticAssetsBucket</a></code> | <code>aws-cdk-lib.aws_s3.IBucket</code> | Bucket containing static assets. |
+
+---
+
+##### `buildCommand`<sup>Optional</sup> <a name="buildCommand" id="open-next-cdk.NextjsDistributionPropsDefaults.property.buildCommand"></a>
+
+```typescript
+public readonly buildCommand: string;
+```
+
+- *Type:* string
+
+Optional value used to install NextJS node dependencies.
+
+It defaults to 'npx --yes open-next@latest build'
+
+---
+
+##### `buildPath`<sup>Optional</sup> <a name="buildPath" id="open-next-cdk.NextjsDistributionPropsDefaults.property.buildPath"></a>
+
+```typescript
+public readonly buildPath: string;
+```
+
+- *Type:* string
+
+The directory to execute `npm run build` from.
+
+By default, it is `nextjsPath`.
+Can be overridden, particularly useful for monorepos where `build` is expected to run
+at the root of the project.
+
+---
+
+##### `compressionLevel`<sup>Optional</sup> <a name="compressionLevel" id="open-next-cdk.NextjsDistributionPropsDefaults.property.compressionLevel"></a>
+
+```typescript
+public readonly compressionLevel: number;
+```
+
+- *Type:* number
+- *Default:* 1
+
+0 - no compression, fastest 9 - maximum compression, slowest.
+
+---
+
+##### `environment`<sup>Optional</sup> <a name="environment" id="open-next-cdk.NextjsDistributionPropsDefaults.property.environment"></a>
+
+```typescript
+public readonly environment: {[ key: string ]: string};
+```
+
+- *Type:* {[ key: string ]: string}
+
+Custom environment variables to pass to the NextJS build and runtime.
+
+---
+
+##### ~~`isPlaceholder`~~<sup>Optional</sup> <a name="isPlaceholder" id="open-next-cdk.NextjsDistributionPropsDefaults.property.isPlaceholder"></a>
+
+- *Deprecated:* use `openNextPath` instead
+
+```typescript
+public readonly isPlaceholder: boolean;
+```
+
+- *Type:* boolean
+
+Used in conjunction with nextJsPath to skip building NextJS app and assume .open-next folder already exists. Useful when using `next dev` for local development.
+
+---
+
+##### ~~`nextjsPath`~~<sup>Optional</sup> <a name="nextjsPath" id="open-next-cdk.NextjsDistributionPropsDefaults.property.nextjsPath"></a>
+
+- *Deprecated:* use `nextJsPath` instead
+
+```typescript
+public readonly nextjsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath`, `nextJsPath` or `nextjsPath` must be supplied.
+
+---
+
+##### `nextJsPath`<sup>Optional</sup> <a name="nextJsPath" id="open-next-cdk.NextjsDistributionPropsDefaults.property.nextJsPath"></a>
+
+```typescript
+public readonly nextJsPath: string;
+```
+
+- *Type:* string
+
+Relative path to the directory where the NextJS project is located.
+
+Can be the root of your project (`.`) or a subdirectory (`packages/web`).
+
+One of `openNextPath` or `nextJsPath` must be supplied.
+
+---
+
+##### `nodeEnv`<sup>Optional</sup> <a name="nodeEnv" id="open-next-cdk.NextjsDistributionPropsDefaults.property.nodeEnv"></a>
+
+```typescript
+public readonly nodeEnv: string;
+```
+
+- *Type:* string
+
+Optional value for NODE_ENV during build and runtime.
+
+---
+
+##### `openNextPath`<sup>Optional</sup> <a name="openNextPath" id="open-next-cdk.NextjsDistributionPropsDefaults.property.openNextPath"></a>
+
+```typescript
+public readonly openNextPath: string;
+```
+
+- *Type:* string
+
+Relative path to the OpenNext package named `.open-next` by default.
+
+One of `openNextPath` or `nextJsPath` must be supplied.
+
+---
+
+##### `quiet`<sup>Optional</sup> <a name="quiet" id="open-next-cdk.NextjsDistributionPropsDefaults.property.quiet"></a>
+
+```typescript
+public readonly quiet: boolean;
+```
+
+- *Type:* boolean
+
+Less build output.
+
+---
+
+##### `sharpLayerArn`<sup>Optional</sup> <a name="sharpLayerArn" id="open-next-cdk.NextjsDistributionPropsDefaults.property.sharpLayerArn"></a>
+
+```typescript
+public readonly sharpLayerArn: string;
+```
+
+- *Type:* string
+
+Optional arn for the sharp lambda layer.
+
+If omitted, the layer will be created.
+
+---
+
+##### `tempBuildDir`<sup>Optional</sup> <a name="tempBuildDir" id="open-next-cdk.NextjsDistributionPropsDefaults.property.tempBuildDir"></a>
+
+```typescript
+public readonly tempBuildDir: string;
+```
+
+- *Type:* string
+
+Directory to store temporary build files in.
+
+Defaults to os.tmpdir().
+
+---
+
+##### `cachePolicies`<sup>Optional</sup> <a name="cachePolicies" id="open-next-cdk.NextjsDistributionPropsDefaults.property.cachePolicies"></a>
+
+```typescript
+public readonly cachePolicies: NextjsCachePolicyProps;
+```
+
+- *Type:* <a href="#open-next-cdk.NextjsCachePolicyProps">NextjsCachePolicyProps</a>
+
+Override the default CloudFront cache policies created internally.
+
+---
+
+##### `cdk`<sup>Optional</sup> <a name="cdk" id="open-next-cdk.NextjsDistributionPropsDefaults.property.cdk"></a>
+
+```typescript
+public readonly cdk: NextjsDistributionCdkProps;
+```
+
+- *Type:* <a href="#open-next-cdk.NextjsDistributionCdkProps">NextjsDistributionCdkProps</a>
+
+Overrides for created CDK resources.
+
+---
+
+##### `customDomain`<sup>Optional</sup> <a name="customDomain" id="open-next-cdk.NextjsDistributionPropsDefaults.property.customDomain"></a>
+
+```typescript
+public readonly customDomain: string | NextjsDomainProps;
+```
+
+- *Type:* string | <a href="#open-next-cdk.NextjsDomainProps">NextjsDomainProps</a>
+
+The customDomain for this website. Supports domains that are hosted either on [Route 53](https://aws.amazon.com/route53/) or externally.
+
+Note that you can also migrate externally hosted domains to Route 53 by
+[following this guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html).
+
+---
+
+*Example*
+
+```typescript
+new NextjsDistribution(this, "Dist", {
+  customDomain: "domain.com",
+});
+
+new NextjsDistribution(this, "Dist", {
+  customDomain: {
+    domainName: "domain.com",
+    domainAlias: "www.domain.com",
+    hostedZone: "domain.com"
+  },
+});
+```
+
+
+##### `functionUrlAuthType`<sup>Optional</sup> <a name="functionUrlAuthType" id="open-next-cdk.NextjsDistributionPropsDefaults.property.functionUrlAuthType"></a>
+
+```typescript
+public readonly functionUrlAuthType: FunctionUrlAuthType;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.FunctionUrlAuthType
+- *Default:* "NONE"
+
+Override lambda function url auth type.
+
+---
+
+##### `imageOptFunction`<sup>Optional</sup> <a name="imageOptFunction" id="open-next-cdk.NextjsDistributionPropsDefaults.property.imageOptFunction"></a>
+
+```typescript
+public readonly imageOptFunction: IFunction;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.IFunction
+
+Lambda function to optimize images.
+
+Must be provided if you want to serve dynamic requests.
+
+---
+
+##### `nextBuild`<sup>Optional</sup> <a name="nextBuild" id="open-next-cdk.NextjsDistributionPropsDefaults.property.nextBuild"></a>
+
+```typescript
+public readonly nextBuild: NextjsBuild;
+```
+
+- *Type:* <a href="#open-next-cdk.NextjsBuild">NextjsBuild</a>
+
+Built NextJS app.
+
+---
+
+##### `originRequestPolicies`<sup>Optional</sup> <a name="originRequestPolicies" id="open-next-cdk.NextjsDistributionPropsDefaults.property.originRequestPolicies"></a>
+
+```typescript
+public readonly originRequestPolicies: NextjsOriginRequestPolicyProps;
+```
+
+- *Type:* <a href="#open-next-cdk.NextjsOriginRequestPolicyProps">NextjsOriginRequestPolicyProps</a>
+
+Override the default CloudFront origin request policies created internally.
+
+---
+
+##### `serverFunction`<sup>Optional</sup> <a name="serverFunction" id="open-next-cdk.NextjsDistributionPropsDefaults.property.serverFunction"></a>
+
+```typescript
+public readonly serverFunction: IFunction;
+```
+
+- *Type:* aws-cdk-lib.aws_lambda.IFunction
+
+Lambda function to route all non-static requests to.
+
+Must be provided if you want to serve dynamic requests.
+
+---
+
+##### `stackPrefix`<sup>Optional</sup> <a name="stackPrefix" id="open-next-cdk.NextjsDistributionPropsDefaults.property.stackPrefix"></a>
+
+```typescript
+public readonly stackPrefix: string;
+```
+
+- *Type:* string
+
+Optional value to prefix the edge function stack It defaults to "Nextjs".
+
+---
+
+##### `stageName`<sup>Optional</sup> <a name="stageName" id="open-next-cdk.NextjsDistributionPropsDefaults.property.stageName"></a>
+
+```typescript
+public readonly stageName: string;
+```
+
+- *Type:* string
+
+Include the name of your deployment stage if present.
+
+Used to name the edge functions stack.
+Required if using SST.
+
+---
+
+##### `staticAssetsBucket`<sup>Optional</sup> <a name="staticAssetsBucket" id="open-next-cdk.NextjsDistributionPropsDefaults.property.staticAssetsBucket"></a>
+
+```typescript
+public readonly staticAssetsBucket: IBucket;
+```
+
+- *Type:* aws-cdk-lib.aws_s3.IBucket
+
+Bucket containing static assets.
+
+Must be provided if you want to serve static files.
 
 ---
 

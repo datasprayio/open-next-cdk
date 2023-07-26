@@ -75,6 +75,57 @@ export interface NextjsAssetsDeploymentProps extends NextjsBaseProps {
 }
 
 /**
+ * Effectively a Partial<NextjsAssetsCachePolicyProps> to satisfy JSII
+ */
+export interface NextjsAssetsDeploymentPropsDefaults extends NextjsBaseProps {
+  /**
+   * The `NextjsBuild` instance representing the built Nextjs application.
+   */
+  readonly nextBuild?: NextjsBuild;
+
+  /**
+   * Properties for the S3 bucket containing the NextJS assets.
+   */
+  readonly bucket?: s3.IBucket;
+
+  /**
+   * Distribution to invalidate when assets change.
+   */
+  readonly distribution?: cloudfront.IDistribution;
+
+  /**
+   * Override the default S3 cache policies created internally.
+   */
+  readonly cachePolicies?: NextjsAssetsCachePolicyProps;
+
+  /**
+   * Set to true to delete old assets (defaults to false).
+   * Recommended to only set to true if you don't need the ability to roll back deployments.
+   */
+  readonly prune?: boolean;
+
+  /**
+   * In case of useEfs, vpc is required
+   */
+  readonly vpc?: IVpc;
+
+  /**
+   * In case of useEfs, vpc is required
+   */
+  readonly useEfs?: boolean;
+
+  /**
+   * memoryLimit for lambda function which been run by BucketDeployment
+   */
+  readonly memoryLimit?: number;
+
+  /**
+   * ephemeralStorageSize for lambda function which been run by BucketDeployment
+   */
+  readonly ephemeralStorageSize?: Size;
+}
+
+/**
  * Uploads NextJS-built static and public files to S3.
  *
  * Will rewrite CloudFormation references with their resolved values after uploading.

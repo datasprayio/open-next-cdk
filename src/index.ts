@@ -9,6 +9,7 @@ export {
 export {
   NextJsAssetsDeployment,
   NextjsAssetsDeploymentProps,
+  NextjsAssetsDeploymentPropsDefaults,
   NextjsAssetsCachePolicyProps,
 } from './NextjsAssetsDeployment';
 export { NextjsBuild, NextjsBuildProps, CreateArchiveArgs } from './NextjsBuild';
@@ -26,6 +27,7 @@ export {
   NextjsDistributionCdkProps,
   NextjsDistributionCdkOverrideProps,
   NextjsDistributionProps,
+  NextjsDistributionPropsDefaults,
   NextjsDomainProps,
   NextjsCachePolicyProps,
   NextjsOriginRequestPolicyProps,
