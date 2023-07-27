@@ -106,7 +106,7 @@ export interface BaseSiteDomainProps {
    */
   readonly domainAlias?: string;
   /**
-   * Specify additional names that should route to the Cloudfront Distribution. Note, certificates for these names will not be automatically generated so the `certificate` option must be specified.
+   * Specify additional names that should route to the Cloudfront Distribution.
    */
   readonly alternateNames?: string[];
   /**

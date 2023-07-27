@@ -773,6 +773,7 @@ export class NextjsDistribution extends Construct {
       } else {
         acmCertificate = new acm.DnsValidatedCertificate(this, 'Certificate', {
           domainName: customDomain.domainName,
+          subjectAlternativeNames: customDomain.alternateNames,
           hostedZone: this.hostedZone,
           region: 'us-east-1',
         });
