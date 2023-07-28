@@ -763,19 +763,17 @@ export class NextjsDistribution extends Construct {
     // HostedZone is set for Route 53 domains
     if (this.hostedZone) {
       if (typeof customDomain === 'string') {
-        acmCertificate = new acm.DnsValidatedCertificate(this, 'Certificate', {
+        acmCertificate = new acm.Certificate(this, 'Certificate', {
           domainName: customDomain,
-          hostedZone: this.hostedZone,
-          region: 'us-east-1',
+          validation: acm.CertificateValidation.fromDns(this.hostedZone)
         });
       } else if (customDomain.certificate) {
         acmCertificate = customDomain.certificate;
       } else {
-        acmCertificate = new acm.DnsValidatedCertificate(this, 'Certificate', {
+        acmCertificate = new acm.Certificate(this, 'Certificate', {
           domainName: customDomain.domainName,
           subjectAlternativeNames: customDomain.alternateNames,
-          hostedZone: this.hostedZone,
-          region: 'us-east-1',
+          validation: acm.CertificateValidation.fromDns(this.hostedZone)
         });
       }
     }
