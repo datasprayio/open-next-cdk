@@ -765,7 +765,7 @@ export class NextjsDistribution extends Construct {
       if (typeof customDomain === 'string') {
         acmCertificate = new acm.Certificate(this, 'Certificate', {
           domainName: customDomain,
-          validation: acm.CertificateValidation.fromDns(this.hostedZone)
+          validation: acm.CertificateValidation.fromDns(this.hostedZone),
         });
       } else if (customDomain.certificate) {
         acmCertificate = customDomain.certificate;
@@ -773,7 +773,7 @@ export class NextjsDistribution extends Construct {
         acmCertificate = new acm.Certificate(this, 'Certificate', {
           domainName: customDomain.domainName,
           subjectAlternativeNames: customDomain.alternateNames,
-          validation: acm.CertificateValidation.fromDns(this.hostedZone)
+          validation: acm.CertificateValidation.fromDns(this.hostedZone),
         });
       }
     }
