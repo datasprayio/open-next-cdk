@@ -12,8 +12,6 @@ type BaseSiteDomainProps struct {
 	// Supports domains that are hosted either on [Route 53](https://aws.amazon.com/route53/) or externally.
 	DomainName *string `field:"required" json:"domainName" yaml:"domainName"`
 	// Specify additional names that should route to the Cloudfront Distribution.
-	//
-	// Note, certificates for these names will not be automatically generated so the `certificate` option must be specified.
 	AlternateNames *[]*string `field:"optional" json:"alternateNames" yaml:"alternateNames"`
 	// Import the certificate for the domain.
 	//
