@@ -10,7 +10,6 @@ import { PolicyStatement, ServicePrincipal } from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Runtime } from 'aws-cdk-lib/aws-lambda';
 import * as route53 from 'aws-cdk-lib/aws-route53';
-import * as route53Patterns from 'aws-cdk-lib/aws-route53-patterns';
 import * as route53Targets from 'aws-cdk-lib/aws-route53-targets';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
@@ -19,6 +18,8 @@ import { bundleFunction } from './BundleFunction';
 import { DEFAULT_STATIC_MAX_AGE } from './constants';
 import { BaseSiteDomainProps, buildErrorResponsesForRedirectToIndex, NextjsBaseProps } from './NextjsBase';
 import { NextjsBuild } from './NextjsBuild';
+import { domainAddTrailingDot } from './utils';
+import { HttpsRedirectPatched } from './website-redirect';
 
 // contains server-side resolved environment vars in config bucket
 export const CONFIG_ENV_JSON_PATH = 'next-env.json';
@@ -805,7 +806,7 @@ export class NextjsDistribution extends Construct {
 
     // Create DNS record
     const recordProps = {
-      recordName,
+      recordName: domainAddTrailingDot(recordName),
       zone: this.hostedZone,
       target: route53.RecordTarget.fromAlias(new route53Targets.CloudFrontTarget(this.distribution)),
     };
@@ -814,9 +815,9 @@ export class NextjsDistribution extends Construct {
 
     // Create Alias redirect record
     if (domainAlias) {
-      new route53Patterns.HttpsRedirect(this, 'Redirect', {
+      new HttpsRedirectPatched(this, 'Redirect', {
         zone: this.hostedZone,
-        recordNames: [domainAlias],
+        recordNames: [domainAddTrailingDot(domainAlias)],
         targetDomain: recordName,
       });
     }
