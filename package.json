@@ -29,7 +29,8 @@
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
     "watch": "npx projen watch",
-    "projen": "npx projen"
+    "projen": "npx projen",
+    "postinstall": "patch-package"
   },
   "author": {
     "name": "Dataspray",
@@ -57,6 +58,8 @@
     "jsii-docgen": "^7.1.46",
     "jsii-pacmak": "^1.80.0",
     "open-next": "^0.8.2",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.8.7",
     "projen": "^0.71.7",
     "standard-version": "^9",

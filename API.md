@@ -2539,8 +2539,6 @@ public readonly alternateNames: string[];
 
 Specify additional names that should route to the Cloudfront Distribution.
 
-Note, certificates for these names will not be automatically generated so the `certificate` option must be specified.
-
 ---
 
 ##### `certificate`<sup>Optional</sup> <a name="certificate" id="open-next-cdk.BaseSiteDomainProps.property.certificate"></a>
@@ -5045,8 +5043,6 @@ public readonly alternateNames: string[];
 - *Type:* string[]
 
 Specify additional names that should route to the Cloudfront Distribution.
-
-Note, certificates for these names will not be automatically generated so the `certificate` option must be specified.
 
 ---
 

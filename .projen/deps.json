@@ -91,6 +91,14 @@
       "type": "build"
     },
     {
+      "name": "patch-package",
+      "type": "build"
+    },
+    {
+      "name": "postinstall-postinstall",
+      "type": "build"
+    },
+    {
       "name": "prettier",
       "type": "build"
     },

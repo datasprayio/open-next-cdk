@@ -1,0 +1,12 @@
+diff --git a/node_modules/aws-cdk-lib/aws-route53/lib/util.js b/node_modules/aws-cdk-lib/aws-route53/lib/util.js
+index a2e6e62..ddb4317 100644
+--- a/node_modules/aws-cdk-lib/aws-route53/lib/util.js
++++ b/node_modules/aws-cdk-lib/aws-route53/lib/util.js
+@@ -46,6 +46,7 @@ class ValidationError extends Error {
+  *      </ul>
+  */
+ function determineFullyQualifiedDomainName(providedName, hostedZone) {
++    return providedName; // Workaround for https://github.com/aws/aws-cdk/issues/26572
+     if (providedName.endsWith('.')) {
+         return providedName;
+     }

@@ -75,10 +75,20 @@ const project = new awscdk.AwsCdkConstructLibrary({
     '@aws-sdk/signature-v4',
     '@aws-crypto/sha256-js',
   ] /* Runtime dependencies of this module. */,
-  devDeps: ['open-next', 'aws-sdk', 'constructs'] /* Build dependencies for this module. */,
+  devDeps: [
+    'open-next',
+    'aws-sdk',
+    'constructs',
+    'patch-package',
+    'postinstall-postinstall',
+  ] /* Build dependencies for this module. */,
 
   // do not generate sample test files
   sampleCode: false,
+});
+
+project.addScripts({
+  postinstall: 'patch-package',
 });
 
 // Ignore platform check when installing esbuild for other supported platforms
