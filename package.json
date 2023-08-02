@@ -56,6 +56,7 @@
     "jsii-diff": "^1.80.0",
     "jsii-docgen": "^7.1.46",
     "jsii-pacmak": "^1.80.0",
+    "jsii-rosetta": "1.x",
     "open-next": "^0.8.2",
     "prettier": "^2.8.7",
     "projen": "^0.71.7",
@@ -85,7 +86,7 @@
     "esbuild": "0.17.16",
     "fs-extra": "^10.1.0",
     "glob": "^8.1.0",
-    "indent-string": "*",
+    "indent-string": "^5.0.0",
     "jszip": "^3.10.1",
     "micromatch": "^4.0.5",
     "node-fetch": "^3.3.1",
@@ -116,8 +117,8 @@
     "serverless-http"
   ],
   "resolutions": {
-    "@types/prettier": "2.6.0",
-    "@types/babel__traverse": "7.18.2"
+    "@types/babel__traverse": "7.18.2",
+    "@types/prettier": "2.6.0"
   },
   "keywords": [
     "aws-cdk",
