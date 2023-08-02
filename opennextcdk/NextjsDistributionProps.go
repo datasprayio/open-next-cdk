@@ -1,4 +1,3 @@
-// Deploy a NextJS app using OpenNext packaging to serverless AWS using CDK
 package opennextcdk
 
 import (
@@ -9,7 +8,7 @@ import (
 type NextjsDistributionProps struct {
 	// Optional value used to install NextJS node dependencies.
 	//
-	// It defaults to 'npx --yes open-next@latest build'.
+	// It defaults to 'npx --yes open-next@1 build'.
 	BuildCommand *string `field:"optional" json:"buildCommand" yaml:"buildCommand"`
 	// The directory to execute `npm run build` from.
 	//
@@ -18,6 +17,8 @@ type NextjsDistributionProps struct {
 	// at the root of the project.
 	BuildPath *string `field:"optional" json:"buildPath" yaml:"buildPath"`
 	// 0 - no compression, fastest 9 - maximum compression, slowest.
+	// Default: 1.
+	//
 	CompressionLevel *float64 `field:"optional" json:"compressionLevel" yaml:"compressionLevel"`
 	// Custom environment variables to pass to the NextJS build and runtime.
 	Environment *map[string]*string `field:"optional" json:"environment" yaml:"environment"`
@@ -91,6 +92,8 @@ type NextjsDistributionProps struct {
 	//
 	CustomDomain interface{} `field:"optional" json:"customDomain" yaml:"customDomain"`
 	// Override lambda function url auth type.
+	// Default: "NONE".
+	//
 	FunctionUrlAuthType awslambda.FunctionUrlAuthType `field:"optional" json:"functionUrlAuthType" yaml:"functionUrlAuthType"`
 	// Override the default CloudFront origin request policies created internally.
 	OriginRequestPolicies *NextjsOriginRequestPolicyProps `field:"optional" json:"originRequestPolicies" yaml:"originRequestPolicies"`

@@ -1,4 +1,3 @@
-// Deploy a NextJS app using OpenNext packaging to serverless AWS using CDK
 package opennextcdk
 
 import (
@@ -640,6 +639,8 @@ func ImageOptimizationLambda_MetricAll(metricName *string, props *awscloudwatch.
 }
 
 // Metric for the number of concurrent executions across all Lambdas.
+// Default: max over 5 minutes.
+//
 func ImageOptimizationLambda_MetricAllConcurrentExecutions(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
 	_init_.Initialize()
 
@@ -659,6 +660,8 @@ func ImageOptimizationLambda_MetricAllConcurrentExecutions(props *awscloudwatch.
 }
 
 // Metric for the Duration executing all Lambdas.
+// Default: average over 5 minutes.
+//
 func ImageOptimizationLambda_MetricAllDuration(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
 	_init_.Initialize()
 
@@ -678,6 +681,8 @@ func ImageOptimizationLambda_MetricAllDuration(props *awscloudwatch.MetricOption
 }
 
 // Metric for the number of Errors executing all Lambdas.
+// Default: sum over 5 minutes.
+//
 func ImageOptimizationLambda_MetricAllErrors(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
 	_init_.Initialize()
 
@@ -697,6 +702,8 @@ func ImageOptimizationLambda_MetricAllErrors(props *awscloudwatch.MetricOptions)
 }
 
 // Metric for the number of invocations of all Lambdas.
+// Default: sum over 5 minutes.
+//
 func ImageOptimizationLambda_MetricAllInvocations(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
 	_init_.Initialize()
 
@@ -716,6 +723,8 @@ func ImageOptimizationLambda_MetricAllInvocations(props *awscloudwatch.MetricOpt
 }
 
 // Metric for the number of throttled invocations of all Lambdas.
+// Default: sum over 5 minutes.
+//
 func ImageOptimizationLambda_MetricAllThrottles(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
 	_init_.Initialize()
 
@@ -735,6 +744,8 @@ func ImageOptimizationLambda_MetricAllThrottles(props *awscloudwatch.MetricOptio
 }
 
 // Metric for the number of unreserved concurrent executions across all Lambdas.
+// Default: max over 5 minutes.
+//
 func ImageOptimizationLambda_MetricAllUnreservedConcurrentExecutions(props *awscloudwatch.MetricOptions) awscloudwatch.Metric {
 	_init_.Initialize()
 
