@@ -4,6 +4,7 @@ const { awscdk, JsonPatch, Tasks } = require('projen');
  * To add additional platforms, ensure esbuild supports it here: https://esbuild.github.io/getting-started/#download-a-build
  */
 const supportedOsCpus = [
+  ['darwin', 'arm64'],
   ['darwin', 'x64'],
   ['linux', 'arm64'],
   ['linux', 'x64'],

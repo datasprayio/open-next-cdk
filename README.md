@@ -47,7 +47,7 @@ Your NextJS app is packaged using OpenNext to fit the serverless format on Lambd
 
 NextJs versions: >=12.3.0+ (includes 13.0.0+)
 
-Platforms: darwin-x64, linux-arm64, linux-x64, win32-arm64, win32-x64
+Platforms: darwin-arm64, darwin-x64, linux-arm64, linux-x64, win32-arm64, win32-x64
 
 # Quickstart
 
@@ -266,7 +266,7 @@ Compatible with: `cdk-nextjs`[@3.2.1](https://github.com/jetbridge/cdk-nextjs/re
 
 This project has been initially forked from [cdk-nextjs](https://github.com/jetbridge/cdk-nextjs) in order to [publish the package to other langugages](https://github.com/jetbridge/cdk-nextjs/issues/120#issuecomment-1634926223). So far notable changes are:
 - Extended language support: TS, Java, Go, .NET, Python.
-- Extended platform support: darwin-x64, linux-arm64, linux-x64, win32-arm64, win32-x64
+- Extended platform support: darwin-arm64, darwin-x64, linux-arm64, linux-x64, win32-arm64, win32-x64
 - Use pre-built open-next package
 
 # Contributing

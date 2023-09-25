@@ -72,6 +72,7 @@
     "@aws-crypto/sha256-js": "^4.0.0",
     "@aws-sdk/client-s3": "^3.310.0",
     "@aws-sdk/signature-v4": "^3.341.0",
+    "@esbuild/darwin-arm64": "0.17.16",
     "@esbuild/darwin-x64": "0.17.16",
     "@esbuild/linux-arm64": "0.17.16",
     "@esbuild/linux-x64": "0.17.16",
