@@ -130,6 +130,11 @@
       "type": "bundled"
     },
     {
+      "name": "@esbuild/darwin-arm64",
+      "version": "0.17.16",
+      "type": "bundled"
+    },
+    {
       "name": "@esbuild/darwin-x64",
       "version": "0.17.16",
       "type": "bundled"
