@@ -32,9 +32,9 @@ import { domainAddTrailingDot } from './utils';
 /**
  * Properties to configure an HTTPS Redirect
  *
- * Patched version of Taken from https://github.com/aws/aws-cdk/blob/main/packages/aws-cdk-lib/aws-route53-patterns/lib/website-redirect.ts
- * - Workaround for https://github.com/aws/aws-cdk/issues/26572
- * - Remove deprecated DnsValidatedCertificate
+ * Patched version of https://github.com/aws/aws-cdk/blob/main/packages/aws-cdk-lib/aws-route53-patterns/lib/website-redirect.ts
+ * - Workaround for https://github.com/aws/aws-cdk/issues/26572 via domainAddTrailingDot patch
+ * - Removed deprecated DnsValidatedCertificate
  */
 export interface HttpsRedirectProps {
   /**
@@ -125,6 +125,7 @@ export class HttpsRedirectPatched extends Construct {
 
     domainNames.forEach((domainName) => {
       const hash = md5hash(domainName).slice(0, 6);
+      // domainAddTrailingDot fixes ability to use CfnParameters as domain name
       domainName = domainAddTrailingDot(domainName);
       const aliasProps = {
         recordName: domainName,

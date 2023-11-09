@@ -817,7 +817,7 @@ export class NextjsDistribution extends Construct {
     if (domainAlias) {
       new HttpsRedirectPatched(this, 'Redirect', {
         zone: this.hostedZone,
-        recordNames: [domainAddTrailingDot(domainAlias)],
+        recordNames: [domainAlias],
         targetDomain: recordName,
       });
     }
