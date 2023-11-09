@@ -333,6 +333,7 @@ new ImageOptimizationLambda(scope: Construct, id: string, props: ImageOptimizati
 | <code><a href="#open-next-cdk.ImageOptimizationLambda.configureAsyncInvoke">configureAsyncInvoke</a></code> | Configures options for asynchronous invocation. |
 | <code><a href="#open-next-cdk.ImageOptimizationLambda.considerWarningOnInvokeFunctionPermissions">considerWarningOnInvokeFunctionPermissions</a></code> | A warning will be added to functions under the following conditions: - permissions that include `lambda:InvokeFunction` are added to the unqualified function. |
 | <code><a href="#open-next-cdk.ImageOptimizationLambda.grantInvoke">grantInvoke</a></code> | Grant the given identity permissions to invoke this Lambda. |
+| <code><a href="#open-next-cdk.ImageOptimizationLambda.grantInvokeCompositePrincipal">grantInvokeCompositePrincipal</a></code> | Grant multiple principals the ability to invoke this Lambda via CompositePrincipal. |
 | <code><a href="#open-next-cdk.ImageOptimizationLambda.grantInvokeUrl">grantInvokeUrl</a></code> | Grant the given identity permissions to invoke this Lambda Function URL. |
 | <code><a href="#open-next-cdk.ImageOptimizationLambda.metric">metric</a></code> | Return the given named metric for this Function. |
 | <code><a href="#open-next-cdk.ImageOptimizationLambda.metricDuration">metricDuration</a></code> | How long execution of this Lambda takes. |
@@ -384,11 +385,11 @@ public addEventSource(source: IEventSource): void
 
 Adds an event source to this function.
 
-Event sources are implemented in the @aws-cdk/aws-lambda-event-sources module.
+Event sources are implemented in the aws-cdk-lib/aws-lambda-event-sources module.
 
 The following example adds an SQS Queue as an event source:
 ```
-import { SqsEventSource } from '@aws-cdk/aws-lambda-event-sources';
+import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
 myFunction.addEventSource(new SqsEventSource(myQueue));
 ```
 
@@ -522,6 +523,20 @@ Grant the given identity permissions to invoke this Lambda.
 ###### `grantee`<sup>Required</sup> <a name="grantee" id="open-next-cdk.ImageOptimizationLambda.grantInvoke.parameter.grantee"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
+
+---
+
+##### `grantInvokeCompositePrincipal` <a name="grantInvokeCompositePrincipal" id="open-next-cdk.ImageOptimizationLambda.grantInvokeCompositePrincipal"></a>
+
+```typescript
+public grantInvokeCompositePrincipal(compositePrincipal: CompositePrincipal): Grant[]
+```
+
+Grant multiple principals the ability to invoke this Lambda via CompositePrincipal.
+
+###### `compositePrincipal`<sup>Required</sup> <a name="compositePrincipal" id="open-next-cdk.ImageOptimizationLambda.grantInvokeCompositePrincipal.parameter.compositePrincipal"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.CompositePrincipal
 
 ---
 
