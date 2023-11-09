@@ -56,6 +56,10 @@ func (i *jsiiProxy_ImageOptimizationLambda) validateGrantInvokeParameters(grante
 	return nil
 }
 
+func (i *jsiiProxy_ImageOptimizationLambda) validateGrantInvokeCompositePrincipalParameters(compositePrincipal awsiam.CompositePrincipal) error {
+	return nil
+}
+
 func (i *jsiiProxy_ImageOptimizationLambda) validateGrantInvokeUrlParameters(grantee awsiam.IGrantable) error {
 	return nil
 }

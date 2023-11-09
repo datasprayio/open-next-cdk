@@ -125,11 +125,11 @@ type ImageOptimizationLambda interface {
 	AddEnvironment(key *string, value *string, options *awslambda.EnvironmentOptions) awslambda.Function
 	// Adds an event source to this function.
 	//
-	// Event sources are implemented in the @aws-cdk/aws-lambda-event-sources module.
+	// Event sources are implemented in the aws-cdk-lib/aws-lambda-event-sources module.
 	//
 	// The following example adds an SQS Queue as an event source:
 	// ```
-	// import { SqsEventSource } from '@aws-cdk/aws-lambda-event-sources';
+	// import { SqsEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
 	// myFunction.addEventSource(new SqsEventSource(myQueue));
 	// ```.
 	AddEventSource(source awslambda.IEventSource)
@@ -180,6 +180,8 @@ type ImageOptimizationLambda interface {
 	GetResourceNameAttribute(nameAttr *string) *string
 	// Grant the given identity permissions to invoke this Lambda.
 	GrantInvoke(grantee awsiam.IGrantable) awsiam.Grant
+	// Grant multiple principals the ability to invoke this Lambda via CompositePrincipal.
+	GrantInvokeCompositePrincipal(compositePrincipal awsiam.CompositePrincipal) *[]awsiam.Grant
 	// Grant the given identity permissions to invoke this Lambda Function URL.
 	GrantInvokeUrl(grantee awsiam.IGrantable) awsiam.Grant
 	// Mix additional information into the hash of the Version object.
@@ -962,6 +964,22 @@ func (i *jsiiProxy_ImageOptimizationLambda) GrantInvoke(grantee awsiam.IGrantabl
 		i,
 		"grantInvoke",
 		[]interface{}{grantee},
+		&returns,
+	)
+
+	return returns
+}
+
+func (i *jsiiProxy_ImageOptimizationLambda) GrantInvokeCompositePrincipal(compositePrincipal awsiam.CompositePrincipal) *[]awsiam.Grant {
+	if err := i.validateGrantInvokeCompositePrincipalParameters(compositePrincipal); err != nil {
+		panic(err)
+	}
+	var returns *[]awsiam.Grant
+
+	_jsii_.Invoke(
+		i,
+		"grantInvokeCompositePrincipal",
+		[]interface{}{compositePrincipal},
 		&returns,
 	)
 
