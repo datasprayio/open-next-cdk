@@ -19,6 +19,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Dataspray',
   authorAddress: 'matus@matus.io',
   cdkVersion: '2.105.0',
+  minNodeVersion: '18.0.0',
   defaultReleaseBranch: 'main',
   dependabot: true,
   name: 'OpenNext via CDK',
