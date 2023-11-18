@@ -502,7 +502,7 @@ export class NextjsDistribution extends Construct {
       responseHeadersPolicy: staticResponseHeadersPolicy,
     };
 
-    // requests going to lambda (api, etc)
+    // requests going to lambda (api, server actions, etc)
     const lambdaBehavior: cloudfront.BehaviorOptions = {
       viewerProtocolPolicy,
       origin: serverFunctionOrigin,
@@ -558,9 +558,6 @@ export class NextjsDistribution extends Construct {
       },
 
       additionalBehaviors: {
-        // is index.html static or dynamic?
-        ...(hasIndexHtml ? {} : { '/': lambdaBehavior }),
-
         // known dynamic routes
         'api/*': lambdaBehavior,
         '_next/data/*': lambdaBehavior,
@@ -572,6 +569,9 @@ export class NextjsDistribution extends Construct {
         // it would be nice to create routes for all the static files we know of
         // but we run into the limit of CacheBehaviors per distribution
         '_next/*': staticBehavior,
+
+        // is index.html static or dynamic?
+        ...(hasIndexHtml ? {} : { '/*': lambdaBehavior }),
       },
     });
   }
