@@ -18,7 +18,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   package: { installCommand: 'yarn install --ignoreAA-platform --check-files --frozen-lockfile' },
   author: 'Dataspray',
   authorAddress: 'matus@matus.io',
-  cdkVersion: '2.105.0',
+  cdkVersion: '2.115.0',
   minNodeVersion: '18.0.0',
   defaultReleaseBranch: 'main',
   dependabot: true,
