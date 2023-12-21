@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27",
-    "@types/node": "^18",
+    "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.115.0",
@@ -62,7 +62,7 @@
     "projen": "^0.71.161",
     "standard-version": "^9",
     "ts-jest": "^27",
-    "typescript": "4.9.5"
+    "typescript": "~4.7.4"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.115.0",
@@ -132,9 +132,6 @@
     "opennext",
     "serverless"
   ],
-  "engines": {
-    "node": ">= 18.0.0"
-  },
   "main": "lib/index.js",
   "license": "Apache-2.0",
   "version": "0.0.0",
